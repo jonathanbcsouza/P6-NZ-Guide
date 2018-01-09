@@ -1,0 +1,165 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="actionBarStyle">@style/BarStyle</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+
+    <style name="MyActionBar" parent="@android:style/Widget.Holo.Light.ActionBar">
+        <item name="android:background">#FF9D21</item>
+        <item name="android:titleTextStyle">@style/MyActionBarTitleText</item>
+    </style>
+
+    <style name="MyActionBarTitleText" parent="@android:style/TextAppearance.Holo.Widget.ActionBar.Title">
+        <item name="android:textColor">@color/colorLightGrey</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="BarStyle" parent="@style/Widget.AppCompat.Light.ActionBar.Solid.Inverse">
+        <item name="elevation">0dp</item>
+    </style>
+
+    <style name="CategoryTab" parent="Widget.Design.TabLayout">
+        <item name="tabIndicatorColor">@android:color/white</item>
+        <item name="tabSelectedTextColor">@android:color/white</item>
+        <item name="tabTextAppearance">@style/CategoryTabTextAppearance</item>
+    </style>
+
+    <style name="CategoryTabTextAppearance" parent="TextAppearance.Design.Tab">
+        <item name="android:textColor">#A8A19E</item>
+    </style>
+
+    <style name="SplashTheme" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowBackground">@drawable/splash_auckland</item>
+
+    </style>
+
+
+    <!-- NEED CHANGE -->
+    <!-- City Screen Panel Common Styles -->
+    <style name="CityPanel">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/font_small</item>
+        <item name="android:paddingLeft">@dimen/dimen_10dp</item>
+        <item name="android:paddingRight">@dimen/dimen_10dp</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <!-- City Description Header -->
+    <style name="CityDescriptionHeader" parent="CityPanel">
+        <item name="android:layout_marginTop">@dimen/dimen_30dp</item>
+        <item name="android:paddingTop">@dimen/dimen_5dp</item>
+        <item name="android:paddingBottom">@dimen/dimen_5dp</item>
+        <item name="android:background">@color/colorPrimaryDark</item>
+        <item name="android:typeface">sans</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!-- Weather and Time Panels -->
+    <style name="CityPanelGreen" parent="CityPanel">
+        <item name="android:background">@color/colorPrimary</item>
+        <item name="android:paddingTop">@dimen/dimen_16dp</item>
+        <item name="android:paddingBottom">@dimen/dimen_16dp</item>
+    </style>
+    <!-- City Facts Header -->
+    <style name="CityFactHeader" parent="CityFacts">
+        <item name="android:textColor">@color/colorPink</item>
+        <item name="android:typeface">sans</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!-- City Fact Panel -->
+    <style name="CityFactPanel" parent="CityFacts">
+        <item name="android:textColor">@color/colorText</item>
+        <item name="android:layout_marginBottom">@dimen/dimen_10dp</item>
+    </style>
+
+    <!-- City Facts Common Styles -->
+    <style name="CityFacts">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/font_small</item>
+    </style>
+
+    <!-- List Item MODIFY -->
+    <style name="list_item_text_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="list_item_image_icon_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_marginRight">@dimen/activity_margin</item>
+        <item name="android:tint">@color/secondaryTextColor</item>
+    </style>
+
+    <style name="detail_activity_category_text_style">
+        <item name="android:fontFamily">sans-serif-light</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingLeft">@dimen/activity_padding</item>
+        <item name="android:textColor">@color/primaryTextColor</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="detail_activity_place_title_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">sans-serif-light</item>
+        <item name="android:padding">16dp</item>
+        <item name="android:textColor">@color/colorLightGrey</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="detail_activity_take_me_button_style">
+
+        <item name="android:background">@drawable/textview_background</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:padding">8dp</item>
+        <item name="android:textColor">@color/whiteText</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+
+    <style name="detail_activity_summary_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">sans-serif-light</item>
+        <item name="android:paddingLeft">@dimen/activity_padding</item>
+        <item name="android:paddingRight">@dimen/activity_padding</item>
+        <item name="android:textColor">@color/primaryTextColor</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="detail_activity_category_title_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">sans-serif-light</item>
+        <item name="android:padding">@dimen/activity_padding</item>
+        <item name="android:textColor">@color/primaryTextColor</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+
+</resources>

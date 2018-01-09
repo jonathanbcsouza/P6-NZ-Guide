@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#000001</color>
+    <color name="colorPrimaryDark">#1e222d</color>
+    <color name="colorAccent">#d3431b</color>
+    <color name="colorPink">#c4745d</color>
+    <color name="colorLightGrey">#E5E5E5</color>
+    <color name="colorText">#000</color>
+
+    <!-- Text color scheme -->
+    <color name="textDark">#000000</color>
+    <color name="primaryTextColor">#303030</color>
+    <color name="secondaryTextColor">#757575</color>
+    <color name="whiteText">#FFFFFF</color>
+
+    <!-- Background color scheme -->
+    <color name="primaryBackground">#f1f1f1</color>
+</resources>

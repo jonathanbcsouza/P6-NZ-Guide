@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/dimen_20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="@dimen/dimen_0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/image_city"
+                    android:layout_width="@dimen/city_icon_width"
+                    android:layout_height="@dimen/city_icon_height"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/auckland" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="@dimen/dimen_0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/CityFactHeader"
+                    android:text="@string/label_country" />
+
+                <TextView
+                    android:id="@+id/text_country"
+                    style="@style/CityFactPanel"
+                    android:text="Auckland" />
+
+                <TextView
+                    style="@style/CityFactHeader"
+                    android:text="@string/label_language" />
+
+                <TextView
+                    android:id="@+id/text_language"
+                    style="@style/CityFactPanel"
+                    android:text="@string/country_language" />
+
+                <TextView
+                    style="@style/CityFactHeader"
+                    android:text="@string/label_airports" />
+
+                <TextView
+                    android:id="@+id/text_airport"
+                    style="@style/CityFactPanel"
+                    android:text="@string/airport_name" />
+
+                <TextView
+                    style="@style/CityFactHeader"
+                    android:text="@string/label_transport" />
+
+                <TextView
+                    android:id="@+id/text_transport"
+                    style="@style/CityFactPanel"
+                    android:text="Bus, rail, ferry and flights" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            style="@style/CityDescriptionHeader"
+            android:background="@color/colorPink"
+            android:text="@string/label_about_city" />
+
+        <TextView
+            android:id="@+id/text_panel_about"
+            style="@style/CityPanelGreen"
+            android:background="@color/colorLightGrey"
+            android:text="Auckland is a city in New Zealand's North Island. Auckland is the largest urban area in the country, with an urban population of around 1,534,700. It is located in the Auckland Region—the area governed by Auckland Council—which includes outlying rural areas and the islands of the Hauraki Gulf, resulting in a total population of 1,657,200. A diverse and multicultural city, Auckland is home to the largest Polynesian population in the world. The Māori-language name for Auckland is Tāmaki or Tāmaki-makau-rau, meaning (Tāmaki with a hundred lovers), in reference to the desirability of its fertile land at the hub of waterways in all directions. It has also been called Ākarana, a transliteration of the English name."
+            android:textColor="@color/colorText" />
+
+    </LinearLayout>
+</ScrollView>
