@@ -26,63 +26,105 @@ import android.widget.ListView;
 import java.util.ArrayList;
 
 
-
 public class FlatmatesWanted extends android.support.v4.app.Fragment {
 
-
     public FlatmatesWanted() {
-        // Required empty public constructor
     }
 
-
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_list, container, false);
 
-        final ArrayList<Places> flatMatesList = new ArrayList<Places>();
-        flatMatesList.add(new Places(getString(R.string.flatmate1)
-                , getString(R.string.cn_tower_address)
-                , getResources().getString(R.string.cn_tower)
-                , R.drawable.auckland
-                , "43.642482,-79.387074"
-                , 3.5
-                , R.drawable.skytower));
-        flatMatesList.add(new Places(getString(R.string.flatmate2)
-                , getString(R.string.cn_tower_address)
-                , getResources().getString(R.string.cn_tower)
-                , R.drawable.auckland
-                , "43.642482,-79.387074"
-                , 3.5
-                , R.drawable.skytower));
+        final ArrayList<Places> flatmatesPlaces = new ArrayList<>();
+        flatmatesPlaces.add(new Places(getString(R.string.flatmate1)
+                , getString(R.string.flatmate1Address)
+                , getResources().getString(R.string.flatmate1Description)
+                , R.drawable.flatmate1
+                , "43.646257, -79.409191"
+                , 3.9
+                , getString(R.string.flatmate1phone)
+                , R.drawable.flatmate1));
 
-        PlacesAdapter adapter = new PlacesAdapter(getActivity(), flatMatesList);
-        ListView listView = rootView.findViewById(R.id.list_places);
+        flatmatesPlaces.add(new Places(getString(R.string.flatmate2)
+                , getString(R.string.flatmate2Address)
+                , getResources().getString(R.string.flatmate2Description)
+                , R.drawable.flatmate2
+                , "43.646257, -79.409191"
+                , 3.9
+                , getString(R.string.flatmate2phone)
+                , R.drawable.flatmate2));
+
+        flatmatesPlaces.add(new Places(getString(R.string.flatmate3)
+                , getString(R.string.flatmate3Address)
+                , getResources().getString(R.string.flatmate3Description)
+                , R.drawable.flatmate3
+                , "43.646257, -79.409191"
+                , 3.9
+                , getString(R.string.flatmate3phone)
+                , R.drawable.flatmate3));
+
+        flatmatesPlaces.add(new Places(getString(R.string.flatmate4)
+                , getString(R.string.flatmate4Address)
+                , getResources().getString(R.string.flatmate4Description)
+                , R.drawable.flatmate4
+                , "43.646257, -79.409191"
+                , 3.9
+                , getString(R.string.flatmate4phone)
+                , R.drawable.flatmate4));
+
+        flatmatesPlaces.add(new Places(getString(R.string.flatmate5)
+                , getString(R.string.flatmate5Address)
+                , getResources().getString(R.string.flatmate5Description)
+                , R.drawable.flatmate5
+                , "43.646257, -79.409191"
+                , 3.9
+                , getString(R.string.flatmate5phone)
+                , R.drawable.flatmate5));
+
+        flatmatesPlaces.add(new Places(getString(R.string.flatmate6)
+                , getString(R.string.flatmate6Address)
+                , getResources().getString(R.string.flatmate6Description)
+                , R.drawable.flatmate6
+                , "43.646257, -79.409191"
+                , 3.9
+                , getString(R.string.flatmate6phone)
+                , R.drawable.flatmate6));
+
+        flatmatesPlaces.add(new Places(getString(R.string.flatmate7)
+                , getString(R.string.flatmate7Address)
+                , getResources().getString(R.string.flatmate7Description)
+                , R.drawable.flatmate7
+                , "43.646257, -79.409191"
+                , 3.9
+                , getString(R.string.flatmate7phone)
+                , R.drawable.flatmate7));
+
+
+        PlacesAdapter adapter = new PlacesAdapter(getActivity(), flatmatesPlaces);
+        ListView listView = rootView.findViewById(R.id.fragment_list);
         listView.setAdapter(adapter);
 
-        // Start new activity to show detail about attraction which is clicked in ListView
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                // Create a new Intent to display detail about the list item clicked on
-                Intent intent = new Intent(getActivity(), AllPlacesActivity.class);
+                Intent intentHotels = new Intent(getActivity(), AllPlacesActivity.class);
 
-                // Get the {@link Word} object at the given position the user clicked on
-                Places hotels = flatMatesList.get(position);
+                Places flatmates = flatmatesPlaces.get(position);
 
-                /** Create a new Bundle to send data to {@link PLACEDetailActivity} */
                 Bundle bundle = new Bundle();
-                bundle.putString(Keys.PLACE_NAME_KEY, hotels.getPlacesName());
-                bundle.putString(Keys.PLACE_ADDRESS_KEY, hotels.getPlacesAddress());
-                bundle.putInt(Keys.PLACE_IMAGE_KEY, hotels.getImageResourceId());
-                bundle.putString(Keys.PLACE_LOCATION_KEY, hotels.getLocationId());
-                bundle.putString(Keys.PLACE_DETAIL_KEY, hotels.getPlacesDescription());
-                bundle.putDouble(Keys.PLACE_RATING_KEY, hotels.getPlacesRating());
+                bundle.putString(Keys.PLACE_NAME_KEY, flatmates.getPlacesName());
+                bundle.putString(Keys.PLACE_ADDRESS_KEY, flatmates.getPlacesAddress());
+                bundle.putString(Keys.PLACE_DETAIL_KEY, flatmates.getPlacesDescription());
+                bundle.putInt(Keys.PLACE_IMAGE_KEY, flatmates.getImageResourceId());
+                bundle.putString(Keys.PLACE_LOCATION_KEY, flatmates.getLocationId());
+                bundle.putDouble(Keys.PLACE_RATING_KEY, flatmates.getPlacesRating());
+                bundle.putString(Keys.PLACE_PHONE_NUMBER_KEY, flatmates.getPlacesPhoneNumber());
 
                 bundle.putInt(Keys.FRAGMENT_PLACE, 2);
-                intent.putExtras(bundle);
+                intentHotels.putExtras(bundle);
 
-                // start new activity
-                startActivity(intent);
+                startActivity(intentHotels);
             }
         });
 

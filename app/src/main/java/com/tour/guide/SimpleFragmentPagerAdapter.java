@@ -41,7 +41,7 @@ public class SimpleFragmentPagerAdapter extends FragmentPagerAdapter {
         if (position == 0) {
             return new AboutFragments();
         } else if (position == 1) {
-            return new HotelsFragment();
+            return new HotelsActivity();
         } else if (position == 2) {
             return new FlatmatesWanted();
         } else if (position == 3) {
@@ -66,11 +66,9 @@ public class SimpleFragmentPagerAdapter extends FragmentPagerAdapter {
         } else if (position == 1) {
             return mContext.getString(R.string.hotels);
         } else if (position == 2) {
-            return mContext.getString(R.string.flatmatesWanted);
-        } else if (position == 3) {
-            return mContext.getString(R.string.foodsAndDrinks);
+            return mContext.getString(R.string.flatmates);
         } else {
-            return mContext.getString(R.string.about);
+            return mContext.getString(R.string.foodsAndDrinks);
         }
     }
 }

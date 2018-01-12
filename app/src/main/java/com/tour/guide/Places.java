@@ -5,7 +5,6 @@ package com.tour.guide;
  */
 
 public class Places {
-
     private static final String NO_PHONE_NUMBER = "0";
     private String mPlacesName;
     private String mPlacesAddress;
@@ -16,80 +15,83 @@ public class Places {
     private String mPlacesPhoneNumber = NO_PHONE_NUMBER;
     private int mThumbnailResourceId;
 
-    public Places(String attractionName
-            , String attractionAddress
-            , String attractionDescription
+    public Places(String placesName
+            , String placesAddress
+            , String placesDescription
             , int imageResourceId
             , String locationId
-            , double attractionRating
+            , double placesRating
             , int thumbnailResourceID) {
-        mPlacesName = attractionName;
-        mPlacesAddress = attractionAddress;
-        mPlacesDescription = attractionDescription;
+        mPlacesName = placesName;
+        mPlacesAddress = placesAddress;
+        mPlacesDescription = placesDescription;
         mImageResourceId = imageResourceId;
         mLocationId = locationId;
-        mPlacesRating = attractionRating;
+        mPlacesRating = placesRating;
         mThumbnailResourceId = thumbnailResourceID;
     }
 
-
-    public Places(String attractionName
-            , String attractionAddress
-            , String attractionDescription
+    /**
+     * Constructor for details about places
+     *
+     * @param placesName        name of the place
+     * @param placesAddress     address of the place
+     * @param placesDescription general description of the place
+     * @param imageResourceId       image resource id of the place
+     * @param locationId            location detail in form of latitude and longitude
+     * @param placesRating      rating for places
+     * @param placesPhoneNumber phone number of place
+     * @param thumbnailResourceId   thumbnail resource id of the place
+     */
+    public Places(String placesName
+            , String placesAddress
+            , String placesDescription
             , int imageResourceId
             , String locationId
-            , double attractionRating
-            , String attractionPhoneNumber, int thumbnailResourceId) {
-        mPlacesName = attractionName;
-        mPlacesAddress = attractionAddress;
-        mPlacesDescription = attractionDescription;
+            , double placesRating
+            , String placesPhoneNumber, int thumbnailResourceId) {
+        mPlacesName = placesName;
+        mPlacesAddress = placesAddress;
+        mPlacesDescription = placesDescription;
         mImageResourceId = imageResourceId;
         mLocationId = locationId;
-        mPlacesRating = attractionRating;
-        mPlacesPhoneNumber = attractionPhoneNumber;
+        mPlacesRating = placesRating;
+        mPlacesPhoneNumber = placesPhoneNumber;
         mThumbnailResourceId = thumbnailResourceId;
     }
 
 
-    public String getPlacesName() {
+    public String   getPlacesName() {
         return mPlacesName;
     }
-
 
     public String getPlacesAddress() {
         return mPlacesAddress;
     }
 
-
     public String getPlacesDescription() {
         return mPlacesDescription;
     }
-
 
     public int getImageResourceId() {
         return mImageResourceId;
     }
 
-
     public String getLocationId() {
         return mLocationId;
     }
-
 
     public double getPlacesRating() {
         return mPlacesRating;
     }
 
-
     public String getPlacesPhoneNumber() {
         return mPlacesPhoneNumber;
     }
 
-
     public boolean hasPhoneNumber() {
         return !(mPlacesPhoneNumber.equals(NO_PHONE_NUMBER));
     }
-
 
     public int getThubmnailResourceId() {
         return mThumbnailResourceId;

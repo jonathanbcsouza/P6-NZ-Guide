@@ -21,8 +21,8 @@
                 android:id="@+id/place_image"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/image_height"
-                android:src="@drawable/auckland"
-                android:scaleType="centerCrop" />
+                android:scaleType="centerCrop"
+                android:src="@drawable/auckland" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -99,12 +99,38 @@
         </RelativeLayout>
 
         <TextView
-            android:id="@+id/place_description"
+            android:id="@+id/allPlaces_activity_attraction_description"
             style="@style/detail_activity_summary_style"
-            android:text="@string/hotel1description" />
+            tools:text="@string/place_title" />
+
+        <TextView
+            android:id="@+id/address_text"
+            style="@style/detail_activity_category_title_style"
+            tools:text="@string/address_title" />
 
         <LinearLayout
-            android:id="@+id/place_phone_number_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/activity_padding">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_margin"
+                android:src="@drawable/ic_location_on_black_24dp"
+                android:tint="@color/primaryTextColor" />
+
+            <TextView
+                android:id="@+id/detail_activity_place_address"
+                style="@style/detail_activity_category_text_style"
+                android:autoLink="map"
+                tools:text="Toronto, ON M5J 1E6" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/allPlaces_activity_phone_number_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -119,18 +145,11 @@
                 android:tint="@color/primaryTextColor" />
 
             <TextView
-                android:id="@+id/place_phone_number"
+                android:id="@+id/detail_activity_place_phone_number"
                 style="@style/detail_activity_category_text_style"
                 android:autoLink="map"
                 tools:text="(123) 234-4575" />
+
         </LinearLayout>
-
-
-        <TextView
-            android:id="@+id/place_address"
-            style="@style/detail_activity_category_title_style"
-            tools:text="@string/address_title" />
-
     </LinearLayout>
-
 </ScrollView>

@@ -26,63 +26,142 @@ import android.widget.ListView;
 import java.util.ArrayList;
 
 
-
 public class FoodsFragment extends android.support.v4.app.Fragment {
 
-
     public FoodsFragment() {
-        // Required empty public constructor
     }
 
-
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_list, container, false);
 
-        final ArrayList<Places> hotelsList = new ArrayList<Places>();
-        hotelsList.add(new Places(getString(R.string.restaurant1)
-                , getString(R.string.cn_tower_address)
-                , getResources().getString(R.string.cn_tower)
-                , R.drawable.auckland
-                , "43.642482,-79.387074"
-                , 3.5
-                , R.drawable.skytower));
-        hotelsList.add(new Places(getString(R.string.restaurant2)
-                , getString(R.string.cn_tower_address)
-                , getResources().getString(R.string.cn_tower)
-                , R.drawable.auckland
-                , "43.642482,-79.387074"
-                , 3.5
-                , R.drawable.skytower));
 
-        PlacesAdapter adapter = new PlacesAdapter(getActivity(), hotelsList);
-        ListView listView = rootView.findViewById(R.id.list_places);
+        final ArrayList<Places> foodsPlaces = new ArrayList<>();
+        foodsPlaces.add(new Places(getString(R.string.restaurant1)
+                , getString(R.string.restaurant1Address)
+                , getResources().getString(R.string.restaurant1Description)
+                , R.drawable.restaurant1
+                , "43.646257, -79.409191"
+                , 3.9
+                , getString(R.string.restaurant1phone)
+                , R.drawable.restaurant1));
+
+        foodsPlaces.add(new Places(getString(R.string.restaurant2)
+                , getString(R.string.restaurant2Address)
+                , getResources().getString(R.string.restaurant2Description)
+                , R.drawable.restaurant2
+                , "43.646257, -79.409191"
+                , 3.9
+                , getString(R.string.restaurant2phone)
+                , R.drawable.restaurant2));
+
+        foodsPlaces.add(new Places(getString(R.string.restaurant3)
+                , getString(R.string.restaurant3Address)
+                , getResources().getString(R.string.restaurant3Description)
+                , R.drawable.restaurant3
+                , "43.646257, -79.409191"
+                , 3.9
+                , getString(R.string.restaurant3phone)
+                , R.drawable.restaurant3));
+
+        foodsPlaces.add(new Places(getString(R.string.restaurant4)
+                , getString(R.string.restaurant4Address)
+                , getResources().getString(R.string.restaurant4Description)
+                , R.drawable.restaurant4
+                , "43.646257, -79.409191"
+                , 3.9
+                , getString(R.string.restaurant4phone)
+                , R.drawable.restaurant4));
+
+        foodsPlaces.add(new Places(getString(R.string.restaurant5)
+                , getString(R.string.restaurant5Address)
+                , getResources().getString(R.string.restaurant5Description)
+                , R.drawable.restaurant5
+                , "43.646257, -79.409191"
+                , 3.9
+                , getString(R.string.restaurant5phone)
+                , R.drawable.restaurant5));
+
+        foodsPlaces.add(new Places(getString(R.string.restaurant6)
+                , getString(R.string.restaurant6Address)
+                , getResources().getString(R.string.restaurant6Description)
+                , R.drawable.restaurant6
+                , "43.646257, -79.409191"
+                , 3.9
+                , getString(R.string.restaurant6phone)
+                , R.drawable.restaurant6));
+
+        foodsPlaces.add(new Places(getString(R.string.restaurant7)
+                , getString(R.string.restaurant7Address)
+                , getResources().getString(R.string.restaurant7Description)
+                , R.drawable.restaurant7
+                , "43.646257, -79.409191"
+                , 3.9
+                , getString(R.string.restaurant7phone)
+                , R.drawable.restaurant7));
+
+        foodsPlaces.add(new Places(getString(R.string.restaurant8)
+                , getString(R.string.restaurant8Address)
+                , getResources().getString(R.string.restaurant8Description)
+                , R.drawable.restaurant8
+                , "43.646257, -79.409191"
+                , 3.9
+                , getString(R.string.restaurant8phone)
+                , R.drawable.restaurant8));
+
+        foodsPlaces.add(new Places(getString(R.string.restaurant9)
+                , getString(R.string.restaurant9Address)
+                , getResources().getString(R.string.restaurant9Description)
+                , R.drawable.restaurant9
+                , "43.646257, -79.409191"
+                , 3.9
+                , getString(R.string.restaurant9phone)
+                , R.drawable.restaurant9));
+
+        foodsPlaces.add(new Places(getString(R.string.restaurant10)
+                , getString(R.string.restaurant10Address)
+                , getResources().getString(R.string.restaurant10Description)
+                , R.drawable.restaurant10
+                , "43.646257, -79.409191"
+                , 3.9
+                , getString(R.string.restaurant10phone)
+                , R.drawable.restaurant10));
+
+        foodsPlaces.add(new Places(getString(R.string.restaurant11)
+                , getString(R.string.restaurant11Address)
+                , getResources().getString(R.string.restaurant11Description)
+                , R.drawable.restaurant11
+                , "43.646257, -79.409191"
+                , 3.9
+                , getString(R.string.restaurant11phone)
+                , R.drawable.restaurant11));
+        
+
+        PlacesAdapter adapter = new PlacesAdapter(getActivity(), foodsPlaces);
+        ListView listView = rootView.findViewById(R.id.fragment_list);
         listView.setAdapter(adapter);
 
-        // Start new activity to show detail about attraction which is clicked in ListView
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                // Create a new Intent to display detail about the list item clicked on
-                Intent intent = new Intent(getActivity(), AllPlacesActivity.class);
+                Intent intentHotels = new Intent(getActivity(), AllPlacesActivity.class);
 
-                // Get the {@link Word} object at the given position the user clicked on
-                Places hotels = hotelsList.get(position);
+                Places hotels = foodsPlaces.get(position);
 
-                /** Create a new Bundle to send data to {@link PLACEDetailActivity} */
                 Bundle bundle = new Bundle();
                 bundle.putString(Keys.PLACE_NAME_KEY, hotels.getPlacesName());
                 bundle.putString(Keys.PLACE_ADDRESS_KEY, hotels.getPlacesAddress());
+                bundle.putString(Keys.PLACE_DETAIL_KEY, hotels.getPlacesDescription());
                 bundle.putInt(Keys.PLACE_IMAGE_KEY, hotels.getImageResourceId());
                 bundle.putString(Keys.PLACE_LOCATION_KEY, hotels.getLocationId());
-                bundle.putString(Keys.PLACE_DETAIL_KEY, hotels.getPlacesDescription());
                 bundle.putDouble(Keys.PLACE_RATING_KEY, hotels.getPlacesRating());
+                bundle.putString(Keys.PLACE_PHONE_NUMBER_KEY, hotels.getPlacesPhoneNumber());
 
                 bundle.putInt(Keys.FRAGMENT_PLACE, 3);
-                intent.putExtras(bundle);
+                intentHotels.putExtras(bundle);
 
-                // start new activity
-                startActivity(intent);
+                startActivity(intentHotels);
             }
         });
 

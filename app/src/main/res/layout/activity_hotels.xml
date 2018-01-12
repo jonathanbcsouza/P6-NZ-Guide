@@ -3,12 +3,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.tour.guide.RecycleView">
-
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/recycler_view_layour_recycler"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:listitem="@layout/activity_list_itens"/>
+    tools:context="com.tour.guide.HotelsActivity">
 
 </android.support.constraint.ConstraintLayout>

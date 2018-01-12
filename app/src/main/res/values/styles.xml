@@ -39,9 +39,7 @@
 
     </style>
 
-
-    <!-- NEED CHANGE -->
-    <!-- City Screen Panel Common Styles -->
+    <!--Common Styles -->
     <style name="CityPanel">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
@@ -51,7 +49,6 @@
         <item name="android:textColor">@android:color/white</item>
     </style>
 
-    <!-- City Description Header -->
     <style name="CityDescriptionHeader" parent="CityPanel">
         <item name="android:layout_marginTop">@dimen/dimen_30dp</item>
         <item name="android:paddingTop">@dimen/dimen_5dp</item>
@@ -61,33 +58,29 @@
         <item name="android:textStyle">bold</item>
     </style>
 
-    <!-- Weather and Time Panels -->
     <style name="CityPanelGreen" parent="CityPanel">
         <item name="android:background">@color/colorPrimary</item>
         <item name="android:paddingTop">@dimen/dimen_16dp</item>
         <item name="android:paddingBottom">@dimen/dimen_16dp</item>
     </style>
-    <!-- City Facts Header -->
+
     <style name="CityFactHeader" parent="CityFacts">
         <item name="android:textColor">@color/colorPink</item>
         <item name="android:typeface">sans</item>
         <item name="android:textStyle">bold</item>
     </style>
 
-    <!-- City Fact Panel -->
     <style name="CityFactPanel" parent="CityFacts">
         <item name="android:textColor">@color/colorText</item>
         <item name="android:layout_marginBottom">@dimen/dimen_10dp</item>
     </style>
 
-    <!-- City Facts Common Styles -->
     <style name="CityFacts">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:textSize">@dimen/font_small</item>
     </style>
 
-    <!-- List Item MODIFY -->
     <style name="list_item_text_style">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>

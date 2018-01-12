@@ -11,7 +11,7 @@ public class SplashActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        //Delay created
+    // Delay created
         Handler handle = new Handler();
         handle.postDelayed(new Runnable() {
             @Override

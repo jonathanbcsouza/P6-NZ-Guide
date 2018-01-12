@@ -19,15 +19,16 @@
             </intent-filter>
         </activity>
         <activity android:name=".MainActivity" />
-
         <activity
             android:name=".AllPlacesActivity"
             android:label="@string/app_name"
             android:parentActivityName=".MainActivity" />
+
         <meta-data
             android:name="android.support.PARENT_ACTIVITY"
             android:value="com.tour.guide.MainActivity" />
 
+        <activity android:name=".HotelsActivity"></activity>
     </application>
 
 </manifest>

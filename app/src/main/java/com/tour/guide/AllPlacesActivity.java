@@ -9,6 +9,8 @@ import android.widget.ImageView;
 import android.widget.RatingBar;
 import android.widget.TextView;
 
+import com.tour.guide.Keys;
+
 public class AllPlacesActivity extends AppCompatActivity {
 
     private Bundle bundle;
@@ -18,79 +20,61 @@ public class AllPlacesActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_all_places);
 
-        // Get the bundle sent from different fragments
         bundle = getIntent().getExtras();
 
         assert bundle != null;
         int identifier = bundle.getInt(Keys.FRAGMENT_PLACE);
         switch (identifier) {
+            case 0:
+                setTitle(getString(R.string.about));
+                break;
             case 1:
                 setTitle(getString(R.string.hotels));
                 break;
             case 2:
-                setTitle(getString(R.string.flatmatesWanted));
+                setTitle(getString(R.string.flatmates));
                 break;
             case 3:
-                setTitle(getString(R.string.foodsAndDrinks));
+                setTitle(R.string.foodsAndDrinks);
                 break;
         }
 
-        // If Bundle contains phone number, then show the phone icon to perform call operation
-        // **Connect with XML activity_detail
+
         View phoneIcon = findViewById(R.id.place_phone_icon_layout);
-        View phoneNumberInContactSection = findViewById(R.id.place_phone_number_layout);
-        // TextView to set the title of category (i.e Address or Contact) depending upon the
-        // detail activity is showing
-        TextView addressTitle = findViewById(R.id.place_address);
+        View phoneNumberInContactSection = findViewById(R.id.allPlaces_activity_phone_number_layout);
+
+        TextView addressTitle = findViewById(R.id.address_text);
         if (bundle.containsKey(Keys.PLACE_PHONE_NUMBER_KEY)) {
             phoneIcon.setVisibility(View.VISIBLE);
             phoneNumberInContactSection.setVisibility(View.VISIBLE);
-            // Activity shows both address and phone number so set category title to "Contact"
             addressTitle.setText(getString(R.string.contact_title));
 
-            // Display phone number in Contact section
             showPhoneNumberAndMakeCall();
         } else {
-            // If bundle doesn't contain phone number, hide the phone icon
-            // and phone number from thr contact section
+
             phoneIcon.setVisibility(View.GONE);
             phoneNumberInContactSection.setVisibility(View.GONE);
-            // Activity shows only address so set category title to "Address"
             addressTitle.setText(getString(R.string.address_title));
         }
 
-        // Find the ImageView for the image of attraction by id of list_item_attraction_image
         ImageView attractionImage = findViewById(R.id.place_image);
-        // Get the attraction resource id of image form Bundle and set the image
         attractionImage.setImageResource(bundle.getInt(Keys.PLACE_IMAGE_KEY));
 
-        // Find the textView for the description of the attraction by id of list_item_attraction_description
-        TextView attractionDescription = findViewById(R.id.place_description);
-        // Get the attraction description from Bundle and set the text
+        TextView attractionDescription = findViewById(R.id.allPlaces_activity_attraction_description);
         attractionDescription.setText(bundle.getString(Keys.PLACE_DETAIL_KEY));
 
-        // Find the textView for the Name of the attraction by id of list_item_attraction_name
         TextView attractionName = findViewById(R.id.place_name);
-        // Get the attraction name from Bundle and set the text
         attractionName.setText(bundle.getString(Keys.PLACE_NAME_KEY));
 
-        // Find the textView for the address of the attraction by id of list_item_attraction_address_to_google_maps
-        TextView attractionAddress = findViewById(R.id.place_address);
-        // Get the attraction address from Bundle and set the text
+        TextView attractionAddress = findViewById(R.id.detail_activity_place_address);
         attractionAddress.setText(bundle.getString(Keys.PLACE_ADDRESS_KEY));
 
-        // Find the TextView for displaying rating with id of rating_text
         TextView ratingText = findViewById(R.id.place_rating_text);
-        // Get the attraction ratting from Bundle and set the text
         ratingText.setText(String.valueOf(bundle.getDouble(Keys.PLACE_RATING_KEY)));
 
-        // Find the RatingBar with id of ratting_bar
         RatingBar ratingBar = findViewById(R.id.place_rating_bar);
-        // Convert the rating into float from double and set the RatingBar
         ratingBar.setRating((float) bundle.getDouble(Keys.PLACE_RATING_KEY));
 
-        // Find the TextView with id of take_me_to_location and attach a listener to it
-        // So when user clicks on TextView, it opens up maps through Intent to show location
         TextView openMaps = findViewById(R.id.detail_activity_take_me_to_location);
         openMaps.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -104,15 +88,7 @@ public class AllPlacesActivity extends AppCompatActivity {
         });
     }
 
-    /**
-     * This function is called to generate URI string for map
-     * When this URI is passed, it will show marker on the map with name of particular attraction
-     * clicked on
-     *
-     * @param locationId Location string in format (Latitude, Longitude)
-     * @return URI for maps in format
-     * "geo : Latitude , Longitude ?q = <Latitude> <Longitude> (Label Name)"
-     */
+
     private String getMapsURIString(String locationId) {
         String[] latitudeAndLongitude = locationId.split(",");
         String latitude = latitudeAndLongitude[0];
@@ -122,18 +98,10 @@ public class AllPlacesActivity extends AppCompatActivity {
                 + bundle.getString(Keys.PLACE_NAME_KEY) + ")";
     }
 
-    /**
-     * This function is called to display phone number in
-     * Contact section of activity_attraction_detail. and attach a click listener to phone icon
-     * So when user clicks on phone icon, they can make a call
-     */
     private void showPhoneNumberAndMakeCall() {
-        // Find the TextView with Id list_item_attraction_phone_number and set the phone number
-        TextView phoneNumber = findViewById(R.id.place_phone_number);
+        TextView phoneNumber = findViewById(R.id.detail_activity_place_phone_number);
         phoneNumber.setText(bundle.getString(Keys.PLACE_PHONE_NUMBER_KEY));
 
-        // Find the ImageView with id detail_activity_phone_icon and attach a listener to it
-        // When user clicks on Image, start a new Intent to make a phone call
         ImageView callIcon = findViewById(R.id.place_phone_icon);
         callIcon.setOnClickListener(new View.OnClickListener() {
             @Override
