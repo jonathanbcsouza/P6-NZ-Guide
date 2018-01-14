@@ -28,7 +28,8 @@
             android:name="android.support.PARENT_ACTIVITY"
             android:value="com.tour.guide.MainActivity" />
 
-        <activity android:name=".HotelsActivity"></activity>
+        <activity android:name=".HotelsFragment" />
+        <activity android:name=".SightsFragment"></activity>
     </application>
 
 </manifest>

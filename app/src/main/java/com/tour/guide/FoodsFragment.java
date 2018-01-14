@@ -42,8 +42,8 @@ public class FoodsFragment extends android.support.v4.app.Fragment {
                 , getString(R.string.restaurant1Address)
                 , getResources().getString(R.string.restaurant1Description)
                 , R.drawable.restaurant1
-                , "43.646257, -79.409191"
-                , 3.9
+                , "-36.856566, 174.758455"
+                , 4.9
                 , getString(R.string.restaurant1phone)
                 , R.drawable.restaurant1));
 
@@ -51,8 +51,8 @@ public class FoodsFragment extends android.support.v4.app.Fragment {
                 , getString(R.string.restaurant2Address)
                 , getResources().getString(R.string.restaurant2Description)
                 , R.drawable.restaurant2
-                , "43.646257, -79.409191"
-                , 3.9
+                , "-36.851861, 174.760729"
+                , 4.9
                 , getString(R.string.restaurant2phone)
                 , R.drawable.restaurant2));
 
@@ -60,8 +60,8 @@ public class FoodsFragment extends android.support.v4.app.Fragment {
                 , getString(R.string.restaurant3Address)
                 , getResources().getString(R.string.restaurant3Description)
                 , R.drawable.restaurant3
-                , "43.646257, -79.409191"
-                , 3.9
+                , "-36.857870, 174.756683"
+                , 4.9
                 , getString(R.string.restaurant3phone)
                 , R.drawable.restaurant3));
 
@@ -69,8 +69,8 @@ public class FoodsFragment extends android.support.v4.app.Fragment {
                 , getString(R.string.restaurant4Address)
                 , getResources().getString(R.string.restaurant4Description)
                 , R.drawable.restaurant4
-                , "43.646257, -79.409191"
-                , 3.9
+                , "-36.857228, 174.760122"
+                , 4.9
                 , getString(R.string.restaurant4phone)
                 , R.drawable.restaurant4));
 
@@ -78,8 +78,8 @@ public class FoodsFragment extends android.support.v4.app.Fragment {
                 , getString(R.string.restaurant5Address)
                 , getResources().getString(R.string.restaurant5Description)
                 , R.drawable.restaurant5
-                , "43.646257, -79.409191"
-                , 3.9
+                , "-36.855597, 174.762493"
+                , 4.9
                 , getString(R.string.restaurant5phone)
                 , R.drawable.restaurant5));
 
@@ -87,8 +87,8 @@ public class FoodsFragment extends android.support.v4.app.Fragment {
                 , getString(R.string.restaurant6Address)
                 , getResources().getString(R.string.restaurant6Description)
                 , R.drawable.restaurant6
-                , "43.646257, -79.409191"
-                , 3.9
+                , "-36.857421, 174.759596\n tets"
+                , 4.9
                 , getString(R.string.restaurant6phone)
                 , R.drawable.restaurant6));
 
@@ -96,8 +96,8 @@ public class FoodsFragment extends android.support.v4.app.Fragment {
                 , getString(R.string.restaurant7Address)
                 , getResources().getString(R.string.restaurant7Description)
                 , R.drawable.restaurant7
-                , "43.646257, -79.409191"
-                , 3.9
+                , "-36.855771, 174.762290"
+                , 4.9
                 , getString(R.string.restaurant7phone)
                 , R.drawable.restaurant7));
 
@@ -105,8 +105,8 @@ public class FoodsFragment extends android.support.v4.app.Fragment {
                 , getString(R.string.restaurant8Address)
                 , getResources().getString(R.string.restaurant8Description)
                 , R.drawable.restaurant8
-                , "43.646257, -79.409191"
-                , 3.9
+                , "-36.853287, 174.763031"
+                , 4.9
                 , getString(R.string.restaurant8phone)
                 , R.drawable.restaurant8));
 
@@ -114,8 +114,8 @@ public class FoodsFragment extends android.support.v4.app.Fragment {
                 , getString(R.string.restaurant9Address)
                 , getResources().getString(R.string.restaurant9Description)
                 , R.drawable.restaurant9
-                , "43.646257, -79.409191"
-                , 3.9
+                , "-36.853335, 174.763200"
+                , 4.9
                 , getString(R.string.restaurant9phone)
                 , R.drawable.restaurant9));
 
@@ -123,8 +123,8 @@ public class FoodsFragment extends android.support.v4.app.Fragment {
                 , getString(R.string.restaurant10Address)
                 , getResources().getString(R.string.restaurant10Description)
                 , R.drawable.restaurant10
-                , "43.646257, -79.409191"
-                , 3.9
+                , "-36.853377, 174.763170"
+                , 4.9
                 , getString(R.string.restaurant10phone)
                 , R.drawable.restaurant10));
 
@@ -132,11 +132,11 @@ public class FoodsFragment extends android.support.v4.app.Fragment {
                 , getString(R.string.restaurant11Address)
                 , getResources().getString(R.string.restaurant11Description)
                 , R.drawable.restaurant11
-                , "43.646257, -79.409191"
-                , 3.9
+                , "-36.849571, 174.758403"
+                , 4.9
                 , getString(R.string.restaurant11phone)
                 , R.drawable.restaurant11));
-        
+
 
         PlacesAdapter adapter = new PlacesAdapter(getActivity(), foodsPlaces);
         ListView listView = rootView.findViewById(R.id.fragment_list);

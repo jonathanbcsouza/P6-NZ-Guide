@@ -26,9 +26,9 @@ import android.widget.ListView;
 import java.util.ArrayList;
 
 
-public class HotelsActivity extends android.support.v4.app.Fragment {
+public class HotelsFragment extends android.support.v4.app.Fragment {
 
-    public HotelsActivity() {
+    public HotelsFragment() {
     }
 
     @Override
@@ -41,8 +41,8 @@ public class HotelsActivity extends android.support.v4.app.Fragment {
                 , getString(R.string.hotel1Address)
                 , getResources().getString(R.string.hotel1description)
                 , R.drawable.hotel1
-                , "43.646257, -79.409191"
-                , 3.9
+                , "-36.8485317,174.7620578,17z"
+                , 3.5
                 , getString(R.string.hotel1phone)
                 , R.drawable.hotel1));
 
@@ -50,8 +50,8 @@ public class HotelsActivity extends android.support.v4.app.Fragment {
                 , getString(R.string.hotel2Address)
                 , getResources().getString(R.string.hotel2description)
                 , R.drawable.hotel2
-                , "43.646257, -79.409191"
-                , 3.9
+                , "-36.8471687,174.7605083,17z"
+                , 4.1
                 , getString(R.string.hotel2phone)
                 , R.drawable.hotel2));
 
@@ -59,8 +59,8 @@ public class HotelsActivity extends android.support.v4.app.Fragment {
                 , getString(R.string.hotel3Address)
                 , getResources().getString(R.string.hotel3description)
                 , R.drawable.hotel3
-                , "43.646257, -79.409191"
-                , 3.9
+                , "-36.8468237,174.7714343,17z"
+                , 4.1
                 , getString(R.string.hotel3phone)
                 , R.drawable.hotel3));
 
@@ -72,6 +72,7 @@ public class HotelsActivity extends android.support.v4.app.Fragment {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
                 Intent intentHotels = new Intent(getActivity(), AllPlacesActivity.class);
 
                 Places hotels = hotelsPlaces.get(position);

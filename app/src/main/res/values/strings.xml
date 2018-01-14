@@ -3,8 +3,9 @@
     <string name="app_name">Visit Auckland</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="about">About</string>
+    <string name="sights">Sights</string>
     <string name="hotels">Hotels</string>
-    <string name="flatmates">Flatmates</string>
+    <string name="flatmates">Flats</string>
     <string name="foodsAndDrinks">Foods</string>
 
     <!--All Places standards -->
@@ -23,14 +24,82 @@
     <string name="country_language">English</string>
     <string name="label_country">Country</string>
 
+    <!-- Database for future - Not implemented
+       <string name="sight11">St. Patrick\'s Cathedral</string>
+       <string name="sight12">Auckland Harbour Bridge</string>
+       <string name="sight13">Britomart</string>
+       <string name="sight14">Manukau Heads Lighthouse</string>
+       <string name="sight15">Holy Trinity Cathedral</string>
+       <string name="sight16">MJ Savage Memorial Park</string>
+       <string name="sight17">Spark Arena</string>
+       <string name="sight18">The Alan Gibbs Farm</string>
+       <string name="sight19">Coast-to-Coast Walkway</string>
+       <string name="sight20">Auckland Town Hall</string>
+       <string name="sight21">Vulcan Lane</string>
+       <string name="sight22">Aotea Square</string>
+       <string name="sight23">St Matthew-in-the-City Church</string>
+       <string name="sight24">Mt Smart Stadium Auckland New Zealand</string>
+       <string name="sight25">Titirangi</string>
+       <string name="sight26">Kiwi Valley Farm Park</string>
+       <string name="sight27">Karangahape Road (K Road)</string>
+       <string name="sight28">North Wharf</string>
+       <string name="sight29">Highwic</string>
+       <string name="sight30">Alberton</string>
+       -->
+
+    <!-- Fragment Sights Top 10 -->
+    <string name="sight1">SkyTower</string>
+    <string name="sight2">Waitakere Ranges</string>
+    <string name="sight3">Viaduct Harbour</string>
+    <string name="sight4">One Tree Hill (Maungakiekie)</string>
+    <string name="sight5">North Head Historic Reserve</string>
+    <string name="sight6">Ponsonby</string>
+    <string name="sight7">Parnell</string>
+    <string name="sight8">Howick Historical Village</string>
+    <string name="sight9">Queen Street</string>
+    <string name="sight10">Ferry Building</string>
+
+    <string name="sight1phone">09-363 6000</string>
+    <string name="sight2phone">09-817 0089</string>
+    <string name="sight3phone">09-300 7582</string>
+    <string name="sight4phone">09-600 1545</string>
+    <string name="sight5phone">09-362 0655</string>
+    <string name="sight6phone">09-377 7780</string>
+    <string name="sight7phone">09-303 0150</string>
+    <string name="sight8phone">09-379 5656</string>
+    <string name="sight9phone">09-379 5151</string>
+    <string name="sight10phone">09-379 5353</string>
+
+    <string name="sight1Address">Corner Victoria and Federal Sts, Auckland Central, Auckland 1010, New Zealand</string>
+    <string name="sight2Address">Arataki Visitor Centre | 300 Scenic Drive, Titirangi, Auckland Central, Auckland 0604, New Zealand</string>
+    <string name="sight3Address">Viaduct Harbour Ave, Auckland Central, Auckland 1010, New Zealand</string>
+    <string name="sight4Address">670 Manukau Road | Epsom, Auckland Central, Auckland 1023, New Zealand</string>
+    <string name="sight5Address">Takarunga Rd. | Devonport, Auckland Central, Auckland, New Zealand</string>
+    <string name="sight6Address">Auckland Central, Auckland, New Zealand</string>
+    <string name="sight7Address">Parnell Road, Auckland Central, Auckland 1052, New Zealand</string>
+    <string name="sight8Address">Bells Road | Lloyd Elsmore Park, Howick, Auckland Central, Auckland, New Zealand</string>
+    <string name="sight9Address">Auckland Central, Auckland, New Zealand</string>
+    <string name="sight10Address">Ferry Building 99 Quay Street, Auckland Central, Auckland 1010, New Zealand</string>
+
+    <string name="sight1description">Auckland\'s Sky Tower is the tallest structure in the Southern Hemisphere, this tower is more than 300 metres high. Offering stunning views, along with award winning restaurants, a gift shop and an opportunity to push your limits by walking the outside of the viewing platforms, or by jumping off from 192 metres above Auckland's CBD.</string>
+    <string name="sight2description">This scenic drive takes you past bush scenery, to observation points for spectacular views and to gorgeous beaches.</string>
+    <string name="sight3description">Visit the center of Auckland sailing and the place for the finest restaurants, bars, and luxury apartments.</string>
+    <string name="sight4description">The second highest volcanic peak in Auckland, next to Mount Eden, One Tree Hill offers views of the city and has a huge obelisk at the top.</string>
+    <string name="sight5description">Historic Reserve</string>
+    <string name="sight6description">Neighbourhoods</string>
+    <string name="sight7description">Saved from demolition by the efforts of one individual, this restored historic village has specialty and antique shops, cafes, pubs and restaurants and is a trendy nightspot.</string>
+    <string name="sight8description">Enter another era at this living museum, where costumed staff and 30 restored buildings recreate an early Auckland settlement.</string>
+    <string name="sight9description">Auckland’s main street is home to numerous shops, restaurants and entertainment centers.</string>
+    <string name="sight10description">Architectural Buildings</string>
+
     <!-- Fragment Hotels -->
-    <string name="hotel1">Best Western President Hotel</string>
+    <string name="hotel1">Best Western</string>
     <string name="hotel2">Rydges</string>
     <string name="hotel3">Waldorf Stadium Apartments </string>
 
-    <string name="hotel1phone">021 1901614</string>
-    <string name="hotel2phone">021 1901614</string>
-    <string name="hotel3phone">021 1901614</string>
+    <string name="hotel1phone">09-303 1333</string>
+    <string name="hotel2phone">09-375 5900</string>
+    <string name="hotel3phone">09-337 5300</string>
 
     <string name="hotel1Address">27-35 Victoria Street West, 1010 Auckland, New Zealand</string>
     <string name="hotel2Address">Cnr Kingston &amp; Federal Streets, 1010 Auckland, New Zealand</string>

@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.RatingBar;
 import android.widget.TextView;
 
@@ -26,7 +27,7 @@ public class AllPlacesActivity extends AppCompatActivity {
         int identifier = bundle.getInt(Keys.FRAGMENT_PLACE);
         switch (identifier) {
             case 0:
-                setTitle(getString(R.string.about));
+                setTitle(getString(R.string.sights));
                 break;
             case 1:
                 setTitle(getString(R.string.hotels));
@@ -57,17 +58,17 @@ public class AllPlacesActivity extends AppCompatActivity {
             addressTitle.setText(getString(R.string.address_title));
         }
 
-        ImageView attractionImage = findViewById(R.id.place_image);
-        attractionImage.setImageResource(bundle.getInt(Keys.PLACE_IMAGE_KEY));
+        ImageView placeImage = findViewById(R.id.place_image);
+        placeImage.setImageResource(bundle.getInt(Keys.PLACE_IMAGE_KEY));
 
-        TextView attractionDescription = findViewById(R.id.allPlaces_activity_attraction_description);
-        attractionDescription.setText(bundle.getString(Keys.PLACE_DETAIL_KEY));
+        TextView placeDescription = findViewById(R.id.allPlaces_activity_attraction_description);
+        placeDescription.setText(bundle.getString(Keys.PLACE_DETAIL_KEY));
 
-        TextView attractionName = findViewById(R.id.place_name);
-        attractionName.setText(bundle.getString(Keys.PLACE_NAME_KEY));
+        TextView placeName = findViewById(R.id.place_name);
+        placeName.setText(bundle.getString(Keys.PLACE_NAME_KEY));
 
-        TextView attractionAddress = findViewById(R.id.detail_activity_place_address);
-        attractionAddress.setText(bundle.getString(Keys.PLACE_ADDRESS_KEY));
+        TextView placeAddress = findViewById(R.id.detail_activity_place_address);
+        placeAddress.setText(bundle.getString(Keys.PLACE_ADDRESS_KEY));
 
         TextView ratingText = findViewById(R.id.place_rating_text);
         ratingText.setText(String.valueOf(bundle.getDouble(Keys.PLACE_RATING_KEY)));
@@ -75,7 +76,7 @@ public class AllPlacesActivity extends AppCompatActivity {
         RatingBar ratingBar = findViewById(R.id.place_rating_bar);
         ratingBar.setRating((float) bundle.getDouble(Keys.PLACE_RATING_KEY));
 
-        TextView openMaps = findViewById(R.id.detail_activity_take_me_to_location);
+        LinearLayout openMaps = findViewById(R.id.detail_activity_take_me_to_location);
         openMaps.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
