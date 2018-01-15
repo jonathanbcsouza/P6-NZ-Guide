@@ -1,5 +1,5 @@
 Tour Guide - Auckland City - New Zealand 
-<img src="https://upload.wikimedia.org/wikipedia/en/thumb/3/35/New_Zealand_Cricket_Cap_Insignia.svg/120px New_Zealand_Cricket_Cap_Insignia.svg.png" width="50"  align="center" >
+<img src="https://upload.wikimedia.org/wikipedia/en/thumb/3/35/New_Zealand_Cricket_Cap_Insignia.svg/120px-New_Zealand_Cricket_Cap_Insignia.svg.png" width="50"  align="left" >
 =================================
 
 <img src="https://lh3.googleusercontent.com/ZDqEVjop42KVd17v1396Fj6vSWh0KOnWxJnxaqrAbJJGJUSXyeML1xshzJ96O4Zo64of=h900-rw" width="150" align="right" hspace="5">
