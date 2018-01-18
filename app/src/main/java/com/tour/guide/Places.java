@@ -31,18 +31,6 @@ public class Places {
         mThumbnailResourceId = thumbnailResourceID;
     }
 
-    /**
-     * Constructor for details about places
-     *
-     * @param placesName        name of the place
-     * @param placesAddress     address of the place
-     * @param placesDescription general description of the place
-     * @param imageResourceId       image resource id of the place
-     * @param locationId            location detail in form of latitude and longitude
-     * @param placesRating      rating for places
-     * @param placesPhoneNumber phone number of place
-     * @param thumbnailResourceId   thumbnail resource id of the place
-     */
     public Places(String placesName
             , String placesAddress
             , String placesDescription

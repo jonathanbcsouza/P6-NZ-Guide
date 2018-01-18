@@ -8,11 +8,12 @@
     <color name="colorText">#000</color>
 
     <!-- Text color scheme -->
-    <color name="textDark">#000000</color>
     <color name="primaryTextColor">#303030</color>
     <color name="secondaryTextColor">#757575</color>
-    <color name="whiteText">#FFFFFF</color>
 
     <!-- Background color scheme -->
     <color name="primaryBackground">#f1f1f1</color>
+
+    <!--Transparente Background -->
+    <color name="transparentColor">#99000000</color>
 </resources>

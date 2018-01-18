@@ -7,18 +7,20 @@ import android.os.Bundle;
 
 public class SplashActivity extends AppCompatActivity {
 
+    int delayTime = 1400;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-    // Delay created
+        // Delay created
         Handler handle = new Handler();
         handle.postDelayed(new Runnable() {
             @Override
             public void run() {
                 startApp();
             }
-        }, 1400);
+        }, delayTime);
 
     }
 

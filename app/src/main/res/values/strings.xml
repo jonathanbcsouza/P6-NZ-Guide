@@ -1,7 +1,6 @@
 <resources>
     <!-- App main structure -->
     <string name="app_name">Visit Auckland</string>
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="about">About</string>
     <string name="sights">Sights</string>
     <string name="hotels">Hotels</string>
@@ -17,35 +16,17 @@
     <string name="label_language">Main Language</string>
     <string name="label_airports">Main Airport</string>
     <string name="label_transport">Modes of Transport</string>
-    <string name="label_time">Local Time</string>
     <string name="label_about_city">About the City</string>
-    <string name="label_btn_website">Visit Website</string>
     <string name="airport_name">Auckland airport</string>
     <string name="country_language">English</string>
     <string name="label_country">Country</string>
 
-    <!-- Database for future - Not implemented
-       <string name="sight11">St. Patrick\'s Cathedral</string>
-       <string name="sight12">Auckland Harbour Bridge</string>
-       <string name="sight13">Britomart</string>
-       <string name="sight14">Manukau Heads Lighthouse</string>
-       <string name="sight15">Holy Trinity Cathedral</string>
-       <string name="sight16">MJ Savage Memorial Park</string>
-       <string name="sight17">Spark Arena</string>
-       <string name="sight18">The Alan Gibbs Farm</string>
-       <string name="sight19">Coast-to-Coast Walkway</string>
-       <string name="sight20">Auckland Town Hall</string>
-       <string name="sight21">Vulcan Lane</string>
-       <string name="sight22">Aotea Square</string>
-       <string name="sight23">St Matthew-in-the-City Church</string>
-       <string name="sight24">Mt Smart Stadium Auckland New Zealand</string>
-       <string name="sight25">Titirangi</string>
-       <string name="sight26">Kiwi Valley Farm Park</string>
-       <string name="sight27">Karangahape Road (K Road)</string>
-       <string name="sight28">North Wharf</string>
-       <string name="sight29">Highwic</string>
-       <string name="sight30">Alberton</string>
-       -->
+    <!-- Others -->
+    <string name="tourist_information">Tourist Information</string>
+    <string name="go">go</string>
+    <string name="auckland">auckland</string>
+    <string name="transports">bus_rail_ferry_and_flights</string>
+    <string name="city_description">auckland_is_a_city_in_new_zealand_s_north_island_auckland_is_the_largest_urban_area_in_the_country_with_an_urban_population_of_around_1_534_700_it_is_located_in_the_auckland_region_the_area_governed_by_auckland_council_which_includes_outlying_rural_areas_and_the_islands_of_the_hauraki_gulf_resulting_in_a_total_population_of_1_657_200_a_diverse_and_multicultural_city_auckland_is_home_to_the_largest_polynesian_population_in_the_world_the_m_ori_language_name_for_auckland_is_t_maki_or_t_maki_makau_rau_meaning_t_maki_with_a_hundred_lovers_in_reference_to_the_desirability_of_its_fertile_land_at_the_hub_of_waterways_in_all_directions_it_has_also_been_called_karana_a_transliteration_of_the_english_name</string>
 
     <!-- Fragment Sights Top 10 -->
     <string name="sight1">SkyTower</string>
@@ -60,8 +41,8 @@
     <string name="sight10">Ferry Building</string>
 
     <string name="sight1phone">09-363 6000</string>
-    <string name="sight2phone">09-817 0089</string>
-    <string name="sight3phone">09-300 7582</string>
+    <string name="sight2phone">9 365 9918</string>
+    <string name="sight3phone">9 365 9918</string>
     <string name="sight4phone">09-600 1545</string>
     <string name="sight5phone">09-362 0655</string>
     <string name="sight6phone">09-377 7780</string>
@@ -84,13 +65,17 @@
     <string name="sight1description">Auckland\'s Sky Tower is the tallest structure in the Southern Hemisphere, this tower is more than 300 metres high. Offering stunning views, along with award winning restaurants, a gift shop and an opportunity to push your limits by walking the outside of the viewing platforms, or by jumping off from 192 metres above Auckland's CBD.</string>
     <string name="sight2description">This scenic drive takes you past bush scenery, to observation points for spectacular views and to gorgeous beaches.</string>
     <string name="sight3description">Visit the center of Auckland sailing and the place for the finest restaurants, bars, and luxury apartments.</string>
-    <string name="sight4description">The second highest volcanic peak in Auckland, next to Mount Eden, One Tree Hill offers views of the city and has a huge obelisk at the top.</string>
-    <string name="sight5description">Historic Reserve</string>
-    <string name="sight6description">Neighbourhoods</string>
-    <string name="sight7description">Saved from demolition by the efforts of one individual, this restored historic village has specialty and antique shops, cafes, pubs and restaurants and is a trendy nightspot.</string>
-    <string name="sight8description">Enter another era at this living museum, where costumed staff and 30 restored buildings recreate an early Auckland settlement.</string>
-    <string name="sight9description">Auckland’s main street is home to numerous shops, restaurants and entertainment centers.</string>
-    <string name="sight10description">Architectural Buildings</string>
+
+    <string name="sights_location_1">-36.8484437,174.7600023,17z</string>
+    <string name="sights_location_2">-37.0136954,174.5542605,11z</string>
+    <string name="sights_location_3">-36.8429654,174.7559422,16z</string>
+    <string name="sights_location_4">-36.899982,174.7745785,15z</string>
+    <string name="sights_location_5">-36.8270751,174.8096291,17z</string>
+    <string name="sights_location_6">-36.8505695,174.7304198,15z</string>
+    <string name="sights_location_7">-36.8556312,174.770044,14z</string>
+    <string name="sights_location_8">-36.9074857,174.9005203,17z</string>
+    <string name="sights_location_9">-36.8508956,174.7623284,17z</string>
+    <string name="sights_location_10">-36.8429846,174.7647521,17z</string>
 
     <!-- Fragment Hotels -->
     <string name="hotel1">Best Western</string>
@@ -146,6 +131,10 @@
         Voyager Maritime Museum and shopping on Queen Street are each a 15-minute walk away.
         This is our guests' favourite part of Auckland, according to independent reviews.
         Couples particularly like the location — they rated it 8.7 for a two-person trip.</string>
+
+    <string name="hotel_location_1">-36.8485317,174.7620578,17z</string>
+    <string name="hotel_location_2">-36.8471687,174.7605083,17z</string>
+    <string name="hotel_location_3">-36.8468237,174.7714343,17z</string>
 
     <!-- Fragment Flatmates -->
     <string name="flatmate1">New Windsor, 5 bedrooms</string>
@@ -246,6 +235,14 @@
         1 TV has Sky and other has Google Cast for Netflix etc
         Room has Furniture and bedding if you need.No pets.</string>
 
+    <string name="flatmate_location_1">-36.9040558,174.7046399,15z</string>
+    <string name="flatmate_location_2">-36.9105399,174.7624982,15z</string>
+    <string name="flatmate_location_3">-36.7345931,174.6816716,14z</string>
+    <string name="flatmate_location_4">-36.8608996,174.7575403,15z</string>
+    <string name="flatmate_location_5">-36.8879967,174.7185396,14z</string>
+    <string name="flatmate_location_6">-36.9736861,174.8963783,13z</string>
+    <string name="flatmate_location_7">-37.0454281,174.9038104,15z</string>
+
     <!-- Fragment FoodsAndDrinks -->
     <string name="restaurant1">POKPOK Thai Restaurant &amp; Bar</string>
     <string name="restaurant2">Katsura Japanese Restaurant</string>
@@ -293,8 +290,19 @@
     <string name="restaurant8Description">Sushi Restaurant</string>
     <string name="restaurant9Description">Yakitori Restaurant</string>
     <string name="restaurant10Description">Japanese Restaurant</string>
-    <string name="restaurant11Description">Mediterranean Restaurant
-</string>
+    <string name="restaurant11Description">Mediterranean Restaurant</string>
+
+    <string name="restaurant_location_1">-36.856566, 174.758455</string>
+    <string name="restaurant_location_2">-36.851861, 174.760729</string>
+    <string name="restaurant_location_3">-36.857870, 174.756683</string>
+    <string name="restaurant_location_4">-36.857228, 174.760122</string>
+    <string name="restaurant_location_5">-36.855597, 174.762493</string>
+    <string name="restaurant_location_6">-36.857421, 174.759596</string>
+    <string name="restaurant_location_7">-36.855771, 174.762290</string>
+    <string name="restaurant_location_8">-36.853287, 174.763031</string>
+    <string name="restaurant_location_9">-36.853335, 174.763200</string>
+    <string name="restaurant_location_10">-36.853377, 174.763170</string>
+    <string name="restaurant_location_11">-36.849571, 174.758403</string>
 
 </resources>
 

@@ -10,6 +10,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.squareup.picasso.Picasso;
 import com.tour.guide.Places;
 import com.tour.guide.R;
 
@@ -35,6 +36,7 @@ public class PlacesAdapter extends ArrayAdapter<Places> {
         Places currentPlaces = getItem(position);
 
         ImageView attractionImage = listItemView.findViewById(R.id.list_item_image);
+
         assert currentPlaces != null;
         attractionImage.setImageResource(currentPlaces.getThubmnailResourceId());
 

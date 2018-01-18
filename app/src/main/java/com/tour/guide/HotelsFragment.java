@@ -41,7 +41,7 @@ public class HotelsFragment extends android.support.v4.app.Fragment {
                 , getString(R.string.hotel1Address)
                 , getResources().getString(R.string.hotel1description)
                 , R.drawable.hotel1
-                , "-36.8485317,174.7620578,17z"
+                , getString(R.string.hotel_location_1)
                 , 3.5
                 , getString(R.string.hotel1phone)
                 , R.drawable.hotel1));
@@ -50,7 +50,7 @@ public class HotelsFragment extends android.support.v4.app.Fragment {
                 , getString(R.string.hotel2Address)
                 , getResources().getString(R.string.hotel2description)
                 , R.drawable.hotel2
-                , "-36.8471687,174.7605083,17z"
+                , getString(R.string.hotel_location_2)
                 , 4.1
                 , getString(R.string.hotel2phone)
                 , R.drawable.hotel2));
@@ -59,7 +59,7 @@ public class HotelsFragment extends android.support.v4.app.Fragment {
                 , getString(R.string.hotel3Address)
                 , getResources().getString(R.string.hotel3description)
                 , R.drawable.hotel3
-                , "-36.8468237,174.7714343,17z"
+                , getString(R.string.hotel_location_3)
                 , 4.1
                 , getString(R.string.hotel3phone)
                 , R.drawable.hotel3));

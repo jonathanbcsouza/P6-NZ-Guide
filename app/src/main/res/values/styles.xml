@@ -10,32 +10,12 @@
     </style>
 
 
-    <style name="MyActionBar" parent="@android:style/Widget.Holo.Light.ActionBar">
-        <item name="android:background">#FF9D21</item>
-        <item name="android:titleTextStyle">@style/MyActionBarTitleText</item>
-    </style>
-
-    <style name="MyActionBarTitleText" parent="@android:style/TextAppearance.Holo.Widget.ActionBar.Title">
-        <item name="android:textColor">@color/colorLightGrey</item>
-        <item name="android:textStyle">bold</item>
-    </style>
-
     <style name="BarStyle" parent="@style/Widget.AppCompat.Light.ActionBar.Solid.Inverse">
         <item name="elevation">0dp</item>
     </style>
 
-    <style name="CategoryTab" parent="Widget.Design.TabLayout">
-        <item name="tabIndicatorColor">@android:color/white</item>
-        <item name="tabSelectedTextColor">@android:color/white</item>
-        <item name="tabTextAppearance">@style/CategoryTabTextAppearance</item>
-    </style>
-
-    <style name="CategoryTabTextAppearance" parent="TextAppearance.Design.Tab">
-        <item name="android:textColor">#A8A19E</item>
-    </style>
-
     <style name="SplashTheme" parent="Theme.AppCompat.NoActionBar">
-        <item name="android:windowBackground">@drawable/splash_auckland</item>
+        <item name="android:windowBackground">@drawable/auckland_hd</item>
 
     </style>
 
@@ -117,15 +97,6 @@
         <item name="android:textStyle">bold</item>
     </style>
 
-    <style name="detail_activity_take_me_button_style">
-
-        <item name="android:background">@drawable/textview_background</item>
-        <item name="android:fontFamily">sans-serif-medium</item>
-        <item name="android:padding">8dp</item>
-        <item name="android:textColor">@color/whiteText</item>
-        <item name="android:textSize">14sp</item>
-    </style>
-
 
     <style name="detail_activity_summary_style">
         <item name="android:layout_width">match_parent</item>
@@ -146,15 +117,6 @@
         <item name="android:textSize">16sp</item>
         <item name="android:textStyle">bold</item>
     </style>
-
-    <style name="AppTheme.NoActionBar">
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
-    </style>
-
-    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
-
-    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
 
 </resources>

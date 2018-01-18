@@ -41,7 +41,7 @@ public class FlatmatesWanted extends android.support.v4.app.Fragment {
                 , getString(R.string.flatmate1Address)
                 , getResources().getString(R.string.flatmate1Description)
                 , R.drawable.flatmate1
-                , "-36.9040558,174.7046399,15z"
+                , getString(R.string.flatmate_location_1)
                 , 4.9
                 , getString(R.string.flatmate1phone)
                 , R.drawable.flatmate1));
@@ -50,7 +50,7 @@ public class FlatmatesWanted extends android.support.v4.app.Fragment {
                 , getString(R.string.flatmate2Address)
                 , getResources().getString(R.string.flatmate2Description)
                 , R.drawable.flatmate2
-                , "-36.9105399,174.7624982,15z"
+                , getString(R.string.flatmate_location_2)
                 , 5.0
                 , getString(R.string.flatmate2phone)
                 , R.drawable.flatmate2));
@@ -59,7 +59,7 @@ public class FlatmatesWanted extends android.support.v4.app.Fragment {
                 , getString(R.string.flatmate3Address)
                 , getResources().getString(R.string.flatmate3Description)
                 , R.drawable.flatmate3
-                , "-36.7345931,174.6816716,14z"
+                , getString(R.string.flatmate_location_3)
                 , 3.5
                 , getString(R.string.flatmate3phone)
                 , R.drawable.flatmate3));
@@ -68,7 +68,7 @@ public class FlatmatesWanted extends android.support.v4.app.Fragment {
                 , getString(R.string.flatmate4Address)
                 , getResources().getString(R.string.flatmate4Description)
                 , R.drawable.flatmate4
-                , "-36.8608996,174.7575403,15z"
+                , getString(R.string.flatmate_location_4)
                 , 3.9
                 , getString(R.string.flatmate4phone)
                 , R.drawable.flatmate4));
@@ -77,7 +77,7 @@ public class FlatmatesWanted extends android.support.v4.app.Fragment {
                 , getString(R.string.flatmate5Address)
                 , getResources().getString(R.string.flatmate5Description)
                 , R.drawable.flatmate5
-                , "-36.8879967,174.7185396,14z"
+                , getString(R.string.flatmate_location_5)
                 , 4.9
                 , getString(R.string.flatmate5phone)
                 , R.drawable.flatmate5));
@@ -86,7 +86,7 @@ public class FlatmatesWanted extends android.support.v4.app.Fragment {
                 , getString(R.string.flatmate6Address)
                 , getResources().getString(R.string.flatmate6Description)
                 , R.drawable.flatmate6
-                , "-36.9736861,174.8963783,13z"
+                , getString(R.string.flatmate_location_6)
                 , 2.9
                 , getString(R.string.flatmate6phone)
                 , R.drawable.flatmate6));
@@ -95,7 +95,7 @@ public class FlatmatesWanted extends android.support.v4.app.Fragment {
                 , getString(R.string.flatmate7Address)
                 , getResources().getString(R.string.flatmate7Description)
                 , R.drawable.flatmate7
-                , "-37.0454281,174.9038104,15z"
+                , getString(R.string.flatmate_location_7)
                 , 3.9
                 , getString(R.string.flatmate7phone)
                 , R.drawable.flatmate7));

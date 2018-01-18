@@ -23,7 +23,6 @@
                 android:orientation="vertical">
 
                 <ImageView
-                    android:id="@+id/image_city"
                     android:layout_width="@dimen/city_icon_width"
                     android:layout_height="@dimen/city_icon_height"
                     android:scaleType="centerCrop"
@@ -42,16 +41,14 @@
                     android:text="@string/label_country" />
 
                 <TextView
-                    android:id="@+id/text_country"
                     style="@style/CityFactPanel"
-                    android:text="Auckland" />
+                    android:text="@string/auckland" />
 
                 <TextView
                     style="@style/CityFactHeader"
                     android:text="@string/label_language" />
 
                 <TextView
-                    android:id="@+id/text_language"
                     style="@style/CityFactPanel"
                     android:text="@string/country_language" />
 
@@ -60,7 +57,6 @@
                     android:text="@string/label_airports" />
 
                 <TextView
-                    android:id="@+id/text_airport"
                     style="@style/CityFactPanel"
                     android:text="@string/airport_name" />
 
@@ -69,9 +65,8 @@
                     android:text="@string/label_transport" />
 
                 <TextView
-                    android:id="@+id/text_transport"
                     style="@style/CityFactPanel"
-                    android:text="Bus, rail, ferry and flights" />
+                    android:text="@string/transports" />
 
             </LinearLayout>
 
@@ -83,10 +78,9 @@
             android:text="@string/label_about_city" />
 
         <TextView
-            android:id="@+id/text_panel_about"
             style="@style/CityPanelGreen"
             android:background="@color/colorLightGrey"
-            android:text="Auckland is a city in New Zealand's North Island. Auckland is the largest urban area in the country, with an urban population of around 1,534,700. It is located in the Auckland Region—the area governed by Auckland Council—which includes outlying rural areas and the islands of the Hauraki Gulf, resulting in a total population of 1,657,200. A diverse and multicultural city, Auckland is home to the largest Polynesian population in the world. The Māori-language name for Auckland is Tāmaki or Tāmaki-makau-rau, meaning (Tāmaki with a hundred lovers), in reference to the desirability of its fertile land at the hub of waterways in all directions. It has also been called Ākarana, a transliteration of the English name."
+            android:text="@string/city_description"
             android:textColor="@color/colorText" />
 
     </LinearLayout>

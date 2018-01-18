@@ -26,7 +26,7 @@ public class SightsFragment extends android.support.v4.app.Fragment {
                 , getString(R.string.sight1Address)
                 , getResources().getString(R.string.sight1description)
                 , R.drawable.sight1
-                , "-36.8484437,174.7600023,17z"
+                , getString(R.string.sights_location_1)
                 , 5
                 , getString(R.string.sight1phone)
                 , R.drawable.sight1));
@@ -35,25 +35,25 @@ public class SightsFragment extends android.support.v4.app.Fragment {
                 , getString(R.string.sight2Address)
                 , getResources().getString(R.string.sight2description)
                 , R.drawable.sight2
-                , "-37.0136954,174.5542605,11z"
+                , getString(R.string.sights_location_2)
                 , 4.2
-                , "+64 9 365 9918 - Tourist Information"
+                , getString(R.string.sight2phone) + getString(R.string.tourist_information)
                 , R.drawable.sight2));
 
         sightsPlaces.add(new Places(getString(R.string.sight3)
                 , getString(R.string.sight3Address)
                 , getResources().getString(R.string.sight3description)
                 , R.drawable.sight3
-                , "-36.8429654,174.7559422,16z"
+                , getString(R.string.sights_location_3)
                 , 4
-                , "+64 9 365 9918 - Tourist Information"
+                , getString(R.string.sight3phone) + getString(R.string.tourist_information)
                 , R.drawable.sight3));
 
         sightsPlaces.add(new Places(getString(R.string.sight4)
                 , getString(R.string.sight4Address)
                 , getResources().getString(R.string.sight3description)
                 , R.drawable.sight4
-                , "-36.899982,174.7745785,15z"
+                , getString(R.string.sights_location_4)
                 , 4
                 , getString(R.string.sight4phone)
                 , R.drawable.sight4));
@@ -62,7 +62,7 @@ public class SightsFragment extends android.support.v4.app.Fragment {
                 , getString(R.string.sight5Address)
                 , getResources().getString(R.string.sight3description)
                 , R.drawable.sight5
-                , "-36.8270751,174.8096291,17z"
+                , getString(R.string.sights_location_5)
                 , 4
                 , getString(R.string.sight5phone)
                 , R.drawable.sight5));
@@ -71,7 +71,7 @@ public class SightsFragment extends android.support.v4.app.Fragment {
                 , getString(R.string.sight6Address)
                 , getResources().getString(R.string.sight3description)
                 , R.drawable.sight6
-                , "-36.8505695,174.7304198,15z"
+                , getString(R.string.sights_location_6)
                 , 4
                 , getString(R.string.sight6phone)
                 , R.drawable.sight6));
@@ -80,7 +80,7 @@ public class SightsFragment extends android.support.v4.app.Fragment {
                 , getString(R.string.sight7Address)
                 , getResources().getString(R.string.sight3description)
                 , R.drawable.sight7
-                , "-36.8556312,174.770044,14z"
+                , getString(R.string.sights_location_7)
                 , 4
                 , getString(R.string.sight7phone)
                 , R.drawable.sight7));
@@ -89,7 +89,7 @@ public class SightsFragment extends android.support.v4.app.Fragment {
                 , getString(R.string.sight8Address)
                 , getResources().getString(R.string.sight3description)
                 , R.drawable.sight8
-                , "-36.9074857,174.9005203,17z"
+                , getString(R.string.sights_location_8)
                 , 4
                 , getString(R.string.sight8phone)
                 , R.drawable.sight8));
@@ -98,7 +98,7 @@ public class SightsFragment extends android.support.v4.app.Fragment {
                 , getString(R.string.sight9Address)
                 , getResources().getString(R.string.sight3description)
                 , R.drawable.sight9
-                , "-36.8508956,174.7623284,17z"
+                , getString(R.string.sights_location_9)
                 , 4
                 , getString(R.string.sight9phone)
                 , R.drawable.sight9));
@@ -107,7 +107,7 @@ public class SightsFragment extends android.support.v4.app.Fragment {
                 , getString(R.string.sight10Address)
                 , getResources().getString(R.string.sight3description)
                 , R.drawable.sight10
-                , "-36.8429846,174.7647521,17z"
+                , getString(R.string.sights_location_10)
                 , 4
                 , getString(R.string.sight10phone)
                 , R.drawable.sight10));
