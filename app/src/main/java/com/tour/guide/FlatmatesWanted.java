@@ -40,65 +40,65 @@ public class FlatmatesWanted extends android.support.v4.app.Fragment {
         flatmatesPlaces.add(new Places(getString(R.string.flatmate1)
                 , getString(R.string.flatmate1Address)
                 , getResources().getString(R.string.flatmate1Description)
-                , R.drawable.flatmate1
+                , R.mipmap.flatmate1
                 , getString(R.string.flatmate_location_1)
                 , 4.9
                 , getString(R.string.flatmate1phone)
-                , R.drawable.flatmate1));
+                , R.mipmap.flatmate1));
 
         flatmatesPlaces.add(new Places(getString(R.string.flatmate2)
                 , getString(R.string.flatmate2Address)
                 , getResources().getString(R.string.flatmate2Description)
-                , R.drawable.flatmate2
+                , R.mipmap.flatmate2
                 , getString(R.string.flatmate_location_2)
                 , 5.0
                 , getString(R.string.flatmate2phone)
-                , R.drawable.flatmate2));
+                , R.mipmap.flatmate2));
 
         flatmatesPlaces.add(new Places(getString(R.string.flatmate3)
                 , getString(R.string.flatmate3Address)
                 , getResources().getString(R.string.flatmate3Description)
-                , R.drawable.flatmate3
+                , R.mipmap.flatmate3
                 , getString(R.string.flatmate_location_3)
                 , 3.5
                 , getString(R.string.flatmate3phone)
-                , R.drawable.flatmate3));
+                , R.mipmap.flatmate3));
 
         flatmatesPlaces.add(new Places(getString(R.string.flatmate4)
                 , getString(R.string.flatmate4Address)
                 , getResources().getString(R.string.flatmate4Description)
-                , R.drawable.flatmate4
+                , R.mipmap.flatmate4
                 , getString(R.string.flatmate_location_4)
                 , 3.9
                 , getString(R.string.flatmate4phone)
-                , R.drawable.flatmate4));
+                , R.mipmap.flatmate4));
 
         flatmatesPlaces.add(new Places(getString(R.string.flatmate5)
                 , getString(R.string.flatmate5Address)
                 , getResources().getString(R.string.flatmate5Description)
-                , R.drawable.flatmate5
+                , R.mipmap.flatmate5
                 , getString(R.string.flatmate_location_5)
                 , 4.9
                 , getString(R.string.flatmate5phone)
-                , R.drawable.flatmate5));
+                , R.mipmap.flatmate5));
 
         flatmatesPlaces.add(new Places(getString(R.string.flatmate6)
                 , getString(R.string.flatmate6Address)
                 , getResources().getString(R.string.flatmate6Description)
-                , R.drawable.flatmate6
+                , R.mipmap.flatmate6
                 , getString(R.string.flatmate_location_6)
                 , 2.9
                 , getString(R.string.flatmate6phone)
-                , R.drawable.flatmate6));
+                , R.mipmap.flatmate6));
 
         flatmatesPlaces.add(new Places(getString(R.string.flatmate7)
                 , getString(R.string.flatmate7Address)
                 , getResources().getString(R.string.flatmate7Description)
-                , R.drawable.flatmate7
+                , R.mipmap.flatmate7
                 , getString(R.string.flatmate_location_7)
                 , 3.9
                 , getString(R.string.flatmate7phone)
-                , R.drawable.flatmate7));
+                , R.mipmap.flatmate7));
 
 
         PlacesAdapter adapter = new PlacesAdapter(getActivity(), flatmatesPlaces);

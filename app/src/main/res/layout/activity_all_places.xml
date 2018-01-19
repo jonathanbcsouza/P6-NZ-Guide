@@ -19,8 +19,7 @@
                 android:id="@+id/place_image"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/image_height"
-                android:scaleType="centerCrop"
-                android:src="@drawable/auckland" />
+                android:scaleType="centerCrop" />
 
             <LinearLayout
                 android:layout_width="match_parent"

@@ -41,101 +41,101 @@ public class FoodsFragment extends android.support.v4.app.Fragment {
         foodsPlaces.add(new Places(getString(R.string.restaurant1)
                 , getString(R.string.restaurant1Address)
                 , getResources().getString(R.string.restaurant1Description)
-                , R.drawable.restaurant1
+                , R.mipmap.restaurant1
                 , getString(R.string.restaurant_location_1)
                 , 4.9
                 , getString(R.string.restaurant1phone)
-                , R.drawable.restaurant1));
+                , R.mipmap.restaurant1));
 
         foodsPlaces.add(new Places(getString(R.string.restaurant2)
                 , getString(R.string.restaurant2Address)
                 , getResources().getString(R.string.restaurant2Description)
-                , R.drawable.restaurant2
+                , R.mipmap.restaurant2
                 , getString(R.string.restaurant_location_2)
                 , 4.9
                 , getString(R.string.restaurant2phone)
-                , R.drawable.restaurant2));
+                , R.mipmap.restaurant2));
 
         foodsPlaces.add(new Places(getString(R.string.restaurant3)
                 , getString(R.string.restaurant3Address)
                 , getResources().getString(R.string.restaurant3Description)
-                , R.drawable.restaurant3
+                , R.mipmap.restaurant3
                 , getString(R.string.restaurant_location_3)
                 , 4.9
                 , getString(R.string.restaurant3phone)
-                , R.drawable.restaurant3));
+                , R.mipmap.restaurant3));
 
         foodsPlaces.add(new Places(getString(R.string.restaurant4)
                 , getString(R.string.restaurant4Address)
                 , getResources().getString(R.string.restaurant4Description)
-                , R.drawable.restaurant4
+                , R.mipmap.restaurant4
                 , getString(R.string.restaurant_location_4)
                 , 4.9
                 , getString(R.string.restaurant4phone)
-                , R.drawable.restaurant4));
+                , R.mipmap.restaurant4));
 
         foodsPlaces.add(new Places(getString(R.string.restaurant5)
                 , getString(R.string.restaurant5Address)
                 , getResources().getString(R.string.restaurant5Description)
-                , R.drawable.restaurant5
+                , R.mipmap.restaurant5
                 , getString(R.string.restaurant_location_5)
                 , 4.9
                 , getString(R.string.restaurant5phone)
-                , R.drawable.restaurant5));
+                , R.mipmap.restaurant5));
 
         foodsPlaces.add(new Places(getString(R.string.restaurant6)
                 , getString(R.string.restaurant6Address)
                 , getResources().getString(R.string.restaurant6Description)
-                , R.drawable.restaurant6
+                , R.mipmap.restaurant6
                 , getString(R.string.restaurant_location_6)
                 , 4.9
                 , getString(R.string.restaurant6phone)
-                , R.drawable.restaurant6));
+                , R.mipmap.restaurant6));
 
         foodsPlaces.add(new Places(getString(R.string.restaurant7)
                 , getString(R.string.restaurant7Address)
                 , getResources().getString(R.string.restaurant7Description)
-                , R.drawable.restaurant7
+                , R.mipmap.restaurant7
                 , getString(R.string.restaurant_location_7)
                 , 4.9
                 , getString(R.string.restaurant7phone)
-                , R.drawable.restaurant7));
+                , R.mipmap.restaurant7));
 
         foodsPlaces.add(new Places(getString(R.string.restaurant8)
                 , getString(R.string.restaurant8Address)
                 , getResources().getString(R.string.restaurant8Description)
-                , R.drawable.restaurant8
+                , R.mipmap.restaurant8
                 , getString(R.string.restaurant_location_8)
                 , 4.9
                 , getString(R.string.restaurant8phone)
-                , R.drawable.restaurant8));
+                , R.mipmap.restaurant8));
 
         foodsPlaces.add(new Places(getString(R.string.restaurant9)
                 , getString(R.string.restaurant9Address)
                 , getResources().getString(R.string.restaurant9Description)
-                , R.drawable.restaurant9
+                , R.mipmap.restaurant9
                 , getString(R.string.restaurant_location_9)
                 , 4.9
                 , getString(R.string.restaurant9phone)
-                , R.drawable.restaurant9));
+                , R.mipmap.restaurant9));
 
         foodsPlaces.add(new Places(getString(R.string.restaurant10)
                 , getString(R.string.restaurant10Address)
                 , getResources().getString(R.string.restaurant10Description)
-                , R.drawable.restaurant10
+                , R.mipmap.restaurant10
                 , getString(R.string.restaurant_location_10)
                 , 4.9
                 , getString(R.string.restaurant10phone)
-                , R.drawable.restaurant10));
+                , R.mipmap.restaurant10));
 
         foodsPlaces.add(new Places(getString(R.string.restaurant11)
                 , getString(R.string.restaurant11Address)
                 , getResources().getString(R.string.restaurant11Description)
-                , R.drawable.restaurant11
+                , R.mipmap.restaurant11
                 , getString(R.string.restaurant_location_11)
                 , 4.9
                 , getString(R.string.restaurant11phone)
-                , R.drawable.restaurant11));
+                , R.mipmap.restaurant11));
 
 
         PlacesAdapter adapter = new PlacesAdapter(getActivity(), foodsPlaces);

@@ -40,29 +40,29 @@ public class HotelsFragment extends android.support.v4.app.Fragment {
         hotelsPlaces.add(new Places(getString(R.string.hotel1)
                 , getString(R.string.hotel1Address)
                 , getResources().getString(R.string.hotel1description)
-                , R.drawable.hotel1
+                , R.mipmap.hotel1
                 , getString(R.string.hotel_location_1)
                 , 3.5
                 , getString(R.string.hotel1phone)
-                , R.drawable.hotel1));
+                , R.mipmap.hotel1));
 
         hotelsPlaces.add(new Places(getString(R.string.hotel2)
                 , getString(R.string.hotel2Address)
                 , getResources().getString(R.string.hotel2description)
-                , R.drawable.hotel2
+                , R.mipmap.hotel2
                 , getString(R.string.hotel_location_2)
                 , 4.1
                 , getString(R.string.hotel2phone)
-                , R.drawable.hotel2));
+                , R.mipmap.hotel2));
 
         hotelsPlaces.add(new Places(getString(R.string.hotel3)
                 , getString(R.string.hotel3Address)
                 , getResources().getString(R.string.hotel3description)
-                , R.drawable.hotel3
+                , R.mipmap.hotel3
                 , getString(R.string.hotel_location_3)
                 , 4.1
                 , getString(R.string.hotel3phone)
-                , R.drawable.hotel3));
+                , R.mipmap.hotel3));
 
 
         PlacesAdapter adapter = new PlacesAdapter(getActivity(), hotelsPlaces);

@@ -26,7 +26,8 @@
     <string name="go">go</string>
     <string name="auckland">auckland</string>
     <string name="transports">bus_rail_ferry_and_flights</string>
-    <string name="city_description">auckland_is_a_city_in_new_zealand_s_north_island_auckland_is_the_largest_urban_area_in_the_country_with_an_urban_population_of_around_1_534_700_it_is_located_in_the_auckland_region_the_area_governed_by_auckland_council_which_includes_outlying_rural_areas_and_the_islands_of_the_hauraki_gulf_resulting_in_a_total_population_of_1_657_200_a_diverse_and_multicultural_city_auckland_is_home_to_the_largest_polynesian_population_in_the_world_the_m_ori_language_name_for_auckland_is_t_maki_or_t_maki_makau_rau_meaning_t_maki_with_a_hundred_lovers_in_reference_to_the_desirability_of_its_fertile_land_at_the_hub_of_waterways_in_all_directions_it_has_also_been_called_karana_a_transliteration_of_the_english_name</string>
+    <string name="city_description">Auckland (/ˈɔːklənd/ AWK-lənd) is a city in New Zealand\'s North Island. Auckland is the largest urban area in the country, with an urban population of around 1,534,700.[4] It is located in the Auckland Region—the area governed by Auckland Council—which includes outlying rural areas and the islands of the Hauraki Gulf, resulting in a total population of 1,657,200. A diverse and multicultural city, Auckland is home to the largest Polynesian population in the world. The Māori-language name for Auckland is Tāmaki or Tāmaki-makau-rau, meaning "Tāmaki with a hundred lovers", in reference to the desirability of its fertile land at the hub of waterways in all directions. It has also been called Ākarana, a transliteration of the English name.
+        The Auckland urban area (as defined by Statistics New Zealand) ranges to Waiwera in the north, Kumeu in the northwest, and Runciman in the south. Auckland lies between the Hauraki Gulf of the Pacific Ocean to the east, the low Hunua Ranges to the south-east, the Manukau Harbour to the south-west, and the Waitakere Ranges and smaller ranges to the west and north-west. The surrounding hills are covered in rainforest and the landscape is dotted with dozens of dormant volcanic cones. The central part of the urban area occupies a narrow isthmus between the Manukau Harbour on the Tasman Sea and the Waitematā Harbour on the Pacific Ocean. Auckland is one of the few cities in the world to have a harbour on each of two separate major bodies of water.</string>
 
     <!-- Fragment Sights Top 10 -->
     <string name="sight1">SkyTower</string>
@@ -62,7 +63,7 @@
     <string name="sight9Address">Auckland Central, Auckland, New Zealand</string>
     <string name="sight10Address">Ferry Building 99 Quay Street, Auckland Central, Auckland 1010, New Zealand</string>
 
-    <string name="sight1description">Auckland\'s Sky Tower is the tallest structure in the Southern Hemisphere, this tower is more than 300 metres high. Offering stunning views, along with award winning restaurants, a gift shop and an opportunity to push your limits by walking the outside of the viewing platforms, or by jumping off from 192 metres above Auckland's CBD.</string>
+    <string name="sight1description">Auckland\'s Sky Tower is the tallest structure in the Southern Hemisphere, this tower is more than 300 metres high. Offering stunning views, along with award winning restaurants, a gift shop and an opportunity to push your limits by walking the outside of the viewing platforms, or by jumping off from 192 metres above Auckland\'s CBD.</string>
     <string name="sight2description">This scenic drive takes you past bush scenery, to observation points for spectacular views and to gorgeous beaches.</string>
     <string name="sight3description">Visit the center of Auckland sailing and the place for the finest restaurants, bars, and luxury apartments.</string>
 
@@ -100,8 +101,8 @@
         Guest facilities include a tour desk, car rental service and laundry facilities.
         The city’s public transport hub, Britomart Station, is a 10-minute walk away.
         Auckland International Airport is a 30-minute drive from Best Western President Hotel Auckland.
-        Auckland's main shopping street, Queen Street, is 50 m from the hotel.
-        This is our guests' favourite part of Auckland, according to independent reviews.
+        Auckland\'s main shopping street, Queen Street, is 50 m from the hotel.
+        This is our guests\' favourite part of Auckland, according to independent reviews.
         Couples particularly like the location — they rated it 8.7 for a two-person trip.
         The staff speak English.</string>
 
@@ -116,7 +117,7 @@
         On-site dining options include Barista on the Corner and The CUT Restaurant &amp; Bar.
         Barista on the Corner serves muffins, pastries, tea and coffee. The CUT Restaurant &amp;
         Bar offers traditional cuisine with a modern twist and a large selection of wines, cocktails and other beverages.
-        This is our guests' favourite part of Auckland, according to independent reviews.
+        This is our guests\' favourite part of Auckland, according to independent reviews.
         Couples particularly like the location — they rated it 8.9 for a two-person trip.
         The staff speak English.</string>
 
@@ -129,7 +130,7 @@
         The 24-hour hotel reception can arrange dry cleaning and can recommend babysitting services.
         Waldorf Stadium Apartments Hotel is just 5 minutes’ walk from both Vector Arena and Auckland Harbour.
         Voyager Maritime Museum and shopping on Queen Street are each a 15-minute walk away.
-        This is our guests' favourite part of Auckland, according to independent reviews.
+        This is our guests\' favourite part of Auckland, according to independent reviews.
         Couples particularly like the location — they rated it 8.7 for a two-person trip.</string>
 
     <string name="hotel_location_1">-36.8485317,174.7620578,17z</string>
@@ -146,12 +147,12 @@
     <string name="flatmate7">Conifer Grove, 4 bedrooms</string>
 
     <string name="flatmate1phone">021 1901614</string>
-    <string name="flatmate2phone">021 1901614</string>
-    <string name="flatmate3phone">021 1901614</string>
-    <string name="flatmate4phone">021 1901614</string>
-    <string name="flatmate5phone">021 1901614</string>
-    <string name="flatmate6phone">021 1901614</string>
-    <string name="flatmate7phone">021 1901614</string>
+    <string name="flatmate2phone">021 2901614</string>
+    <string name="flatmate3phone">021 3901614</string>
+    <string name="flatmate4phone">021 4901614</string>
+    <string name="flatmate5phone">021 5901614</string>
+    <string name="flatmate6phone">021 6901614</string>
+    <string name="flatmate7phone">021 7901614</string>
 
     <string name="flatmate1Address">New Windsor - Auckland City - Auckland</string>
     <string name="flatmate2Address">Royal Oak - Auckland City - Auckland</string>
@@ -222,13 +223,13 @@
     <string name="flatmate6Description">	4 bedroom house with 3 bathrooms.
         Near new quality 4 bedrooms and 3 bathrooms, 3 living areas, 2 kitchens house looking for a clean and tidy working flatmate. The house is located in a new Ormiston area which is next to all amenties. Bus stop just outside the road, Mcdonalds and Pak n Save etc. Facing a amazing park views. Upmarket finishes and chattels HRV systems, air-conditioning and underfloor heating. Prefered working female, however quite male could be considerable. Couples are welcome.
         The room for rent is a double bedroom with HRV ventilation system, big window and quite. It comes with a near new queen bed and a side table.
-        We are a happy couple with a 2 years happy boy. Come and meet us and have a look around. You won't regret it. ^o^
+        We are a happy couple with a 2 years happy boy. Come and meet us and have a look around. You won\'t regret it. ^o^
         **Please leave a message on my phone and I will get back to you very soon. Thanks. **
         No pets or smokers.</string>
 
     <string name="flatmate7Description">4 bedroom house with 2 bathrooms.
         Downstaris bedroom available to Rent.
-        Rent includes Power, Water, Wifii and basic kitchen items.
+        Rent includes Power, Water, Wifi and basic kitchen items.
         4 Bedroom large house with 2 lounges.
         Rented room is downstaris with Toilet/vanity next to it - other bedrooms all upstaris and shower and another toilet, I have ensuite so pretty much your own bathroom.
         Situated at end of a culdesac - very safe area.

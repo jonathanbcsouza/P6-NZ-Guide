@@ -15,7 +15,7 @@
     </style>
 
     <style name="SplashTheme" parent="Theme.AppCompat.NoActionBar">
-        <item name="android:windowBackground">@drawable/auckland_hd</item>
+        <item name="android:windowBackground">@mipmap/auckland_hd</item>
 
     </style>
 
@@ -38,7 +38,7 @@
         <item name="android:textStyle">bold</item>
     </style>
 
-    <style name="CityPanelGreen" parent="CityPanel">
+    <style name="CityPanelDescription" parent="CityPanel">
         <item name="android:background">@color/colorPrimary</item>
         <item name="android:paddingTop">@dimen/dimen_16dp</item>
         <item name="android:paddingBottom">@dimen/dimen_16dp</item>

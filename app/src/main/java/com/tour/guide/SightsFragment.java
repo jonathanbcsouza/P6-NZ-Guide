@@ -25,92 +25,92 @@ public class SightsFragment extends android.support.v4.app.Fragment {
         sightsPlaces.add(new Places(getString(R.string.sight1)
                 , getString(R.string.sight1Address)
                 , getResources().getString(R.string.sight1description)
-                , R.drawable.sight1
+                , R.mipmap.sight1
                 , getString(R.string.sights_location_1)
                 , 5
                 , getString(R.string.sight1phone)
-                , R.drawable.sight1));
+                , R.mipmap.sight1));
 
         sightsPlaces.add(new Places(getString(R.string.sight2)
                 , getString(R.string.sight2Address)
                 , getResources().getString(R.string.sight2description)
-                , R.drawable.sight2
+                , R.mipmap.sight2
                 , getString(R.string.sights_location_2)
                 , 4.2
                 , getString(R.string.sight2phone) + getString(R.string.tourist_information)
-                , R.drawable.sight2));
+                , R.mipmap.sight2));
 
         sightsPlaces.add(new Places(getString(R.string.sight3)
                 , getString(R.string.sight3Address)
                 , getResources().getString(R.string.sight3description)
-                , R.drawable.sight3
+                , R.mipmap.sight3
                 , getString(R.string.sights_location_3)
                 , 4
                 , getString(R.string.sight3phone) + getString(R.string.tourist_information)
-                , R.drawable.sight3));
+                , R.mipmap.sight3));
 
         sightsPlaces.add(new Places(getString(R.string.sight4)
                 , getString(R.string.sight4Address)
                 , getResources().getString(R.string.sight3description)
-                , R.drawable.sight4
+                , R.mipmap.sight4
                 , getString(R.string.sights_location_4)
                 , 4
                 , getString(R.string.sight4phone)
-                , R.drawable.sight4));
+                , R.mipmap.sight4));
 
         sightsPlaces.add(new Places(getString(R.string.sight5)
                 , getString(R.string.sight5Address)
                 , getResources().getString(R.string.sight3description)
-                , R.drawable.sight5
+                , R.mipmap.sight5
                 , getString(R.string.sights_location_5)
                 , 4
                 , getString(R.string.sight5phone)
-                , R.drawable.sight5));
+                , R.mipmap.sight5));
 
         sightsPlaces.add(new Places(getString(R.string.sight6)
                 , getString(R.string.sight6Address)
                 , getResources().getString(R.string.sight3description)
-                , R.drawable.sight6
+                , R.mipmap.sight6
                 , getString(R.string.sights_location_6)
                 , 4
                 , getString(R.string.sight6phone)
-                , R.drawable.sight6));
+                , R.mipmap.sight6));
 
         sightsPlaces.add(new Places(getString(R.string.sight7)
                 , getString(R.string.sight7Address)
                 , getResources().getString(R.string.sight3description)
-                , R.drawable.sight7
+                , R.mipmap.sight7
                 , getString(R.string.sights_location_7)
                 , 4
                 , getString(R.string.sight7phone)
-                , R.drawable.sight7));
+                , R.mipmap.sight7));
 
         sightsPlaces.add(new Places(getString(R.string.sight8)
                 , getString(R.string.sight8Address)
                 , getResources().getString(R.string.sight3description)
-                , R.drawable.sight8
+                , R.mipmap.sight8
                 , getString(R.string.sights_location_8)
                 , 4
                 , getString(R.string.sight8phone)
-                , R.drawable.sight8));
+                , R.mipmap.sight8));
 
         sightsPlaces.add(new Places(getString(R.string.sight9)
                 , getString(R.string.sight9Address)
                 , getResources().getString(R.string.sight3description)
-                , R.drawable.sight9
+                , R.mipmap.sight9
                 , getString(R.string.sights_location_9)
                 , 4
                 , getString(R.string.sight9phone)
-                , R.drawable.sight9));
+                , R.mipmap.sight9));
 
         sightsPlaces.add(new Places(getString(R.string.sight10)
                 , getString(R.string.sight10Address)
                 , getResources().getString(R.string.sight3description)
-                , R.drawable.sight10
+                , R.mipmap.sight10
                 , getString(R.string.sights_location_10)
                 , 4
                 , getString(R.string.sight10phone)
-                , R.drawable.sight10));
+                , R.mipmap.sight10));
 
 
         PlacesAdapter adapter = new PlacesAdapter(getActivity(), sightsPlaces);
