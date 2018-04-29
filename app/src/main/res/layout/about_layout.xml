@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/colorPrimary"
+                android:gravity="center"
+                android:text="Choose the City"
+                android:textColor="@color/itemsSubTitle" />
+
+            <Spinner
+                android:id="@+id/spinner_sleeps"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="@dimen/dimen_10dp">
+
+                <TextView
+                    style="@style/CityFactHeader"
+                    android:text="@string/city" />
+
+                <TextView
+                    android:id="@+id/city"
+                    style="@style/CityFactPanel"
+                    android:text="@string/template_city" />
+
+                <TextView
+                    style="@style/CityFactHeader"
+                    android:text="@string/population" />
+
+                <TextView
+                    android:id="@+id/population"
+                    style="@style/CityFactPanel"
+                    android:text="@string/template_population" />
+
+                <TextView
+                    style="@style/CityFactHeader"
+                    android:text="@string/airports" />
+
+                <TextView
+                    android:id="@+id/airport"
+                    style="@style/CityFactPanel"
+                    android:text="@string/template_airports" />
+
+                <TextView
+                    style="@style/CityFactHeader"
+                    android:text="@string/transports" />
+
+                <TextView
+                    android:id="@+id/transport"
+                    style="@style/CityFactPanel"
+                    android:text="@string/template_transports" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/city_photo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/auckland" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/about_the_city"
+            style="@style/CityDescriptionHeader"
+            android:background="@color/colorPink"
+            android:text="@string/about_city" />
+
+        <TextView
+            style="@style/CityPanelDescription"
+            android:background="@color/tabsTitle"
+            android:text="@string/template_about_city"
+            android:textColor="@color/colorText" />
+
+    </LinearLayout>
+</ScrollView>

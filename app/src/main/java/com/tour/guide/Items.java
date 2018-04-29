@@ -5,15 +5,17 @@ package com.tour.guide;
  */
 
 public class Places {
-    private static final String NO_PHONE_NUMBER = "0";
-    private String mPlacesName;
-    private String mPlacesAddress;
-    private String mPlacesDescription;
     private int mImageResourceId;
-    private String mLocationId;
+    private String mPlacesName;
+    private String mPlacesDescription;
+    private String mPlacesAddress;
+    private static final String NO_PHONE_NUMBER = "0";
     private double mPlacesRating;
+    private String mLocationId;
     private String mPlacesPhoneNumber = NO_PHONE_NUMBER;
     private int mThumbnailResourceId;
+
+  
 
     public Places(String placesName
             , String placesAddress
@@ -46,6 +48,9 @@ public class Places {
         mPlacesRating = placesRating;
         mPlacesPhoneNumber = placesPhoneNumber;
         mThumbnailResourceId = thumbnailResourceId;
+    }
+
+    public Places(String string, String string1, int hotel1) {
     }
 
 
