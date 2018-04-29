@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://C:\Users\jonat\AndroidStudioProjects\TourGuide-Auckland\TourGuide.iml" filepath="C:\Users\jonat\AndroidStudioProjects\TourGuide-Auckland\TourGuide.iml" />
-      <module fileurl="file://$PROJECT_DIR$/TourGuide-Auckland.iml" filepath="$PROJECT_DIR$/TourGuide-Auckland.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Auckland-City.iml" filepath="$PROJECT_DIR$/Auckland-City.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>

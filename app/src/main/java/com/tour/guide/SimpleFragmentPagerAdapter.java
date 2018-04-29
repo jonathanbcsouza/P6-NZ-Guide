@@ -33,30 +33,24 @@ public class SimpleFragmentPagerAdapter extends FragmentPagerAdapter {
         mContext = context;
     }
 
-    /**
-     * Returna o {@link Fragment} que deve ser mostrado para o dado número de página.
-     */
+
     @Override
     public Fragment getItem(int position) {
         if (position == 0) {
-            return new AboutFragments();
+            return new TabAbout();
         } else if (position == 1) {
-            return new SightsFragment();
+            return new TabSights();
         } else if (position == 2) {
-            return new HotelsFragment();
-        } else if (position == 3) {
-            return new FlatmatesWanted();
+            return new TabSleep();
         } else {
-            return new FoodsFragment();
+            return new TabEat();
         }
     }
 
-    /**
-     * Retorna o número total de páginas.
-     */
+
     @Override
     public int getCount() {
-        return 5;
+        return 4;
     }
 
     @Override
@@ -66,11 +60,9 @@ public class SimpleFragmentPagerAdapter extends FragmentPagerAdapter {
         } else if (position == 1) {
             return mContext.getString(R.string.sights);
         } else if (position == 2) {
-            return mContext.getString(R.string.hotels);
-        } else if (position == 3) {
-            return mContext.getString(R.string.flatmates);
+            return mContext.getString(R.string.sleep);
         } else {
-            return mContext.getString(R.string.foodsAndDrinks);
+            return mContext.getString(R.string.eat);
         }
     }
 }

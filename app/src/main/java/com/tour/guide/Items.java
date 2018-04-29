@@ -4,7 +4,7 @@ package com.tour.guide;
  * Created by jonat on 5/01/2018.
  */
 
-public class Places {
+public class Items {
     private int mImageResourceId;
     private String mPlacesName;
     private String mPlacesDescription;
@@ -17,7 +17,7 @@ public class Places {
 
   
 
-    public Places(String placesName
+    public Items(String placesName
             , String placesAddress
             , String placesDescription
             , int imageResourceId
@@ -33,7 +33,7 @@ public class Places {
         mThumbnailResourceId = thumbnailResourceID;
     }
 
-    public Places(String placesName
+    public Items(String placesName
             , String placesAddress
             , String placesDescription
             , int imageResourceId
@@ -50,7 +50,7 @@ public class Places {
         mThumbnailResourceId = thumbnailResourceId;
     }
 
-    public Places(String string, String string1, int hotel1) {
+    public Items(String string, String string1, String string2, int sight1, String string3, int sight11) {
     }
 
 

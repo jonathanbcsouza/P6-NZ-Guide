@@ -16,56 +16,42 @@
 package com.tour.guide;
 
 import android.content.Intent;
+import android.content.res.Resources;
 import android.os.Bundle;
+import android.support.v4.content.res.ResourcesCompat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
 import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.Spinner;
 
 import java.util.ArrayList;
 
 
-public class HotelsFragment extends android.support.v4.app.Fragment {
+public class TabSleep extends android.support.v4.app.Fragment {
 
-    public HotelsFragment() {
+    public TabSleep() {
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.fragment_list, container, false);
+        View rootView = inflater.inflate(R.layout.items_layout, container, false);
 
-        final ArrayList<Places> hotelsPlaces = new ArrayList<>();
-        hotelsPlaces.add(new Places(getString(R.string.hotel1)
-                , getString(R.string.hotel1Address)
-                , getResources().getString(R.string.hotel1description)
-                , R.mipmap.hotel1
-                , getString(R.string.hotel_location_1)
-                , 3.5
-                , getString(R.string.hotel1phone)
-                , R.mipmap.hotel1));
+        final ArrayList<Items> sleepItems = new ArrayList<>();
+        sleepItems.add(new Items(getString(R.string.accommodation1)
+                , getString(R.string.sight1Address)
+                , getResources().getString(R.string.accommodation_descr_1)
+                , R.mipmap.sight1
+                , getString(R.string.sights_location_1)
+                , 5
+                , getString(R.string.sight1phone)
+                , R.mipmap.sight1));
 
-        hotelsPlaces.add(new Places(getString(R.string.hotel2)
-                , getString(R.string.hotel2Address)
-                , getResources().getString(R.string.hotel2description)
-                , R.mipmap.hotel2
-                , getString(R.string.hotel_location_2)
-                , 4.1
-                , getString(R.string.hotel2phone)
-                , R.mipmap.hotel2));
-
-        hotelsPlaces.add(new Places(getString(R.string.hotel3)
-                , getString(R.string.hotel3Address)
-                , getResources().getString(R.string.hotel3description)
-                , R.mipmap.hotel3
-                , getString(R.string.hotel_location_3)
-                , 4.1
-                , getString(R.string.hotel3phone)
-                , R.mipmap.hotel3));
-
-
-        PlacesAdapter adapter = new PlacesAdapter(getActivity(), hotelsPlaces);
+        SleepAdapter adapter = new SleepAdapter(getActivity(), sleepItems);
         ListView listView = rootView.findViewById(R.id.fragment_list);
         listView.setAdapter(adapter);
 
@@ -73,9 +59,9 @@ public class HotelsFragment extends android.support.v4.app.Fragment {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
-                Intent intentHotels = new Intent(getActivity(), AllPlacesActivity.class);
+                Intent intentSleep = new Intent(getActivity(), AllPlacesActivity.class);
 
-                Places hotels = hotelsPlaces.get(position);
+                Items hotels = sleepItems.get(position);
 
                 Bundle bundle = new Bundle();
                 bundle.putString(Keys.PLACE_NAME_KEY, hotels.getPlacesName());
@@ -87,12 +73,13 @@ public class HotelsFragment extends android.support.v4.app.Fragment {
                 bundle.putString(Keys.PLACE_PHONE_NUMBER_KEY, hotels.getPlacesPhoneNumber());
 
                 bundle.putInt(Keys.FRAGMENT_PLACE, 1);
-                intentHotels.putExtras(bundle);
+                intentSleep.putExtras(bundle);
 
-                startActivity(intentHotels);
+                startActivity(intentSleep);
             }
         });
 
         return rootView;
     }
+
 }

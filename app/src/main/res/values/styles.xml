@@ -4,14 +4,7 @@
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
-        <item name="actionBarStyle">@style/BarStyle</item>
-        <item name="android:windowContentOverlay">@null</item>
-    </style>
-
-
-    <style name="BarStyle" parent="@style/Widget.AppCompat.Light.ActionBar.Solid.Inverse">
-        <item name="elevation">0dp</item>
+        <item name="colorAccent">@color/tabsSelected</item>
     </style>
 
     <style name="SplashTheme" parent="Theme.AppCompat.NoActionBar">
@@ -74,14 +67,14 @@
         <item name="android:layout_alignParentRight">true</item>
         <item name="android:layout_centerVertical">true</item>
         <item name="android:layout_marginRight">@dimen/activity_margin</item>
-        <item name="android:tint">@color/secondaryTextColor</item>
+        <item name="android:tint">@color/itemsSubTitle</item>
     </style>
 
     <style name="detail_activity_category_text_style">
         <item name="android:fontFamily">sans-serif-light</item>
         <item name="android:gravity">center_vertical</item>
         <item name="android:paddingLeft">@dimen/activity_padding</item>
-        <item name="android:textColor">@color/primaryTextColor</item>
+        <item name="android:textColor">@color/itemsTitle</item>
         <item name="android:textSize">16sp</item>
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
@@ -92,7 +85,7 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="android:fontFamily">sans-serif-light</item>
         <item name="android:padding">16dp</item>
-        <item name="android:textColor">@color/colorLightGrey</item>
+        <item name="android:textColor">@color/tabsTitle</item>
         <item name="android:textSize">24sp</item>
         <item name="android:textStyle">bold</item>
     </style>
@@ -104,7 +97,7 @@
         <item name="android:fontFamily">sans-serif-light</item>
         <item name="android:paddingLeft">@dimen/activity_padding</item>
         <item name="android:paddingRight">@dimen/activity_padding</item>
-        <item name="android:textColor">@color/primaryTextColor</item>
+        <item name="android:textColor">@color/itemsTitle</item>
         <item name="android:textSize">16sp</item>
     </style>
 
@@ -113,7 +106,7 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="android:fontFamily">sans-serif-light</item>
         <item name="android:padding">@dimen/activity_padding</item>
-        <item name="android:textColor">@color/primaryTextColor</item>
+        <item name="android:textColor">@color/itemsTitle</item>
         <item name="android:textSize">16sp</item>
         <item name="android:textStyle">bold</item>
     </style>

@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@color/primaryBackground">
+    android:background="@color/background">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -17,6 +17,7 @@
 
             <ImageView
                 android:id="@+id/place_image"
+                android:src="@drawable/splash"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/image_height"
                 android:scaleType="centerCrop" />
@@ -25,7 +26,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_alignBottom="@id/place_image"
-                android:background="@color/transparentColor"
+                android:background="@color/transparentBlack"
                 android:orientation="horizontal">
 
                 <TextView
@@ -52,7 +53,7 @@
                     android:layout_margin="8dp"
                     android:layout_weight="0.5"
                     android:gravity="center_vertical"
-                    android:textColor="@color/colorLightGrey"
+                    android:textColor="@color/tabsTitle"
                     tools:text="4.5" />
 
                 <LinearLayout
@@ -68,13 +69,13 @@
                         android:layout_height="wrap_content"
                         android:scaleType="center"
                         android:src="@drawable/ic_location_on_black_24dp"
-                        android:tint="@color/colorAccent" />
+                        android:tint="@color/tabsSelected" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/go"
-                        android:textColor="@color/colorLightGrey" />
+                        android:textColor="@color/tabsTitle" />
 
                 </LinearLayout>
 
@@ -90,7 +91,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:src="@drawable/ic_phone_black_24dp"
-                        android:tint="@color/colorAccent" />
+                        android:tint="@color/tabsSelected" />
                 </FrameLayout>
 
             </LinearLayout>
@@ -119,7 +120,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@dimen/activity_margin"
                 android:src="@drawable/ic_location_on_black_24dp"
-                android:tint="@color/primaryTextColor" />
+                android:tint="@color/itemsTitle" />
 
             <TextView
                 android:id="@+id/detail_activity_place_address"
@@ -141,7 +142,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@dimen/activity_margin"
                 android:src="@drawable/ic_phone_black_24dp"
-                android:tint="@color/primaryTextColor" />
+                android:tint="@color/itemsTitle" />
 
             <TextView
                 android:id="@+id/detail_activity_place_phone_number"

@@ -26,19 +26,19 @@ import android.widget.ListView;
 import java.util.ArrayList;
 
 
-public class FoodsFragment extends android.support.v4.app.Fragment {
+public class TabEat extends android.support.v4.app.Fragment {
 
-    public FoodsFragment() {
+    public TabEat() {
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.fragment_list, container, false);
+        View rootView = inflater.inflate(R.layout.items_layout, container, false);
 
 
-        final ArrayList<Places> foodsPlaces = new ArrayList<>();
-        foodsPlaces.add(new Places(getString(R.string.restaurant1)
+        final ArrayList<Items> foodsPlaces = new ArrayList<>();
+        foodsPlaces.add(new Items(getString(R.string.restaurant1)
                 , getString(R.string.restaurant1Address)
                 , getResources().getString(R.string.restaurant1Description)
                 , R.mipmap.restaurant1
@@ -47,7 +47,7 @@ public class FoodsFragment extends android.support.v4.app.Fragment {
                 , getString(R.string.restaurant1phone)
                 , R.mipmap.restaurant1));
 
-        foodsPlaces.add(new Places(getString(R.string.restaurant2)
+        foodsPlaces.add(new Items(getString(R.string.restaurant2)
                 , getString(R.string.restaurant2Address)
                 , getResources().getString(R.string.restaurant2Description)
                 , R.mipmap.restaurant2
@@ -56,7 +56,7 @@ public class FoodsFragment extends android.support.v4.app.Fragment {
                 , getString(R.string.restaurant2phone)
                 , R.mipmap.restaurant2));
 
-        foodsPlaces.add(new Places(getString(R.string.restaurant3)
+        foodsPlaces.add(new Items(getString(R.string.restaurant3)
                 , getString(R.string.restaurant3Address)
                 , getResources().getString(R.string.restaurant3Description)
                 , R.mipmap.restaurant3
@@ -65,7 +65,7 @@ public class FoodsFragment extends android.support.v4.app.Fragment {
                 , getString(R.string.restaurant3phone)
                 , R.mipmap.restaurant3));
 
-        foodsPlaces.add(new Places(getString(R.string.restaurant4)
+        foodsPlaces.add(new Items(getString(R.string.restaurant4)
                 , getString(R.string.restaurant4Address)
                 , getResources().getString(R.string.restaurant4Description)
                 , R.mipmap.restaurant4
@@ -74,7 +74,7 @@ public class FoodsFragment extends android.support.v4.app.Fragment {
                 , getString(R.string.restaurant4phone)
                 , R.mipmap.restaurant4));
 
-        foodsPlaces.add(new Places(getString(R.string.restaurant5)
+        foodsPlaces.add(new Items(getString(R.string.restaurant5)
                 , getString(R.string.restaurant5Address)
                 , getResources().getString(R.string.restaurant5Description)
                 , R.mipmap.restaurant5
@@ -83,7 +83,7 @@ public class FoodsFragment extends android.support.v4.app.Fragment {
                 , getString(R.string.restaurant5phone)
                 , R.mipmap.restaurant5));
 
-        foodsPlaces.add(new Places(getString(R.string.restaurant6)
+        foodsPlaces.add(new Items(getString(R.string.restaurant6)
                 , getString(R.string.restaurant6Address)
                 , getResources().getString(R.string.restaurant6Description)
                 , R.mipmap.restaurant6
@@ -92,7 +92,7 @@ public class FoodsFragment extends android.support.v4.app.Fragment {
                 , getString(R.string.restaurant6phone)
                 , R.mipmap.restaurant6));
 
-        foodsPlaces.add(new Places(getString(R.string.restaurant7)
+        foodsPlaces.add(new Items(getString(R.string.restaurant7)
                 , getString(R.string.restaurant7Address)
                 , getResources().getString(R.string.restaurant7Description)
                 , R.mipmap.restaurant7
@@ -101,7 +101,7 @@ public class FoodsFragment extends android.support.v4.app.Fragment {
                 , getString(R.string.restaurant7phone)
                 , R.mipmap.restaurant7));
 
-        foodsPlaces.add(new Places(getString(R.string.restaurant8)
+        foodsPlaces.add(new Items(getString(R.string.restaurant8)
                 , getString(R.string.restaurant8Address)
                 , getResources().getString(R.string.restaurant8Description)
                 , R.mipmap.restaurant8
@@ -110,7 +110,7 @@ public class FoodsFragment extends android.support.v4.app.Fragment {
                 , getString(R.string.restaurant8phone)
                 , R.mipmap.restaurant8));
 
-        foodsPlaces.add(new Places(getString(R.string.restaurant9)
+        foodsPlaces.add(new Items(getString(R.string.restaurant9)
                 , getString(R.string.restaurant9Address)
                 , getResources().getString(R.string.restaurant9Description)
                 , R.mipmap.restaurant9
@@ -119,7 +119,7 @@ public class FoodsFragment extends android.support.v4.app.Fragment {
                 , getString(R.string.restaurant9phone)
                 , R.mipmap.restaurant9));
 
-        foodsPlaces.add(new Places(getString(R.string.restaurant10)
+        foodsPlaces.add(new Items(getString(R.string.restaurant10)
                 , getString(R.string.restaurant10Address)
                 , getResources().getString(R.string.restaurant10Description)
                 , R.mipmap.restaurant10
@@ -128,7 +128,7 @@ public class FoodsFragment extends android.support.v4.app.Fragment {
                 , getString(R.string.restaurant10phone)
                 , R.mipmap.restaurant10));
 
-        foodsPlaces.add(new Places(getString(R.string.restaurant11)
+        foodsPlaces.add(new Items(getString(R.string.restaurant11)
                 , getString(R.string.restaurant11Address)
                 , getResources().getString(R.string.restaurant11Description)
                 , R.mipmap.restaurant11
@@ -138,7 +138,7 @@ public class FoodsFragment extends android.support.v4.app.Fragment {
                 , R.mipmap.restaurant11));
 
 
-        PlacesAdapter adapter = new PlacesAdapter(getActivity(), foodsPlaces);
+        ItemsAdapter adapter = new ItemsAdapter(getActivity(), foodsPlaces);
         ListView listView = rootView.findViewById(R.id.fragment_list);
         listView.setAdapter(adapter);
 
@@ -147,7 +147,7 @@ public class FoodsFragment extends android.support.v4.app.Fragment {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Intent intentHotels = new Intent(getActivity(), AllPlacesActivity.class);
 
-                Places hotels = foodsPlaces.get(position);
+                Items hotels = foodsPlaces.get(position);
 
                 Bundle bundle = new Bundle();
                 bundle.putString(Keys.PLACE_NAME_KEY, hotels.getPlacesName());

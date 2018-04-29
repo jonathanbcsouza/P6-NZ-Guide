@@ -30,13 +30,10 @@ public class AllPlacesActivity extends AppCompatActivity {
                 setTitle(getString(R.string.sights));
                 break;
             case 1:
-                setTitle(getString(R.string.hotels));
+                setTitle(getString(R.string.sleep));
                 break;
             case 2:
-                setTitle(getString(R.string.flatmates));
-                break;
-            case 3:
-                setTitle(R.string.foodsAndDrinks);
+                setTitle(R.string.eat);
                 break;
         }
 
@@ -45,6 +42,7 @@ public class AllPlacesActivity extends AppCompatActivity {
         View phoneNumberInContactSection = findViewById(R.id.allPlaces_activity_phone_number_layout);
 
         TextView addressTitle = findViewById(R.id.address_text);
+
         if (bundle.containsKey(Keys.PLACE_PHONE_NUMBER_KEY)) {
             phoneIcon.setVisibility(View.VISIBLE);
             phoneNumberInContactSection.setVisibility(View.VISIBLE);

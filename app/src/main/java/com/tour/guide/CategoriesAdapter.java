@@ -38,7 +38,7 @@ public class CategoriesAdapter extends ArrayAdapter<Categories> {
         TextView nameTextView = (TextView) listItemView.findViewById(R.id.list_item_title);
         nameTextView.setText(currentAucklandTour.getItemTitle());
 
-        TextView numberTextView = (TextView) listItemView.findViewById(R.id.list_item_item_description);
+        TextView numberTextView = (TextView) listItemView.findViewById(R.id.list_item_description);
         numberTextView.setText(currentAucklandTour.getItemDescription());
 
         ImageView iconView = (ImageView) listItemView.findViewById(R.id.list_item_image);

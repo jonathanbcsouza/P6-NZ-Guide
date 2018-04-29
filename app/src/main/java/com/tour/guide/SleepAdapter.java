@@ -12,9 +12,9 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-public class ItemsAdapter extends ArrayAdapter<Items> {
+public class SleepAdapter extends ArrayAdapter<Items> {
 
-    ItemsAdapter(Context context, ArrayList<Items> places) {
+    SleepAdapter(Context context, ArrayList<Items> places) {
         super(context, 0, places);
     }
 

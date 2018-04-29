@@ -1,7 +1,6 @@
 package com.tour.guide;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,18 +10,18 @@ import android.widget.ListView;
 
 import java.util.ArrayList;
 
-public class SightsFragment extends android.support.v4.app.Fragment {
+public class TabSights extends android.support.v4.app.Fragment {
 
-    public SightsFragment() {
+    public TabSights() {
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.fragment_list, container, false);
+        View rootView = inflater.inflate(R.layout.items_layout, container, false);
 
-        final ArrayList<Places> sightsPlaces = new ArrayList<>();
-        sightsPlaces.add(new Places(getString(R.string.sight1)
+        final ArrayList<Items> sightsPlaces = new ArrayList<>();
+        sightsPlaces.add(new Items(getString(R.string.sight1)
                 , getString(R.string.sight1Address)
                 , getResources().getString(R.string.sight1description)
                 , R.mipmap.sight1
@@ -31,7 +30,7 @@ public class SightsFragment extends android.support.v4.app.Fragment {
                 , getString(R.string.sight1phone)
                 , R.mipmap.sight1));
 
-        sightsPlaces.add(new Places(getString(R.string.sight2)
+        sightsPlaces.add(new Items(getString(R.string.sight2)
                 , getString(R.string.sight2Address)
                 , getResources().getString(R.string.sight2description)
                 , R.mipmap.sight2
@@ -40,7 +39,7 @@ public class SightsFragment extends android.support.v4.app.Fragment {
                 , getString(R.string.sight2phone) + getString(R.string.tourist_information)
                 , R.mipmap.sight2));
 
-        sightsPlaces.add(new Places(getString(R.string.sight3)
+        sightsPlaces.add(new Items(getString(R.string.sight3)
                 , getString(R.string.sight3Address)
                 , getResources().getString(R.string.sight3description)
                 , R.mipmap.sight3
@@ -49,7 +48,7 @@ public class SightsFragment extends android.support.v4.app.Fragment {
                 , getString(R.string.sight3phone) + getString(R.string.tourist_information)
                 , R.mipmap.sight3));
 
-        sightsPlaces.add(new Places(getString(R.string.sight4)
+        sightsPlaces.add(new Items(getString(R.string.sight4)
                 , getString(R.string.sight4Address)
                 , getResources().getString(R.string.sight3description)
                 , R.mipmap.sight4
@@ -58,7 +57,7 @@ public class SightsFragment extends android.support.v4.app.Fragment {
                 , getString(R.string.sight4phone)
                 , R.mipmap.sight4));
 
-        sightsPlaces.add(new Places(getString(R.string.sight5)
+        sightsPlaces.add(new Items(getString(R.string.sight5)
                 , getString(R.string.sight5Address)
                 , getResources().getString(R.string.sight3description)
                 , R.mipmap.sight5
@@ -67,7 +66,7 @@ public class SightsFragment extends android.support.v4.app.Fragment {
                 , getString(R.string.sight5phone)
                 , R.mipmap.sight5));
 
-        sightsPlaces.add(new Places(getString(R.string.sight6)
+        sightsPlaces.add(new Items(getString(R.string.sight6)
                 , getString(R.string.sight6Address)
                 , getResources().getString(R.string.sight3description)
                 , R.mipmap.sight6
@@ -76,7 +75,7 @@ public class SightsFragment extends android.support.v4.app.Fragment {
                 , getString(R.string.sight6phone)
                 , R.mipmap.sight6));
 
-        sightsPlaces.add(new Places(getString(R.string.sight7)
+        sightsPlaces.add(new Items(getString(R.string.sight7)
                 , getString(R.string.sight7Address)
                 , getResources().getString(R.string.sight3description)
                 , R.mipmap.sight7
@@ -85,7 +84,7 @@ public class SightsFragment extends android.support.v4.app.Fragment {
                 , getString(R.string.sight7phone)
                 , R.mipmap.sight7));
 
-        sightsPlaces.add(new Places(getString(R.string.sight8)
+        sightsPlaces.add(new Items(getString(R.string.sight8)
                 , getString(R.string.sight8Address)
                 , getResources().getString(R.string.sight3description)
                 , R.mipmap.sight8
@@ -94,7 +93,7 @@ public class SightsFragment extends android.support.v4.app.Fragment {
                 , getString(R.string.sight8phone)
                 , R.mipmap.sight8));
 
-        sightsPlaces.add(new Places(getString(R.string.sight9)
+        sightsPlaces.add(new Items(getString(R.string.sight9)
                 , getString(R.string.sight9Address)
                 , getResources().getString(R.string.sight3description)
                 , R.mipmap.sight9
@@ -103,7 +102,7 @@ public class SightsFragment extends android.support.v4.app.Fragment {
                 , getString(R.string.sight9phone)
                 , R.mipmap.sight9));
 
-        sightsPlaces.add(new Places(getString(R.string.sight10)
+        sightsPlaces.add(new Items(getString(R.string.sight10)
                 , getString(R.string.sight10Address)
                 , getResources().getString(R.string.sight3description)
                 , R.mipmap.sight10
@@ -113,7 +112,7 @@ public class SightsFragment extends android.support.v4.app.Fragment {
                 , R.mipmap.sight10));
 
 
-        PlacesAdapter adapter = new PlacesAdapter(getActivity(), sightsPlaces);
+        ItemsAdapter adapter = new ItemsAdapter(getActivity(), sightsPlaces);
         ListView listView = rootView.findViewById(R.id.fragment_list);
         listView.setAdapter(adapter);
 
@@ -123,7 +122,7 @@ public class SightsFragment extends android.support.v4.app.Fragment {
 
                 Intent intentSights = new Intent(getActivity(), AllPlacesActivity.class);
 
-                Places sights = sightsPlaces.get(position);
+                Items sights = sightsPlaces.get(position);
 
                 Bundle bundle = new Bundle();
                 bundle.putString(Keys.PLACE_NAME_KEY, sights.getPlacesName());
