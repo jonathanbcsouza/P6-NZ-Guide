@@ -94,14 +94,14 @@
         <TextView
             android:id="@+id/about_the_city"
             style="@style/CityDescriptionHeader"
-            android:background="@color/colorPink"
+            android:background="@color/backgroundSubHeaders"
             android:text="@string/about_city" />
 
         <TextView
             style="@style/CityPanelDescription"
             android:background="@color/tabsTitle"
             android:text="@string/template_about_city"
-            android:textColor="@color/colorText" />
+            android:textColor="@color/colorTextSubHeaders" />
 
     </LinearLayout>
 </ScrollView>

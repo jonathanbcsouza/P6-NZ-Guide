@@ -4,7 +4,14 @@
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/tabsSelected</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="actionBarStyle">@style/BarStyle</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+
+    <style name="BarStyle" parent="@style/Widget.AppCompat.Light.ActionBar.Solid.Inverse">
+        <item name="elevation">0dp</item>
     </style>
 
     <style name="SplashTheme" parent="Theme.AppCompat.NoActionBar">
@@ -38,13 +45,13 @@
     </style>
 
     <style name="CityFactHeader" parent="CityFacts">
-        <item name="android:textColor">@color/colorPink</item>
+        <item name="android:textColor">@color/backgroundSubHeaders</item>
         <item name="android:typeface">sans</item>
         <item name="android:textStyle">bold</item>
     </style>
 
     <style name="CityFactPanel" parent="CityFacts">
-        <item name="android:textColor">@color/colorText</item>
+        <item name="android:textColor">@color/colorTextSubHeaders</item>
         <item name="android:layout_marginBottom">@dimen/dimen_10dp</item>
     </style>
 

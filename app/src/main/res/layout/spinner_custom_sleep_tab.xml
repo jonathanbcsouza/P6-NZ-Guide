@@ -8,7 +8,7 @@
     android:layout_height="match_parent"
     android:gravity="center"
     android:soundEffectsEnabled="true"
-    android:background="@color/colorPink"
+    android:background="#000000"
     android:ellipsize="marquee"
-    android:textColor="@color/background"
+    android:textColor="@color/textWhite"
     android:textAlignment="inherit"/>

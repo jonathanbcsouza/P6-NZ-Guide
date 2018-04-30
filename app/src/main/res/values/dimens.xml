@@ -8,26 +8,14 @@
     <dimen name="dimen_16dp">16dp</dimen>
     <dimen name="dimen_20dp">20dp</dimen>
     <dimen name="dimen_30dp">30dp</dimen>
-
-    <!-- Font Sizes -->
-    <dimen name="font_small">13sp</dimen>
-
-    <!-- Font size for Time Display -->
-
-    <!-- Material UI Recommended elevation for Custom Toolbar -->
-
-    <!-- City Icon Height -->
-    <dimen name="city_icon_width">150dp</dimen>
-    <dimen name="city_icon_height">180dp</dimen>
-
-    <!-- Tab Layout padding -->
-
-    <!-- List Item Dimension -->
-
-    <!-- My other project dimens Android Design guidelines. -->
     <dimen name="activity_padding">16dp</dimen>
     <dimen name="activity_margin">16dp</dimen>
     <dimen name="image_height">300dp</dimen>
     <dimen name="list_item_image_height">80dp</dimen>
+
+    <!-- Font Sizes -->
+    <dimen name="font_small">13sp</dimen>
+
+
 
 </resources>
