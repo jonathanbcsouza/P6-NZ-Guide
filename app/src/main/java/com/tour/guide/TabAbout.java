@@ -34,6 +34,8 @@ public class TabAbout extends Fragment implements AdapterView.OnItemSelectedList
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
         String getValue = (String) parent.getItemAtPosition(position);
         Toast.makeText(getActivity(), getValue, Toast.LENGTH_SHORT).show();
+
+
     }
 
     @Override

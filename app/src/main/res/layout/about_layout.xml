@@ -24,7 +24,7 @@
                 android:background="@color/itemsTitle"
                 android:gravity="center"
                 android:text="Choose the City"
-                android:textColor="@color/itemsSubTitle" />
+                android:textColor="@color/textWhite" />
 
             <Spinner
                 android:id="@+id/spinner_sleeps"
