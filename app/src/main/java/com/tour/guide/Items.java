@@ -50,7 +50,13 @@ public class Items {
         mThumbnailResourceId = thumbnailResourceId;
     }
 
-    public Items(String string, String string1, String string2, int sight1, String string3, int sight11) {
+
+    public Items(String placesName
+            , int thumbnailResourceId
+            , String placesPhoneNumber) {
+        mPlacesName = placesName;
+        mThumbnailResourceId = thumbnailResourceId;
+        mPlacesPhoneNumber = placesPhoneNumber;
     }
 
 

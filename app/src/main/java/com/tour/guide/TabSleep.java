@@ -17,6 +17,7 @@ package com.tour.guide;
 
 import android.content.Intent;
 import android.content.res.Resources;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
@@ -49,23 +50,17 @@ public class TabSleep extends android.support.v4.app.Fragment {
         View rootView = inflater.inflate(R.layout.items_layout, container, false);
 
         final ArrayList<Items> sleepItems = new ArrayList<>();
+        sleepItems.add(new Items(getString(R.string.site0)
+                , R.drawable.trademe
+                , getString(R.string.site_short_desc_0)));
+
         sleepItems.add(new Items(getString(R.string.site1)
-                , getString(R.string.sight1Address)
-                , getResources().getString(R.string.accommodation_descr_1)
-                , R.mipmap.sight1
-                , getString(R.string.sights_location_1)
-                , 5
-                , getString(R.string.sight1phone)
-                , R.mipmap.sight1));
+                , R.drawable.airbnb
+                , getString(R.string.site_short_desc_1)));
 
         sleepItems.add(new Items(getString(R.string.site2)
-                , getString(R.string.sight1Address)
-                , getResources().getString(R.string.accommodation_descr_1)
-                , R.mipmap.sight1
-                , getString(R.string.sights_location_1)
-                , 5
-                , getString(R.string.sight1phone)
-                , R.mipmap.sight1));
+                , R.drawable.facebook
+                , getString(R.string.site_short_desc_2)));
 
 
         SleepAdapter adapter = new SleepAdapter(getActivity(), sleepItems);
@@ -76,27 +71,22 @@ public class TabSleep extends android.support.v4.app.Fragment {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
-                Intent intentSleep = new Intent(getActivity(), AllPlacesActivity.class);
+                if (position == 0) {
+                    passUrl("http://trademe.co.nz");
 
-                Items hotels = sleepItems.get(position);
+                } else if (position == 1) {
+                    passUrl("http://airbnb.co.nz/c/jonathans11889");
 
-                Bundle bundle = new Bundle();
-                bundle.putString(Keys.PLACE_NAME_KEY, hotels.getPlacesName());
-                bundle.putString(Keys.PLACE_DETAIL_KEY, hotels.getPlacesDescription());
-                bundle.putString(Keys.PLACE_ADDRESS_KEY, hotels.getPlacesAddress());
-                bundle.putString(Keys.PLACE_LOCATION_KEY, hotels.getLocationId());
-                bundle.putInt(Keys.PLACE_IMAGE_KEY, hotels.getImageResourceId());
-                bundle.putDouble(Keys.PLACE_RATING_KEY, hotels.getPlacesRating());
-                bundle.putString(Keys.PLACE_PHONE_NUMBER_KEY, hotels.getPlacesPhoneNumber());
-
-                bundle.putInt(Keys.FRAGMENT_PLACE, 1);
-                intentSleep.putExtras(bundle);
-
-                startActivity(intentSleep);
+                }
+                passUrl("https://www.facebook.com/search/top/?q=New%20Zealand%20-%20flatmate%20wanted");
             }
         });
 
         return rootView;
     }
 
+    public void passUrl(String site) {
+        Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(site));
+        startActivity(browserIntent);
+    }
 }
