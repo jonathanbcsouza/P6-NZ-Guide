@@ -51,7 +51,7 @@
                 <TextView
                     android:id="@+id/city"
                     style="@style/CityFactPanel"
-                    android:text="@string/template_city" />
+                    android:text="@string/city_0" />
 
                 <TextView
                     style="@style/CityFactHeader"
@@ -60,7 +60,7 @@
                 <TextView
                     android:id="@+id/population"
                     style="@style/CityFactPanel"
-                    android:text="@string/template_population" />
+                    android:text="@string/population_0" />
 
                 <TextView
                     style="@style/CityFactHeader"
@@ -69,7 +69,7 @@
                 <TextView
                     android:id="@+id/airport"
                     style="@style/CityFactPanel"
-                    android:text="@string/template_airports" />
+                    android:text="@string/airports_0" />
 
                 <TextView
                     style="@style/CityFactHeader"
@@ -78,7 +78,7 @@
                 <TextView
                     android:id="@+id/transport"
                     style="@style/CityFactPanel"
-                    android:text="@string/template_transports" />
+                    android:text="@string/transports_0" />
 
             </LinearLayout>
 
@@ -98,9 +98,10 @@
             android:text="@string/about_city" />
 
         <TextView
+            android:id="@+id/description_city"
             style="@style/CityPanelDescription"
             android:background="@color/tabsTitle"
-            android:text="@string/template_about_city"
+            android:text="@string/about_city_0"
             android:textColor="@color/colorTextSubHeaders" />
 
     </LinearLayout>

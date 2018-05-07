@@ -65,25 +65,7 @@ public class TabSights extends android.support.v4.app.Fragment {
                 , 4
                 , getString(R.string.sight5phone)
                 , R.mipmap.sight5));
-
-        sightsPlaces.add(new Items(getString(R.string.sight6)
-                , getString(R.string.sight6Address)
-                , getResources().getString(R.string.sight3description)
-                , R.mipmap.sight6
-                , getString(R.string.sights_location_6)
-                , 4
-                , getString(R.string.sight6phone)
-                , R.mipmap.sight6));
-
-        sightsPlaces.add(new Items(getString(R.string.sight7)
-                , getString(R.string.sight7Address)
-                , getResources().getString(R.string.sight3description)
-                , R.mipmap.sight7
-                , getString(R.string.sights_location_7)
-                , 4
-                , getString(R.string.sight7phone)
-                , R.mipmap.sight7));
-
+        
         sightsPlaces.add(new Items(getString(R.string.sight8)
                 , getString(R.string.sight8Address)
                 , getResources().getString(R.string.sight3description)

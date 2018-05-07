@@ -18,6 +18,8 @@ package com.tour.guide;
 import android.content.Intent;
 import android.content.res.Resources;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentActivity;
 import android.support.v4.content.res.ResourcesCompat;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -25,8 +27,13 @@ import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.Spinner;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
@@ -42,7 +49,7 @@ public class TabSleep extends android.support.v4.app.Fragment {
         View rootView = inflater.inflate(R.layout.items_layout, container, false);
 
         final ArrayList<Items> sleepItems = new ArrayList<>();
-        sleepItems.add(new Items(getString(R.string.accommodation1)
+        sleepItems.add(new Items(getString(R.string.site1)
                 , getString(R.string.sight1Address)
                 , getResources().getString(R.string.accommodation_descr_1)
                 , R.mipmap.sight1
@@ -50,6 +57,16 @@ public class TabSleep extends android.support.v4.app.Fragment {
                 , 5
                 , getString(R.string.sight1phone)
                 , R.mipmap.sight1));
+
+        sleepItems.add(new Items(getString(R.string.site2)
+                , getString(R.string.sight1Address)
+                , getResources().getString(R.string.accommodation_descr_1)
+                , R.mipmap.sight1
+                , getString(R.string.sights_location_1)
+                , 5
+                , getString(R.string.sight1phone)
+                , R.mipmap.sight1));
+
 
         SleepAdapter adapter = new SleepAdapter(getActivity(), sleepItems);
         ListView listView = rootView.findViewById(R.id.fragment_list);
