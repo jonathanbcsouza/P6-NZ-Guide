@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -20,6 +21,7 @@ public class TabAbout extends Fragment implements AdapterView.OnItemSelectedList
     private TextView airport;
     private TextView transport;
     private TextView aboutTheCity;
+    private ImageView photoCity;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -30,6 +32,7 @@ public class TabAbout extends Fragment implements AdapterView.OnItemSelectedList
         airport = rootView.findViewById(R.id.airport);
         transport = rootView.findViewById(R.id.transport);
         aboutTheCity = rootView.findViewById(R.id.description_city);
+        photoCity = rootView.findViewById(R.id.city_photo);
 
         Spinner spinner = (Spinner) rootView.findViewById(R.id.spinner_sleeps);
         ArrayAdapter<CharSequence> adapterSpinner = ArrayAdapter.createFromResource(getActivity(),
@@ -64,6 +67,7 @@ public class TabAbout extends Fragment implements AdapterView.OnItemSelectedList
                 airport.setText(getString(R.string.airports_1));
                 transport.setText(getString(R.string.transports_1));
                 aboutTheCity.setText(getString(R.string.about_city_1));
+                photoCity.setImageResource(R.drawable.wellington);
                 break;
 
             case 2:
@@ -73,6 +77,7 @@ public class TabAbout extends Fragment implements AdapterView.OnItemSelectedList
                 airport.setText(getString(R.string.airports_2));
                 transport.setText(getString(R.string.transports_2));
                 aboutTheCity.setText(getString(R.string.about_city_2));
+                photoCity.setImageResource(R.drawable.christchurch);
                 break;
 /*
             case 3:
