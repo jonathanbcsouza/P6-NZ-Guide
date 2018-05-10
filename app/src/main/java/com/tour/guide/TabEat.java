@@ -16,126 +16,129 @@
 package com.tour.guide;
 
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
+import android.support.annotation.RequiresApi;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
-import android.widget.Toast;
 
 import java.util.ArrayList;
-
 
 public class TabEat extends android.support.v4.app.Fragment {
 
     public TabEat() {
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.KITKAT)
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.items_layout, container, false);
 
-        final ArrayList<Items> foodsPlaces = new ArrayList<>();
-        foodsPlaces.add(new Items(getString(R.string.restaurant1)
-                , getString(R.string.restaurant1Address)
-                , getResources().getString(R.string.restaurant1Description)
-                , R.mipmap.restaurant1
-                , getString(R.string.restaurant_location_1)
-                , 4.9
-                , getString(R.string.restaurant1phone)
-                , R.mipmap.restaurant1));
+            final ArrayList<Items> foodsPlaces = new ArrayList<>();
+            foodsPlaces.add(new Items(getString(R.string.restaurant1)
+                    , getString(R.string.restaurant1Address)
+                    , getResources().getString(R.string.restaurant1Description)
+                    , R.mipmap.restaurant1
+                    , getString(R.string.restaurant_location_1)
+                    , 4.9
+                    , getString(R.string.restaurant1phone)
+                    , R.mipmap.restaurant1));
 
-        foodsPlaces.add(new Items(getString(R.string.restaurant2)
-                , getString(R.string.restaurant2Address)
-                , getResources().getString(R.string.restaurant2Description)
-                , R.mipmap.restaurant2
-                , getString(R.string.restaurant_location_2)
-                , 4.9
-                , getString(R.string.restaurant2phone)
-                , R.mipmap.restaurant2));
+            foodsPlaces.add(new Items(getString(R.string.restaurant2)
+                    , getString(R.string.restaurant2Address)
+                    , getResources().getString(R.string.restaurant2Description)
+                    , R.mipmap.restaurant2
+                    , getString(R.string.restaurant_location_2)
+                    , 4.9
+                    , getString(R.string.restaurant2phone)
+                    , R.mipmap.restaurant2));
 
-        foodsPlaces.add(new Items(getString(R.string.restaurant3)
-                , getString(R.string.restaurant3Address)
-                , getResources().getString(R.string.restaurant3Description)
-                , R.mipmap.restaurant3
-                , getString(R.string.restaurant_location_3)
-                , 4.9
-                , getString(R.string.restaurant3phone)
-                , R.mipmap.restaurant3));
+            foodsPlaces.add(new Items(getString(R.string.restaurant3)
+                    , getString(R.string.restaurant3Address)
+                    , getResources().getString(R.string.restaurant3Description)
+                    , R.mipmap.restaurant3
+                    , getString(R.string.restaurant_location_3)
+                    , 4.9
+                    , getString(R.string.restaurant3phone)
+                    , R.mipmap.restaurant3));
 
-        foodsPlaces.add(new Items(getString(R.string.restaurant4)
-                , getString(R.string.restaurant4Address)
-                , getResources().getString(R.string.restaurant4Description)
-                , R.mipmap.restaurant4
-                , getString(R.string.restaurant_location_4)
-                , 4.9
-                , getString(R.string.restaurant4phone)
-                , R.mipmap.restaurant4));
+            foodsPlaces.add(new Items(getString(R.string.restaurant4)
+                    , getString(R.string.restaurant4Address)
+                    , getResources().getString(R.string.restaurant4Description)
+                    , R.mipmap.restaurant4
+                    , getString(R.string.restaurant_location_4)
+                    , 4.9
+                    , getString(R.string.restaurant4phone)
+                    , R.mipmap.restaurant4));
 
-        foodsPlaces.add(new Items(getString(R.string.restaurant5)
-                , getString(R.string.restaurant5Address)
-                , getResources().getString(R.string.restaurant5Description)
-                , R.mipmap.restaurant5
-                , getString(R.string.restaurant_location_5)
-                , 4.9
-                , getString(R.string.restaurant5phone)
-                , R.mipmap.restaurant5));
+            foodsPlaces.add(new Items(getString(R.string.restaurant5)
+                    , getString(R.string.restaurant5Address)
+                    , getResources().getString(R.string.restaurant5Description)
+                    , R.mipmap.restaurant5
+                    , getString(R.string.restaurant_location_5)
+                    , 4.9
+                    , getString(R.string.restaurant5phone)
+                    , R.mipmap.restaurant5));
 
-        foodsPlaces.add(new Items(getString(R.string.restaurant6)
-                , getString(R.string.restaurant6Address)
-                , getResources().getString(R.string.restaurant6Description)
-                , R.mipmap.restaurant6
-                , getString(R.string.restaurant_location_6)
-                , 4.9
-                , getString(R.string.restaurant6phone)
-                , R.mipmap.restaurant6));
+            foodsPlaces.add(new Items(getString(R.string.restaurant6)
+                    , getString(R.string.restaurant6Address)
+                    , getResources().getString(R.string.restaurant6Description)
+                    , R.mipmap.restaurant6
+                    , getString(R.string.restaurant_location_6)
+                    , 4.9
+                    , getString(R.string.restaurant6phone)
+                    , R.mipmap.restaurant6));
 
-        foodsPlaces.add(new Items(getString(R.string.restaurant7)
-                , getString(R.string.restaurant7Address)
-                , getResources().getString(R.string.restaurant7Description)
-                , R.mipmap.restaurant7
-                , getString(R.string.restaurant_location_7)
-                , 4.9
-                , getString(R.string.restaurant7phone)
-                , R.mipmap.restaurant7));
 
-        foodsPlaces.add(new Items(getString(R.string.restaurant8)
-                , getString(R.string.restaurant8Address)
-                , getResources().getString(R.string.restaurant8Description)
-                , R.mipmap.restaurant8
-                , getString(R.string.restaurant_location_8)
-                , 4.9
-                , getString(R.string.restaurant8phone)
-                , R.mipmap.restaurant8));
+            foodsPlaces.add(new Items(getString(R.string.restaurant7)
+                    , getString(R.string.restaurant7Address)
+                    , getResources().getString(R.string.restaurant7Description)
+                    , R.mipmap.restaurant7
+                    , getString(R.string.restaurant_location_7)
+                    , 4.9
+                    , getString(R.string.restaurant7phone)
+                    , R.mipmap.restaurant7));
 
-        foodsPlaces.add(new Items(getString(R.string.restaurant9)
-                , getString(R.string.restaurant9Address)
-                , getResources().getString(R.string.restaurant9Description)
-                , R.mipmap.restaurant9
-                , getString(R.string.restaurant_location_9)
-                , 4.9
-                , getString(R.string.restaurant9phone)
-                , R.mipmap.restaurant9));
+            foodsPlaces.add(new Items(getString(R.string.restaurant8)
+                    , getString(R.string.restaurant8Address)
+                    , getResources().getString(R.string.restaurant8Description)
+                    , R.mipmap.restaurant8
+                    , getString(R.string.restaurant_location_8)
+                    , 4.9
+                    , getString(R.string.restaurant8phone)
+                    , R.mipmap.restaurant8));
 
-        foodsPlaces.add(new Items(getString(R.string.restaurant10)
-                , getString(R.string.restaurant10Address)
-                , getResources().getString(R.string.restaurant10Description)
-                , R.mipmap.restaurant10
-                , getString(R.string.restaurant_location_10)
-                , 4.9
-                , getString(R.string.restaurant10phone)
-                , R.mipmap.restaurant10));
+            foodsPlaces.add(new Items(getString(R.string.restaurant9)
+                    , getString(R.string.restaurant9Address)
+                    , getResources().getString(R.string.restaurant9Description)
+                    , R.mipmap.restaurant9
+                    , getString(R.string.restaurant_location_9)
+                    , 4.9
+                    , getString(R.string.restaurant9phone)
+                    , R.mipmap.restaurant9));
 
-        foodsPlaces.add(new Items(getString(R.string.restaurant11)
-                , getString(R.string.restaurant11Address)
-                , getResources().getString(R.string.restaurant11Description)
-                , R.mipmap.restaurant11
-                , getString(R.string.restaurant_location_11)
-                , 4.9
-                , getString(R.string.restaurant11phone)
-                , R.mipmap.restaurant11));
+            foodsPlaces.add(new Items(getString(R.string.restaurant10)
+                    , getString(R.string.restaurant10Address)
+                    , getResources().getString(R.string.restaurant10Description)
+                    , R.mipmap.restaurant10
+                    , getString(R.string.restaurant_location_10)
+                    , 4.9
+                    , getString(R.string.restaurant10phone)
+                    , R.mipmap.restaurant10));
+
+            foodsPlaces.add(new Items(getString(R.string.restaurant11)
+                    , getString(R.string.restaurant11Address)
+                    , getResources().getString(R.string.restaurant11Description)
+                    , R.mipmap.restaurant11
+                    , getString(R.string.restaurant_location_11)
+                    , 4.9
+                    , getString(R.string.restaurant11phone)
+                    , R.mipmap.restaurant11));
+
 
 
         ItemsAdapter adapter = new ItemsAdapter(getActivity(), foodsPlaces);

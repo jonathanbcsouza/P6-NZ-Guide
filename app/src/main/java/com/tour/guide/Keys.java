@@ -14,6 +14,7 @@ public class Keys {
     public static final String PLACE_RATING_KEY = "places_rating";
     public static final String PLACE_PHONE_NUMBER_KEY = "places_phone_number";
     public static final String FRAGMENT_PLACE = "fragment_identifier";
+    public static final String SPINNER_POSITION_KEY = "spinner_position";
 
     private Keys() {
     }
