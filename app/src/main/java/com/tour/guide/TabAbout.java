@@ -57,6 +57,7 @@ public class TabAbout extends Fragment implements AdapterView.OnItemSelectedList
                 airport.setText(getString(R.string.airports_0));
                 transport.setText(getString(R.string.transports_0));
                 aboutTheCity.setText(getString(R.string.about_city_0));
+                photoCity.setImageResource(R.mipmap.auckland);
                 break;
 
             case 1:
