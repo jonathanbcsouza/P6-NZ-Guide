@@ -10,8 +10,6 @@ import android.widget.LinearLayout;
 import android.widget.RatingBar;
 import android.widget.TextView;
 
-import com.tour.guide.Keys;
-
 public class AllPlacesActivity extends AppCompatActivity {
 
     private Bundle bundle;
@@ -33,7 +31,7 @@ public class AllPlacesActivity extends AppCompatActivity {
                 setTitle(getString(R.string.sleep));
                 break;
             case 2:
-                setTitle(R.string.eat);
+                setTitle(R.string.jobs);
                 break;
         }
 

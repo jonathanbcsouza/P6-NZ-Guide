@@ -1,6 +1,6 @@
 package com.tour.guide;
 
-/**
+import android.content.res.Resources; /**
  * Created by jonat on 5/01/2018.
  */
 
@@ -59,6 +59,9 @@ public class Items {
         mPlacesPhoneNumber = placesPhoneNumber;
     }
 
+
+    public Items(String site, int icon, String desc, String url) {
+    }
 
     public String   getPlacesName() {
         return mPlacesName;

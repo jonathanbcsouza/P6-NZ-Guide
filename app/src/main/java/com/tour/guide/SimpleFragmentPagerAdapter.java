@@ -43,7 +43,7 @@ public class SimpleFragmentPagerAdapter extends FragmentPagerAdapter {
         } else if (position == 2) {
             return new TabSleep();
         } else {
-            return new TabEat();
+            return new TabJobs();
         }
     }
 
@@ -62,7 +62,7 @@ public class SimpleFragmentPagerAdapter extends FragmentPagerAdapter {
         } else if (position == 2) {
             return mContext.getString(R.string.sleep);
         } else {
-            return mContext.getString(R.string.eat);
+            return mContext.getString(R.string.jobs);
         }
     }
 }
