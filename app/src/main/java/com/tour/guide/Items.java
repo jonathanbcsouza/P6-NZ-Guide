@@ -1,6 +1,9 @@
 package com.tour.guide;
 
-import android.content.res.Resources; /**
+import android.content.res.Resources;
+import android.net.Uri;
+
+/**
  * Created by jonat on 5/01/2018.
  */
 
@@ -61,6 +64,12 @@ public class Items {
 
 
     public Items(String site, int icon, String desc, String url) {
+    }
+
+    public Items(String string, int logo, int desc) {
+    }
+
+    public Items(String string, int trademe, String string1, Uri aVoid) {
     }
 
     public String   getPlacesName() {

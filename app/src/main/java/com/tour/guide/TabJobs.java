@@ -16,26 +16,17 @@
 package com.tour.guide;
 
 import android.content.Intent;
-import android.content.res.Resources;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.Snackbar;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentActivity;
-import android.support.v4.content.res.ResourcesCompat;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.animation.Animation;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.Spinner;
-import android.widget.TextView;
-import android.widget.Toast;
-
-import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
@@ -44,6 +35,8 @@ public class TabJobs extends android.support.v4.app.Fragment implements AdapterV
 
     public TabJobs() {
     }
+
+    final ArrayList<Items> jobsArray = new ArrayList<>();
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -62,51 +55,72 @@ public class TabJobs extends android.support.v4.app.Fragment implements AdapterV
         return rootView;
     }
 
-    public void createList(String site, int icon, String desc, String url) {
-        final ArrayList<Items> jobItens = new ArrayList<>();
-        jobItens.add(new Items(site
-                , icon
-                , desc
-                , url));
-
-        SleepAdapter adapter = new SleepAdapter(getActivity(), jobItens);
-        ListView listView = getActivity().findViewById(R.id.jobs_list);
-        listView.setAdapter(adapter);
-
-    }
-
-    public void passUrl(String site) {
-        Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(site));
-        startActivity(browserIntent);
-    }
-
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
         String getValue = (String) parent.getItemAtPosition(position);
 
         switch (position) {
             case 0:
-
                 Snackbar.make(getView(), "Changed to: " + getValue, Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
-                createList("a", R.drawable.facebook, "c", ".com");
 
+                jobsArray.add(new Items(getString(R.string.site0)
+                        , R.drawable.trademe
+                        , getString(R.string.site_short_desc_0)));
                 break;
 
             case 1:
                 Snackbar.make(getView(), "Changed to: " + getValue, Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
-
+                jobsArray.clear();
+                jobsArray.add(new Items(getString(R.string.site0)
+                        , R.drawable.trademe
+                        , getString(R.string.site_short_desc_0)));
+                jobsArray.add(new Items(getString(R.string.site1)
+                        , R.drawable.airbnb
+                        , getString(R.string.site_short_desc_1)));
                 break;
 
             case 2:
                 Snackbar.make(getView(), "Changed to: " + getValue, Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
 
+                jobsArray.clear();
+                jobsArray.add(new Items(getString(R.string.site0)
+                        , R.drawable.trademe
+                        , getString(R.string.site_short_desc_0)));
+                jobsArray.add(new Items(getString(R.string.site1)
+                        , R.drawable.airbnb
+                        , getString(R.string.site_short_desc_1)));
+                jobsArray.add(new Items(getString(R.string.site2)
+                        , R.drawable.facebook
+                        , getString(R.string.site_short_desc_2)));
                 break;
 
         }
+        SleepAdapter adapter = new SleepAdapter(getActivity(), jobsArray);
+        ListView listView = getActivity().findViewById(R.id.jobs_list);
+        listView.setAdapter(adapter);
 
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+                if (position == 0) {
+                    passUrl("http://trademe.co.nz");
+                } else if (position == 1) {
+                    passUrl("http://airbnb.co.nz/c/jonathans11889");
+
+                }
+                passUrl("https://www.facebook.com/search/top/?q=New%20Zealand%20-%20flatmate%20wanted");
+            }
+        });
+
+    }
+
+    public void passUrl(String site) {
+        Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(site));
+        startActivity(browserIntent);
     }
 
     @Override
