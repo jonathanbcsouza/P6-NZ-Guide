@@ -3,6 +3,7 @@ package com.tour.guide;
 import android.os.Bundle;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -20,6 +21,9 @@ public class TabAbout extends Fragment implements AdapterView.OnItemSelectedList
     private TextView transport;
     private TextView aboutTheCity;
     private ImageView photoCity;
+    private Spinner spinner;
+    private ArrayAdapter arrayAdapter;
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -32,11 +36,11 @@ public class TabAbout extends Fragment implements AdapterView.OnItemSelectedList
         aboutTheCity = rootView.findViewById(R.id.description_city);
         photoCity = rootView.findViewById(R.id.city_photo);
 
-        Spinner spinner = (Spinner) rootView.findViewById(R.id.spinner_sleeps);
-        ArrayAdapter<CharSequence> adapterSpinner = ArrayAdapter.createFromResource(getActivity(),
+        spinner = (Spinner) rootView.findViewById(R.id.spinner_sleeps);
+        arrayAdapter = ArrayAdapter.createFromResource(getActivity(),
                 R.array.spinner_cities, R.layout.spinner_custom_sleep_tab);
-        adapterSpinner.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinner.setAdapter(adapterSpinner);
+        arrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinner.setAdapter(arrayAdapter);
 
         spinner.setOnItemSelectedListener(this);
 
@@ -47,44 +51,59 @@ public class TabAbout extends Fragment implements AdapterView.OnItemSelectedList
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
         String getValue = (String) parent.getItemAtPosition(position);
 
+        int spinnerSize = spinner.getAdapter().getCount();
+
+        Log.v("TAGGGGGGGGG", String.valueOf(spinnerSize));
+
+
         switch (position) {
             case 0:
-
-                Snackbar.make(getView(), "Changed to: " + getValue, Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-                city.setText(getString(R.string.city_0));
-                population.setText(getString(R.string.population_0));
-                airport.setText(getString(R.string.airports_0));
-                transport.setText(getString(R.string.transports_0));
-                aboutTheCity.setText(getString(R.string.about_city_0));
-                photoCity.setImageResource(R.mipmap.auckland);
+                createDescription(getValue,
+                        getString(R.string.city_2),
+                        getString(R.string.population_2),
+                        getString(R.string.airports_2),
+                        getString(R.string.transports_2),
+                        getString(R.string.about_city_2),
+                        R.drawable.christchurch);
                 break;
 
             case 1:
-                Snackbar.make(getView(), "Changed to: " + getValue, Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-                city.setText(getString(R.string.city_1));
-                population.setText(getString(R.string.population_1));
-                airport.setText(getString(R.string.airports_1));
-                transport.setText(getString(R.string.transports_1));
-                aboutTheCity.setText(getString(R.string.about_city_1));
-                photoCity.setImageResource(R.drawable.wellington);
+                createDescription(getValue,
+                        getString(R.string.city_2),
+                        getString(R.string.population_2),
+                        getString(R.string.airports_2),
+                        getString(R.string.transports_2),
+                        getString(R.string.about_city_2),
+                        R.drawable.christchurch);
                 break;
 
             case 2:
-                Snackbar.make(getView(), "Changed to: " + getValue, Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-                city.setText(getString(R.string.city_2));
-                population.setText(getString(R.string.population_2));
-                airport.setText(getString(R.string.airports_2));
-                transport.setText(getString(R.string.transports_2));
-                aboutTheCity.setText(getString(R.string.about_city_2));
-                photoCity.setImageResource(R.drawable.christchurch);
+                createDescription(getValue,
+                        getString(R.string.city_2),
+                        getString(R.string.population_2),
+                        getString(R.string.airports_2),
+                        getString(R.string.transports_2),
+                        getString(R.string.about_city_2),
+                        R.drawable.christchurch);
                 break;
 
         }
-
     }
+
+    public void createDescription(String passValue, String passCity, String passPopulation, String passAirport,
+                                  String passTransport, String passAboutCity, int passPhotoCity) {
+
+        Snackbar.make(getView(), "Changed to: " + passValue, Snackbar.LENGTH_LONG)
+                .setAction("Action", null).show();
+
+        city.setText(passCity);
+        population.setText(passPopulation);
+        airport.setText(passAirport);
+        transport.setText(passTransport);
+        aboutTheCity.setText(passAboutCity);
+        photoCity.setImageResource(passPhotoCity);
+    }
+
 
     @Override
     public void onNothingSelected(AdapterView<?> parent) {

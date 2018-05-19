@@ -11,7 +11,6 @@
     <string name="contact_title">Contact</string>
     <string name="address_title">Address</string>
 
-
     <string-array name="spinner_cities">
         <item>Auckland</item>
         <item>Wellington</item>
@@ -31,6 +30,29 @@
         <item>Gisborne</item>
         -->
     </string-array>
+
+    <string-array name="spinner_jobs_categories">
+        <item>Construction</item>
+        <item>Hospitality</item>
+        <item>Cleaning</item>
+        <item>General Services</item>
+    </string-array>
+
+    <!-- Jobs - Construction-->
+    <string name="const0">http://margaritascleaning.co.nz</string>
+    <string name="const1">https://www.cleancomnz.co/</string>
+
+    <!-- Jobs - Hospitality-->
+    <string name="hosp0">http://margaritascleaning.co.nz</string>
+    <string name="hosp1">https://www.cleancomnz.co/</string>
+
+    <!-- Jobs - Cleaning-->
+    <string name="clean0">http://margaritascleaning.co.nz</string>
+    <string name="clean1">https://www.cleancomnz.co/</string>
+
+    <!-- Jobs - General-->
+    <string name="gen0">http://trademe.co.nz</string>
+    <string name="gen1">https://seek.co.nz/</string>
 
     <!-- Label About -->
     <string name="city">City</string>
@@ -73,15 +95,15 @@
     <string name="sight9">Queen Street</string>
     <string name="sight10">Ferry Building</string>
 
-    <string name="sight1phone">09-363 6000</string>
+    <string name="sight1phone">09–363 6000</string>
     <string name="sight2phone">9 365 9918</string>
     <string name="sight3phone">9 365 9918</string>
-    <string name="sight4phone">09-600 1545</string>
-    <string name="sight5phone">09-362 0655</string>
-    <string name="sight6phone">09-377 7780</string>
-    <string name="sight7phone">09-303 0150</string>
-    <string name="sight8phone">09-379 5656</string>
-    <string name="sight9phone">09-379 5151</string>
+    <string name="sight4phone">09–600 1545</string>
+    <string name="sight5phone">09–362 0655</string>
+    <string name="sight6phone">09–377 7780</string>
+    <string name="sight7phone">09–303 0150</string>
+    <string name="sight8phone">09–379 5656</string>
+    <string name="sight9phone">09–379 5151</string>
     <string name="sight10phone">09-379 5353</string>
 
     <string name="sight1Address">Corner Victoria and Federal Sts, Auckland Central, Auckland 1010, New Zealand</string>

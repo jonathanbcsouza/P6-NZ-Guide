@@ -66,11 +66,15 @@ public class Items {
     public Items(String site, int icon, String desc, String url) {
     }
 
-    public Items(String string, int logo, int desc) {
+    public Items(String string, Resources logo, String desc) {
     }
 
     public Items(String string, int trademe, String string1, Uri aVoid) {
     }
+
+    public Items(String site, String string) {
+    }
+
 
     public String   getPlacesName() {
         return mPlacesName;

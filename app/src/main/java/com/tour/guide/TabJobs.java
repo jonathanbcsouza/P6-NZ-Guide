@@ -16,10 +16,10 @@
 package com.tour.guide;
 
 import android.content.Intent;
+import android.content.res.Resources;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.Snackbar;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -37,16 +37,16 @@ public class TabJobs extends android.support.v4.app.Fragment implements AdapterV
     }
 
     final ArrayList<Items> jobsArray = new ArrayList<>();
+    int icon;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.items_layout_spinner, container, false);
 
-
         Spinner spinner = (Spinner) rootView.findViewById(R.id.spinner_jobs);
         ArrayAdapter<CharSequence> adapterSpinner = ArrayAdapter.createFromResource(getActivity(),
-                R.array.spinner_cities, R.layout.spinner_custom_sleep_tab);
+                R.array.spinner_jobs_categories, R.layout.spinner_custom_sleep_tab);
         adapterSpinner.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(adapterSpinner);
 
@@ -58,43 +58,30 @@ public class TabJobs extends android.support.v4.app.Fragment implements AdapterV
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
         String getValue = (String) parent.getItemAtPosition(position);
+        icon = R.drawable.ic_keyboard_arrow_right_black_24dp;
 
         switch (position) {
             case 0:
-                Snackbar.make(getView(), "Changed to: " + getValue, Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-
-                jobsArray.add(new Items(getString(R.string.site0)
-                        , R.drawable.trademe
-                        , getString(R.string.site_short_desc_0)));
+                jobsArray.clear();
+                createArray(getValue, icon, getString(R.string.site0), getString(R.string.site_short_desc_0));
                 break;
 
             case 1:
-                Snackbar.make(getView(), "Changed to: " + getValue, Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
                 jobsArray.clear();
-                jobsArray.add(new Items(getString(R.string.site0)
-                        , R.drawable.trademe
-                        , getString(R.string.site_short_desc_0)));
-                jobsArray.add(new Items(getString(R.string.site1)
-                        , R.drawable.airbnb
-                        , getString(R.string.site_short_desc_1)));
+                createArray(getValue, icon, getString(R.string.site1), getString(R.string.site_short_desc_1));
                 break;
 
             case 2:
-                Snackbar.make(getView(), "Changed to: " + getValue, Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-
                 jobsArray.clear();
-                jobsArray.add(new Items(getString(R.string.site0)
-                        , R.drawable.trademe
-                        , getString(R.string.site_short_desc_0)));
-                jobsArray.add(new Items(getString(R.string.site1)
-                        , R.drawable.airbnb
-                        , getString(R.string.site_short_desc_1)));
-                jobsArray.add(new Items(getString(R.string.site2)
-                        , R.drawable.facebook
-                        , getString(R.string.site_short_desc_2)));
+                createArray(getValue, icon, getString(R.string.site1), getString(R.string.site_short_desc_1));
+                createArray(getValue, icon, getString(R.string.site2), getString(R.string.site_short_desc_2));
+                break;
+
+            case 3:
+                jobsArray.clear();
+                createArray(getValue, icon, getString(R.string.site0), getString(R.string.site_short_desc_0));
+                createArray(getValue, icon, getString(R.string.site1), getString(R.string.site_short_desc_1));
+                createArray(getValue, icon, getString(R.string.site2), getString(R.string.site_short_desc_2));
                 break;
 
         }
@@ -102,20 +89,15 @@ public class TabJobs extends android.support.v4.app.Fragment implements AdapterV
         ListView listView = getActivity().findViewById(R.id.jobs_list);
         listView.setAdapter(adapter);
 
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+    }
 
-                if (position == 0) {
-                    passUrl("http://trademe.co.nz");
-                } else if (position == 1) {
-                    passUrl("http://airbnb.co.nz/c/jonathans11889");
+    public void createArray(String value, int icon, String site, String siteDesc) {
 
-                }
-                passUrl("https://www.facebook.com/search/top/?q=New%20Zealand%20-%20flatmate%20wanted");
-            }
-        });
-
+        Snackbar.make(getView(), "Changed to: " + value, Snackbar.LENGTH_LONG)
+                .setAction("Action", null).show();
+        jobsArray.add(new Items(site
+                , icon
+                , siteDesc));
     }
 
     public void passUrl(String site) {
