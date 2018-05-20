@@ -1,8 +1,5 @@
 package com.tour.guide;
 
-import android.content.res.Resources;
-import android.net.Uri;
-
 /**
  * Created by jonat on 5/01/2018.
  */
@@ -18,25 +15,7 @@ public class Items {
     private String mPlacesPhoneNumber = NO_PHONE_NUMBER;
     private int mThumbnailResourceId;
 
-  
-
-    public Items(String placesName
-            , String placesAddress
-            , String placesDescription
-            , int imageResourceId
-            , String locationId
-            , double placesRating
-            , int thumbnailResourceID) {
-        mPlacesName = placesName;
-        mPlacesAddress = placesAddress;
-        mPlacesDescription = placesDescription;
-        mImageResourceId = imageResourceId;
-        mLocationId = locationId;
-        mPlacesRating = placesRating;
-        mThumbnailResourceId = thumbnailResourceID;
-    }
-
-    public Items(String placesName
+     public Items(String placesName
             , String placesAddress
             , String placesDescription
             , int imageResourceId
@@ -53,26 +32,12 @@ public class Items {
         mThumbnailResourceId = thumbnailResourceId;
     }
 
-
     public Items(String placesName
             , int thumbnailResourceId
             , String placesPhoneNumber) {
         mPlacesName = placesName;
         mThumbnailResourceId = thumbnailResourceId;
         mPlacesPhoneNumber = placesPhoneNumber;
-    }
-
-
-    public Items(String site, int icon, String desc, String url) {
-    }
-
-    public Items(String string, Resources logo, String desc) {
-    }
-
-    public Items(String string, int trademe, String string1, Uri aVoid) {
-    }
-
-    public Items(String site, String string) {
     }
 
 

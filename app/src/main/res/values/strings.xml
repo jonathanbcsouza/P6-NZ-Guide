@@ -38,17 +38,29 @@
         <item>General Services</item>
     </string-array>
 
+    <!-- Jobs - Categories-->
+    <string name="category0">Agency Recruitment</string>
+    <string name="category1">Company</string>
+    <string name="category2">Jobs Website</string>
+
+
     <!-- Jobs - Construction-->
-    <string name="const0">http://margaritascleaning.co.nz</string>
-    <string name="const1">https://www.cleancomnz.co/</string>
+    <string name="const0">https://www.awf.co.nz</string>
+    <string name="const1">http://www.nzlabourhire.co.nz/</string>
+    <string name="const2">https://www.tradestaff.co.nz</string>
+    <string name="const3">http://www.fletcherconstruction.co.nz</string>
+    <string name="const4">https://www.onestaff.co.nz/</string>
+    <string name="const5">https://www.randstad.co.nz/</string>
+    <string name="const6">http://www.kensway.co.nz/</string>
+    <string name="const7">http://www.labourexchange.co.nz/</string>
 
     <!-- Jobs - Hospitality-->
-    <string name="hosp0">http://margaritascleaning.co.nz</string>
-    <string name="hosp1">https://www.cleancomnz.co/</string>
+    <string name="hosp0">https://www.wildfirerestaurant.co.nz</string>
 
     <!-- Jobs - Cleaning-->
     <string name="clean0">http://margaritascleaning.co.nz</string>
     <string name="clean1">https://www.cleancomnz.co/</string>
+    <string name="clean2">http://www.deepcleanservices.co.nz/</string>
 
     <!-- Jobs - General-->
     <string name="gen0">http://trademe.co.nz</string>

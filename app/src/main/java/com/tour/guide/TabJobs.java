@@ -20,6 +20,7 @@ import android.content.res.Resources;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.Snackbar;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -27,6 +28,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -57,39 +59,57 @@ public class TabJobs extends android.support.v4.app.Fragment implements AdapterV
 
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-        String getValue = (String) parent.getItemAtPosition(position);
+        final String getValue = (String) parent.getItemAtPosition(position);
         icon = R.drawable.ic_keyboard_arrow_right_black_24dp;
 
+        Log.v("JONATHAN", String.valueOf(position));
+        Log.v("JONATHAN", String.valueOf(id));
+        Log.v("JONATHAN", String.valueOf(getValue));
+
         switch (position) {
-            case 0:
+            case 0: //Construction
                 jobsArray.clear();
-                createArray(getValue, icon, getString(R.string.site0), getString(R.string.site_short_desc_0));
+                createArray(getValue, icon, getString(R.string.category0), getString(R.string.const0));
+                createArray(getValue, icon, getString(R.string.category1), getString(R.string.const1));
+                createArray(getValue, icon, getString(R.string.category0), getString(R.string.const2));
+                createArray(getValue, icon, getString(R.string.category1), getString(R.string.const3));
+                createArray(getValue, icon, getString(R.string.category0), getString(R.string.const4));
+                createArray(getValue, icon, getString(R.string.category0), getString(R.string.const5));
+                createArray(getValue, icon, getString(R.string.category0), getString(R.string.const7));
                 break;
 
-            case 1:
+            case 1: //Hospitality
                 jobsArray.clear();
-                createArray(getValue, icon, getString(R.string.site1), getString(R.string.site_short_desc_1));
+                createArray(getValue, icon, getString(R.string.category0),getString(R.string.hosp0));
                 break;
 
-            case 2:
+            case 2: // Cleaning
                 jobsArray.clear();
-                createArray(getValue, icon, getString(R.string.site1), getString(R.string.site_short_desc_1));
-                createArray(getValue, icon, getString(R.string.site2), getString(R.string.site_short_desc_2));
+                createArray(getValue, icon,  getString(R.string.category1), getString(R.string.clean0));
+                createArray(getValue, icon,  getString(R.string.category1), getString(R.string.clean1));
+                createArray(getValue, icon,  getString(R.string.category1), getString(R.string.clean2));
                 break;
 
-            case 3:
+            case 3: //General
                 jobsArray.clear();
-                createArray(getValue, icon, getString(R.string.site0), getString(R.string.site_short_desc_0));
-                createArray(getValue, icon, getString(R.string.site1), getString(R.string.site_short_desc_1));
-                createArray(getValue, icon, getString(R.string.site2), getString(R.string.site_short_desc_2));
+                createArray(getValue, icon, getString(R.string.category2), getString(R.string.gen0));
+                createArray(getValue, icon, getString(R.string.category2), getString(R.string.gen1));
                 break;
 
         }
         SleepAdapter adapter = new SleepAdapter(getActivity(), jobsArray);
-        ListView listView = getActivity().findViewById(R.id.jobs_list);
+        final ListView listView = getActivity().findViewById(R.id.jobs_list);
         listView.setAdapter(adapter);
 
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+               // Log.v("JONATHAN", String.valueOf(getValueClicked));
+            }
+        });
     }
+
 
     public void createArray(String value, int icon, String site, String siteDesc) {
 
@@ -104,6 +124,7 @@ public class TabJobs extends android.support.v4.app.Fragment implements AdapterV
         Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(site));
         startActivity(browserIntent);
     }
+
 
     @Override
     public void onNothingSelected(AdapterView<?> parent) {

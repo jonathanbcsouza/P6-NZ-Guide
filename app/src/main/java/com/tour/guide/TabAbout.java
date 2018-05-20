@@ -1,5 +1,6 @@
 package com.tour.guide;
 
+import android.content.res.Resources;
 import android.os.Bundle;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
@@ -51,33 +52,28 @@ public class TabAbout extends Fragment implements AdapterView.OnItemSelectedList
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
         String getValue = (String) parent.getItemAtPosition(position);
 
-        int spinnerSize = spinner.getAdapter().getCount();
-
-        Log.v("TAGGGGGGGGG", String.valueOf(spinnerSize));
-
-
         switch (position) {
             case 0:
                 createDescription(getValue,
-                        getString(R.string.city_2),
-                        getString(R.string.population_2),
-                        getString(R.string.airports_2),
-                        getString(R.string.transports_2),
-                        getString(R.string.about_city_2),
-                        R.drawable.christchurch);
+                        getString(R.string.city_0),
+                        getString(R.string.population_0),
+                        getString(R.string.airports_0),
+                        getString(R.string.transports_0),
+                        getString(R.string.about_city_0),
+                        R.mipmap.auckland);
                 break;
 
-            case 1:
+            case 1: // Wellington
                 createDescription(getValue,
-                        getString(R.string.city_2),
-                        getString(R.string.population_2),
-                        getString(R.string.airports_2),
-                        getString(R.string.transports_2),
-                        getString(R.string.about_city_2),
-                        R.drawable.christchurch);
+                        getString(R.string.city_1),
+                        getString(R.string.population_1),
+                        getString(R.string.airports_1),
+                        getString(R.string.transports_1),
+                        getString(R.string.about_city_1),
+                        R.drawable.wellington);
                 break;
 
-            case 2:
+            case 2: // Christchurch
                 createDescription(getValue,
                         getString(R.string.city_2),
                         getString(R.string.population_2),
