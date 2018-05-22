@@ -80,14 +80,14 @@ public class TabJobs extends android.support.v4.app.Fragment implements AdapterV
 
             case 1: //Hospitality
                 jobsArray.clear();
-                createArray(getValue, icon, getString(R.string.category0),getString(R.string.hosp0));
+                createArray(getValue, icon, getString(R.string.category0), getString(R.string.hosp0));
                 break;
 
             case 2: // Cleaning
                 jobsArray.clear();
-                createArray(getValue, icon,  getString(R.string.category1), getString(R.string.clean0));
-                createArray(getValue, icon,  getString(R.string.category1), getString(R.string.clean1));
-                createArray(getValue, icon,  getString(R.string.category1), getString(R.string.clean2));
+                createArray(getValue, icon, getString(R.string.category1), getString(R.string.clean0));
+                createArray(getValue, icon, getString(R.string.category1), getString(R.string.clean1));
+                createArray(getValue, icon, getString(R.string.category1), getString(R.string.clean2));
                 break;
 
             case 3: //General
@@ -97,15 +97,17 @@ public class TabJobs extends android.support.v4.app.Fragment implements AdapterV
                 break;
 
         }
-        SleepAdapter adapter = new SleepAdapter(getActivity(), jobsArray);
+        final SleepAdapter adapter = new SleepAdapter(getActivity(), jobsArray);
         final ListView listView = getActivity().findViewById(R.id.jobs_list);
         listView.setAdapter(adapter);
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                String getSite = String.valueOf(jobsArray.get(3));
+                Items jobs = jobsArray.get(position);
 
-               // Log.v("JONATHAN", String.valueOf(getValueClicked));
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   //passUrl(value);
             }
         });
     }
