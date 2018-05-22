@@ -104,10 +104,10 @@ public class TabJobs extends android.support.v4.app.Fragment implements AdapterV
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                String getSite = String.valueOf(jobsArray.get(3));
-                Items jobs = jobsArray.get(position);
 
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   //passUrl(value);
+                Items jobs = jobsArray.get(position);
+                passUrl(jobs.getPlacesPhoneNumber());
+
             }
         });
     }

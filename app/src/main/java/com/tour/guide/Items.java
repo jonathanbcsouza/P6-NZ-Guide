@@ -33,11 +33,11 @@ public class Items {
     }
 
     public Items(String placesName
-            , int thumbnailResourceId
-            , String placesPhoneNumber) {
+            , int icon
+            , String website) {
         mPlacesName = placesName;
-        mThumbnailResourceId = thumbnailResourceId;
-        mPlacesPhoneNumber = placesPhoneNumber;
+        mThumbnailResourceId = icon;
+        mPlacesPhoneNumber = website;
     }
 
 
