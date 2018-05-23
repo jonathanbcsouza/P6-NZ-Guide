@@ -3,7 +3,7 @@ Tour Guide - New Zealand
 ---
 <img src="https://lh3.googleusercontent.com/Dq3k3QMUTq1S987xUS34Ufo4Yvysqxtciy_q3bUW5zL3Oynf2iz_ckvswlr1YRK8Ybc=h900-rw" width="150" align="right" hspace="5">
 
-<img src="https://lh3.googleusercontent.com/5jhrvzuSfnDWI_XyWQPNn6EzFzuwIYix_xFO22qpsiiPYSGYYzCQ8zZI4U4DB4gXgQ=h900-rw" width="150"  align="right" hspace="5">
+<img src="/screenshots/jobs.png" width="150" align="right" hspace="5">
 
 <img src="/screenshots/lists.png" width="150" align="right" hspace="5">
 
@@ -13,7 +13,7 @@ Tour Guide - New Zealand
 
 - Splash Screen
 - Intents
-- ClickListeners
+- ClickListeners    
 - Arraylists
 - ArrayAdapter
 - Styles
