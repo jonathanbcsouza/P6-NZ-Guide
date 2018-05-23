@@ -18,6 +18,7 @@ Tour Guide - New Zealand
 - ArrayAdapter
 - Styles
 - Bundles
+- Spinners
 ---
 
 ### Download:
