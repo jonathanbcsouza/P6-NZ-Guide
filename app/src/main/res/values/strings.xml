@@ -116,7 +116,7 @@
     <string name="sight7phone">09–303 0150</string>
     <string name="sight8phone">09–379 5656</string>
     <string name="sight9phone">09–379 5151</string>
-    <string name="sight10phone">09-379 5353</string>
+    <string name="sight10phone">09–379 5353</string>
 
     <string name="sight1Address">Corner Victoria and Federal Sts, Auckland Central, Auckland 1010, New Zealand</string>
     <string name="sight2Address">Arataki Visitor Centre | 300 Scenic Drive, Titirangi, Auckland Central, Auckland 0604, New Zealand</string>
@@ -153,8 +153,16 @@
     <string name="site_short_desc_1">Earn $50 NZD in travel credit </string>
     <string name="site_short_desc_2">Pages used by natives </string>
 
+    <!-- Intent Button Share -->
+    <string name="share_subject">Look this amazing app!</string>
+    <string name="share_message">New Zealand Guide it\'s the first complete app with tips focused in travellers, students and Working Holiday Visa holders! Find out amazing places to live, travel and work!</string>
+    <string name="subscribe_now">Subscribe now!</string>
+    <string name="share_header_when_clicked">Sharing New Zealand with:</string>
+    <string name="site_share" translatable="false">http://bit.ly/tourguidenz</string>
+
     <!-- Others -->
     <string name="tourist_information">\ Tourist Information</string>
     <string name="go">Go</string>
+    <string name="choose_the_city">Choose the City</string>
 </resources>
 

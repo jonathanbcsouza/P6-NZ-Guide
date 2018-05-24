@@ -19,6 +19,8 @@ Tour Guide - New Zealand
 - Styles
 - Bundles
 - Spinners
+- Action Bar
+- Intent Share Button
 ---
 
 ### Download:
