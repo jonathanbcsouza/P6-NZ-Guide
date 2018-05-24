@@ -27,7 +27,6 @@
                 android:prompt="@string/airports"
                 android:textColor="@color/textWhite" />
 
-
             <ListView
                 android:id="@+id/jobs_list"
                 android:layout_width="match_parent"
@@ -37,7 +36,6 @@
                 android:text="@string/about_city_0"
                 android:textColor="@color/colorTextSubHeaders" />a
         </LinearLayout>
-
 
     </LinearLayout>
 </ScrollView>
