@@ -15,24 +15,27 @@
  */
 package com.tour.guide;
 
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
+
+import android.support.v7.app.AlertDialog;
 import android.text.Editable;
 import android.text.InputFilter;
 import android.text.TextWatcher;
 import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.MenuItem;
+
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.ProgressBar;
+import android.widget.Toast;
 
 import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
@@ -40,15 +43,17 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+
 import java.util.ArrayList;
 import java.util.List;
+
 
 public class TabChat extends android.support.v4.app.Fragment {
 
     public TabChat() {
     }
-    private static final String TAG = "MainActivity";
 
+    private static final String TAG = "MainActivity";
     public static final String ANONYMOUS = "anonymous";
     public static final int DEFAULT_MSG_LENGTH_LIMIT = 1000;
 
@@ -58,7 +63,6 @@ public class TabChat extends android.support.v4.app.Fragment {
     private ImageButton mPhotoPickerButton;
     private EditText mMessageEditText;
     private Button mSendButton;
-
     private String mUsername;
 
     //Firebase instances variables
@@ -69,9 +73,41 @@ public class TabChat extends android.support.v4.app.Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.chat_layout, container, false);
+        final View rootView = inflater.inflate(R.layout.chat_layout, container, false);
 
-        mUsername = ANONYMOUS;
+        // Alert Dialog
+        AlertDialog.Builder alertDialog = new AlertDialog.Builder(getContext());
+
+        // Setting Dialog Title
+        alertDialog.setTitle("CONFIG!");
+
+        // Setting Dialog Message
+        alertDialog.setMessage("ENTER YOU NAME:");
+
+        final EditText input = new EditText(getActivity());
+        LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(
+                LinearLayout.LayoutParams.MATCH_PARENT,
+                LinearLayout.LayoutParams.MATCH_PARENT);
+        input.setLayoutParams(lp);
+        alertDialog.setView(input); // uncomment this line
+
+        // Setting Icon to Dialog
+        alertDialog.setIcon(R.drawable.icon_black);
+
+        // Setting Positive "Yes" Button
+        alertDialog.setPositiveButton("DONE",
+                new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        // Write your code here to execute after dialog
+                        Toast.makeText(getContext(), "Welcome " + input.getText(), Toast.LENGTH_SHORT).show();
+                    }
+                });
+
+        // Showing Alert Message
+        alertDialog.show();
+
+
+        //mUsername = ANONYMOUS;  << DISABLE
 
         mFirebaseDatabase = FirebaseDatabase.getInstance();
         mMessagesDatabaseReference = mFirebaseDatabase.getReference().child("messages");
@@ -124,7 +160,7 @@ public class TabChat extends android.support.v4.app.Fragment {
             @Override
             public void onClick(View view) {
 
-                ChatMessageClass friendlyMessage = new ChatMessageClass(mMessageEditText.getText().toString(), mUsername, null);
+                ChatMessageClass friendlyMessage = new ChatMessageClass(mMessageEditText.getText().toString(), input.getText().toString(), null);
                 mMessagesDatabaseReference.push().setValue(friendlyMessage);
                 // Clear input box
                 mMessageEditText.setText("");
@@ -160,7 +196,7 @@ public class TabChat extends android.support.v4.app.Fragment {
 
         mMessagesDatabaseReference.addChildEventListener(mChildEventListener);
 
-        return  rootView;
+        return rootView;
     }
 
 }

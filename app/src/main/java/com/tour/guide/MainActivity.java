@@ -1,6 +1,7 @@
 package com.tour.guide;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
@@ -56,7 +57,12 @@ public class MainActivity extends AppCompatActivity {
                         + "\n" + getString(R.string.site_share));
 
                 startActivity(Intent.createChooser(share, getString(R.string.share_header_when_clicked)));
+                return true;
 
+            case R.id.rate_us:
+
+                Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=" + getPackageName()));
+                startActivity(browserIntent);
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
