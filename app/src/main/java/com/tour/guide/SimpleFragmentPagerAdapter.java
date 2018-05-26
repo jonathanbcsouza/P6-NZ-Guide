@@ -42,15 +42,17 @@ public class SimpleFragmentPagerAdapter extends FragmentPagerAdapter {
             return new TabSights();
         } else if (position == 2) {
             return new TabSleep();
-        } else {
+        } else if (position == 3) {
             return new TabJobs();
+        } else {
+            return new TabChat();
         }
     }
 
 
     @Override
     public int getCount() {
-        return 4;
+        return 5;
     }
 
     @Override
@@ -61,8 +63,10 @@ public class SimpleFragmentPagerAdapter extends FragmentPagerAdapter {
             return mContext.getString(R.string.sights);
         } else if (position == 2) {
             return mContext.getString(R.string.sleep);
-        } else {
+        } else if (position == 3) {
             return mContext.getString(R.string.jobs);
+        } else {
+            return mContext.getString(R.string.chat);
         }
     }
 }

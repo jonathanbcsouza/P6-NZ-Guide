@@ -5,6 +5,9 @@
     <string name="sights">Sights</string>
     <string name="sleep">Sleep</string>
     <string name="jobs">Jobs</string>
+    <string name="chat">Chat \n (Beta)</string>
+
+
 
     <!--All Items standards -->
     <string name="place_title">Place</string>
@@ -164,5 +167,7 @@
     <string name="tourist_information">\ Tourist Information</string>
     <string name="go">Go</string>
     <string name="choose_the_city">Choose the City</string>
+    <string name="send_button_label">Send</string>
+
 </resources>
 
