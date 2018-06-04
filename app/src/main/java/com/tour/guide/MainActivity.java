@@ -10,6 +10,8 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 
+import com.firebase.ui.auth.AuthUI;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -18,13 +20,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         ViewPager viewPager = (ViewPager) findViewById(R.id.viewpager);
-
         SimpleFragmentPagerAdapter adapter = new SimpleFragmentPagerAdapter(this, getSupportFragmentManager());
-
         viewPager.setAdapter(adapter);
-
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
-
         tabLayout.setupWithViewPager(viewPager);
 
     }
@@ -64,8 +62,14 @@ public class MainActivity extends AppCompatActivity {
                 Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=" + getPackageName()));
                 startActivity(browserIntent);
                 return true;
+
+            case R.id.sign_out_menu:
+                //sign_out
+                AuthUI.getInstance().signOut(this);
+                return true;
             default:
                 return super.onOptionsItemSelected(item);
         }
+
     }
 }

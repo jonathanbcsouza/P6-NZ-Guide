@@ -7,10 +7,15 @@
         app:showAsAction="ifRoom" />
     <!-- Settings, should always be in the overflow -->
     <item android:id="@+id/action_share"
-        android:title="Share"
+        android:title="@string/share"
         app:showAsAction="never" />
 
     <item android:id="@+id/rate_us"
-        android:title="Rate us"
+        android:title="@string/rate_us"
         app:showAsAction="never" />
+
+    <item
+        android:id="@+id/sign_out_menu"
+        android:title="@string/sign_out"
+        app:showAsAction="never"/>
 </menu>

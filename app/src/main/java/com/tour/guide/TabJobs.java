@@ -38,8 +38,8 @@ public class TabJobs extends android.support.v4.app.Fragment implements AdapterV
     public TabJobs() {
     }
 
-    final ArrayList<Items> jobsArray = new ArrayList<>();
-    int icon;
+    private final ArrayList<Items> jobsArray = new ArrayList<>();
+    private int icon;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -61,10 +61,6 @@ public class TabJobs extends android.support.v4.app.Fragment implements AdapterV
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
         final String getValue = (String) parent.getItemAtPosition(position);
         icon = R.drawable.ic_keyboard_arrow_right_black_24dp;
-
-        Log.v("JONATHAN", String.valueOf(position));
-        Log.v("JONATHAN", String.valueOf(id));
-        Log.v("JONATHAN", String.valueOf(getValue));
 
         switch (position) {
             case 0: //Construction

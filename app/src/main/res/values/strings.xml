@@ -169,5 +169,10 @@
     <string name="choose_the_city">Choose the City</string>
     <string name="send_button_label">Send</string>
 
+    <!-- Menu list -->
+    <string name="sign_out">Sign Out</string>
+    <string name="rate_us">Rate us</string>
+    <string name="share">Share</string>
+
 </resources>
 
