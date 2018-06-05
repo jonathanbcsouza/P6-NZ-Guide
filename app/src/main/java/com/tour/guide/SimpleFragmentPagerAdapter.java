@@ -33,7 +33,6 @@ public class SimpleFragmentPagerAdapter extends FragmentPagerAdapter {
         mContext = context;
     }
 
-
     @Override
     public Fragment getItem(int position) {
         if (position == 0) {
