@@ -21,6 +21,7 @@ Tour Guide - New Zealand
 - Spinners
 - Action Bar
 - Intent Share Button
+- Firebase and Login Authentication
 ---
 
 ### Download:
