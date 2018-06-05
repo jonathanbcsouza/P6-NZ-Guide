@@ -106,6 +106,7 @@ public class TabChat extends android.support.v4.app.Fragment {
         mFirebaseDatabase = FirebaseDatabase.getInstance();
         mFirebaseAuth = FirebaseAuth.getInstance();
         mFirebaseStorage = FirebaseStorage.getInstance();
+
         mMessagesDatabaseReference = mFirebaseDatabase.getReference().child("messages");
         mChatPhotosStorageReference = mFirebaseStorage.getReference().child("chat_photos");
 
@@ -197,59 +198,37 @@ public class TabChat extends android.support.v4.app.Fragment {
         mFirebaseAuth.removeAuthStateListener(mAuthStateListener);
     }
 
-    @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        if (requestCode == RC_SIGN_IN) {
-            Task<GoogleSignInAccount> task = GoogleSignIn.getSignedInAccountFromIntent(data);
-
-            if (resultCode == RESULT_OK) {
-                // Sign-in succeeded, set up the UI
-                Toast.makeText(getActivity(), "Signed in!", Toast.LENGTH_SHORT).show();
-
-            } else if (resultCode == RESULT_CANCELED) {
-                // Sign in was canceled by the user, finish the activity
-                Toast.makeText(getActivity(), "Sign in canceled", Toast.LENGTH_SHORT).show();
-                getActivity().finish();
-            }
-        } else if (requestCode == RC_PHOTO_PICKER && resultCode == RESULT_OK)
-
-        {
+        if (requestCode == RC_SIGN_IN && resultCode == RESULT_OK) {
+            Toast.makeText(getActivity(), "Signed in!", Toast.LENGTH_SHORT).show();
+        } else if (resultCode == RESULT_CANCELED) {
+            Toast.makeText(getActivity(), "Sign in canceled!", Toast.LENGTH_SHORT).show();
+        } else if (requestCode == RC_PHOTO_PICKER && resultCode == RESULT_OK) {
             Uri selectedImageUri = data.getData();
 
             // Get a reference to store file at chat_photos/<FILENAME>
             final StorageReference photoRef = mChatPhotosStorageReference.child(selectedImageUri.getLastPathSegment());
 
-            UploadTask uploadTask = photoRef.putFile(selectedImageUri);
-
-            Task<Uri> urlTask = uploadTask.continueWithTask(new Continuation<UploadTask.TaskSnapshot, Task<Uri>>() {
-                @Override
-                public Task<Uri> then(@NonNull Task<UploadTask.TaskSnapshot> task) throws Exception {
-                    if (!task.isSuccessful()) {
-                        throw task.getException();
-                    }
-
-                    // Continue with the task to get the download URL
-                    return photoRef.getDownloadUrl();
-                }
-            }).addOnCompleteListener(new OnCompleteListener<Uri>() {
-                @Override
-                public void onComplete(@NonNull Task<Uri> task) {
-                    if (task.isSuccessful()) {
-                        Uri downloadUri = task.getResult();
-                        // Set the download URL to the message box, so that the user can send it to the database
-                        ChatMessageClass sendingMessage = new ChatMessageClass(null, mUsername, downloadUri.toString());
-                        mMessagesDatabaseReference.push().setValue(sendingMessage);
-                    } else {
-                        // Handle failures
-
-                    }
-                }
-            });
+            photoRef.putFile(selectedImageUri)
+                    .addOnSuccessListener(getActivity(), new OnSuccessListener<UploadTask.TaskSnapshot>() {
+                        @Override
+                        public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+                            //When the image has successfully uploaded, get its download URL
+                            photoRef.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+                                @Override
+                                public void onSuccess(Uri uri) {
+                                    Uri dlUri = uri;
+                                    ChatMessageClass friendlyMessage = new ChatMessageClass(null, mUsername, dlUri.toString());
+                                    mMessagesDatabaseReference.push().setValue(friendlyMessage);
+                                }
+                            });
+                        }
+                    });
         }
     }
 
-    @Override
+            @Override
     public void onResume() {
         super.onResume();
         mFirebaseAuth.addAuthStateListener(mAuthStateListener);
