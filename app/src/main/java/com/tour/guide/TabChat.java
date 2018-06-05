@@ -38,6 +38,8 @@ import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
+import com.facebook.CallbackManager;
+import com.facebook.login.widget.LoginButton;
 import com.firebase.ui.auth.AuthUI;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
@@ -110,6 +112,7 @@ public class TabChat extends android.support.v4.app.Fragment {
         mMessagesDatabaseReference = mFirebaseDatabase.getReference().child("messages");
         mChatPhotosStorageReference = mFirebaseStorage.getReference().child("chat_photos");
 
+        mUsername = ANONYMOUS;
 
         // Initialize references to views
         mProgressBar = (ProgressBar) rootView.findViewById(R.id.progressBar);
@@ -125,6 +128,7 @@ public class TabChat extends android.support.v4.app.Fragment {
 
         // Initialize progress bar
         mProgressBar.setVisibility(ProgressBar.INVISIBLE);
+
 
         // ImagePickerButton shows an image picker to upload a image for a message
         mPhotoPickerButton.setOnClickListener(new View.OnClickListener() {
@@ -182,6 +186,7 @@ public class TabChat extends android.support.v4.app.Fragment {
                                     .createSignInIntentBuilder()
                                     .setAvailableProviders(Arrays.asList(
                                             new AuthUI.IdpConfig.EmailBuilder().build(),
+                                            new AuthUI.IdpConfig.FacebookBuilder().build(),
                                             new AuthUI.IdpConfig.GoogleBuilder().build()))
                                     .build(),
                             RC_SIGN_IN);

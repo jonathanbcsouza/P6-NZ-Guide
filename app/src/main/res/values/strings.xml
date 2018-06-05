@@ -174,5 +174,14 @@
     <string name="rate_us">Rate us</string>
     <string name="share">Share</string>
 
+    <!-- ... -->
+    <string name="facebook_application_id" translatable="false">1556166501158453</string>
+    <!-- Facebook Application ID, prefixed by 'fb'. Enables Chrome Custom tabs. -->
+    <string name="facebook_login_protocol_scheme" translatable="false">1556166501158453</string>
+
+    <string name="facebook_app_id">1556166501158453</string>
+    <string name="fb_login_protocol_scheme">fb1556166501158453</string>
+
+
 </resources>
 
