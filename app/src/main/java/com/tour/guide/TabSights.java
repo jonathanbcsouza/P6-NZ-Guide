@@ -93,7 +93,6 @@ public class TabSights extends android.support.v4.app.Fragment {
                 , getString(R.string.sight10phone)
                 , R.mipmap.sight10));
 
-
         ItemsAdapter adapter = new ItemsAdapter(getActivity(), sightsPlaces);
         ListView listView = rootView.findViewById(R.id.fragment_list);
         listView.setAdapter(adapter);
