@@ -16,7 +16,6 @@
         <item>Auckland</item>
         <item>Wellington</item>
         <item>Christchurch</item>
-        <!--
         <item>Hamilton</item>
         <item>Tauranga</item>
         <item>Napier-Hastings</item>
@@ -29,7 +28,6 @@
         <item>Invercargill</item>
         <item>Whanganui</item>
         <item>Gisborne</item>
-        -->
     </string-array>
 
     <string-array name="spinner_jobs_categories">
@@ -43,7 +41,6 @@
     <string name="category0">Agency Recruitment</string>
     <string name="category1">Company</string>
     <string name="category2">Jobs Website</string>
-
 
     <!-- Jobs - Construction-->
     <string name="const0">https://www.awf.co.nz</string>
@@ -176,7 +173,6 @@
     <string name="facebook_application_id" translatable="false">1556166501158453</string>
     <!-- Facebook Application ID, prefixed by 'fb'. Enables Chrome Custom tabs. -->
     <string name="facebook_login_protocol_scheme" translatable="false">1556166501158453</string>
-
     <string name="facebook_app_id">1556166501158453</string>
     <string name="fb_login_protocol_scheme">fb1556166501158453</string>
 
