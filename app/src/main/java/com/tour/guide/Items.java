@@ -40,7 +40,6 @@ public class Items {
         mPlacesPhoneNumber = website;
     }
 
-
     public String   getPlacesName() {
         return mPlacesName;
     }

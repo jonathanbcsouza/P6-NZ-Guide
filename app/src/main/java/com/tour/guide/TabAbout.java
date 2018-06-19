@@ -100,7 +100,6 @@ public class TabAbout extends Fragment implements AdapterView.OnItemSelectedList
         photoCity.setImageResource(passPhotoCity);
     }
 
-
     @Override
     public void onNothingSelected(AdapterView<?> parent) {
 

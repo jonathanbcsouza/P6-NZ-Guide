@@ -35,7 +35,6 @@ public class AllPlacesActivity extends AppCompatActivity {
                 break;
         }
 
-
         View phoneIcon = findViewById(R.id.place_phone_icon_layout);
         View phoneNumberInContactSection = findViewById(R.id.allPlaces_activity_phone_number_layout);
 

@@ -8,8 +8,8 @@ android {
         applicationId "com.tour.guide"
         minSdkVersion 16
         targetSdkVersion 27
-        versionCode 16
-        versionName "1.1.6"
+        versionCode 17
+        versionName "1.1.7"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
@@ -45,8 +45,10 @@ dependencies {
     implementation 'com.google.firebase:firebase-auth:16.0.1'
     implementation 'com.firebaseui:firebase-ui-auth:4.0.0'
     implementation "com.google.firebase:firebase-storage:16.0.1"
+    implementation 'com.google.firebase:firebase-messaging:17.0.0'
+    implementation 'com.google.firebase:firebase-config:16.0.0'
 
-    implementation 'com.facebook.android:facebook-login:[4,5)'
+    implementation 'com.facebook.android:facebook-login:4.33.0'
 
 }
 apply plugin: 'com.google.gms.google-services'

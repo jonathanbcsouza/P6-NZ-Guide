@@ -108,7 +108,6 @@ public class TabJobs extends android.support.v4.app.Fragment implements AdapterV
         });
     }
 
-
     public void createArray(String value, int icon, String site, String siteDesc) {
 
         Snackbar.make(getView(), "Changed to: " + value, Snackbar.LENGTH_LONG)

@@ -45,7 +45,6 @@ public class CategoriesAdapter extends ArrayAdapter<Categories> {
 
         iconView.setImageResource(currentAucklandTour.getItemImage());
 
-
         return listItemView;
     }
 

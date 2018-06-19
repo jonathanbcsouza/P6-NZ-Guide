@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 import com.firebase.ui.auth.AuthUI;
 
@@ -27,9 +28,9 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    // Inflate the menu items for use in the action bar
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu items for use in the action bar
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.action_bar, menu);
         return super.onCreateOptionsMenu(menu);
@@ -64,8 +65,8 @@ public class MainActivity extends AppCompatActivity {
                 return true;
 
             case R.id.sign_out_menu:
-                //sign_out
                 AuthUI.getInstance().signOut(this);
+                Toast.makeText(this, "Sign out done", Toast.LENGTH_SHORT).show();
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
