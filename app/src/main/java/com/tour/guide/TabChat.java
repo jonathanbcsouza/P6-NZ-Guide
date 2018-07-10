@@ -60,7 +60,7 @@ import java.util.Map;
 import static android.app.Activity.RESULT_CANCELED;
 import static android.app.Activity.RESULT_OK;
 
-
+// DISABLE
 public class TabChat extends android.support.v4.app.Fragment {
 
     public TabChat() {

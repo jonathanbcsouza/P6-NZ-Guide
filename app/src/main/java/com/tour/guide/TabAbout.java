@@ -1,16 +1,40 @@
 package com.tour.guide;
 
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
+import android.text.InputFilter;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.ListView;
+import android.widget.ProgressBar;
 import android.widget.Spinner;
 import android.widget.TextView;
+
+import com.firebase.ui.auth.AuthUI;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.ChildEventListener;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.remoteconfig.FirebaseRemoteConfig;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
+
+import java.util.Arrays;
 
 public class TabAbout extends Fragment implements AdapterView.OnItemSelectedListener {
 
@@ -23,6 +47,14 @@ public class TabAbout extends Fragment implements AdapterView.OnItemSelectedList
     private Spinner spinner;
     private ArrayAdapter arrayAdapter;
 
+    private static final String TAG = "MainActivity";
+    public static final int RC_SIGN_IN = 1;
+    private ChildEventListener mChildEventListener;
+
+    //Firebase authentication
+    private FirebaseAuth mFirebaseAuth;
+    private FirebaseAuth.AuthStateListener mAuthStateListener;
+    private FirebaseRemoteConfig mFirebaseRemoteConfig;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -40,10 +72,66 @@ public class TabAbout extends Fragment implements AdapterView.OnItemSelectedList
                 R.array.spinner_cities, R.layout.spinner_custom_sleep_tab);
         arrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(arrayAdapter);
-
         spinner.setOnItemSelectedListener(this);
 
+        //Firebase
+        mFirebaseAuth = FirebaseAuth.getInstance();
+        mFirebaseRemoteConfig = FirebaseRemoteConfig.getInstance();
+
+        mAuthStateListener = new FirebaseAuth.AuthStateListener() {
+            @Override
+            public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
+                FirebaseUser user = firebaseAuth.getCurrentUser();
+                if (user != null) {
+                    onSignedInInitialize(user.getDisplayName()); //user is signed in
+                } else { //user is signed out
+                    onSignedOutCleanup();
+                    startActivityForResult(
+                            AuthUI.getInstance()
+                                    .createSignInIntentBuilder()
+                                    .setAvailableProviders(Arrays.asList(
+                                            new AuthUI.IdpConfig.EmailBuilder().build(),
+                                            new AuthUI.IdpConfig.FacebookBuilder().build(),
+                                            new AuthUI.IdpConfig.GoogleBuilder().build()))
+                                    .build(),
+                            RC_SIGN_IN);
+                }
+            }
+        };
         return rootView;
+    }
+
+    private void onSignedOutCleanup() {
+        detachDatabaseReadListener();
+    }
+
+    private void attachDatabaseReadListener() {
+        if (mChildEventListener == null) {
+            mChildEventListener = new ChildEventListener() {
+                @Override
+                public void onChildAdded(DataSnapshot dataSnapshot, String s) {
+                }
+
+                public void onChildChanged(DataSnapshot dataSnapshot, String s) {
+                }
+
+                public void onChildRemoved(DataSnapshot dataSnapshot) {
+                }
+
+                public void onChildMoved(DataSnapshot dataSnapshot, String s) {
+                }
+
+                public void onCancelled(DatabaseError databaseError) {
+                }
+            };
+
+        }
+    }
+
+    private void detachDatabaseReadListener() {
+        if (mChildEventListener != null) {
+            mChildEventListener = null;
+        }
     }
 
     @Override
@@ -84,6 +172,11 @@ public class TabAbout extends Fragment implements AdapterView.OnItemSelectedList
         }
     }
 
+    @Override
+    public void onNothingSelected(AdapterView<?> parent) {
+
+    }
+
     public void createDescription(String passValue, String passCity, String passPopulation, String passAirport,
                                   String passTransport, String passAboutCity, int passPhotoCity) {
 
@@ -99,7 +192,21 @@ public class TabAbout extends Fragment implements AdapterView.OnItemSelectedList
     }
 
     @Override
-    public void onNothingSelected(AdapterView<?> parent) {
+    public void onPause() {
+        super.onPause();
+        mFirebaseAuth.removeAuthStateListener(mAuthStateListener);
+    }
 
+    @Override
+    public void onResume() {
+        super.onResume();
+        mFirebaseAuth.addAuthStateListener(mAuthStateListener);
+        detachDatabaseReadListener();
+    }
+
+    private void onSignedInInitialize(String username) {
+        attachDatabaseReadListener();
     }
 }
+
+
